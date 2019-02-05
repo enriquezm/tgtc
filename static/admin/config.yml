@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: enriquezm/test-app
+  repo: enriquezm/engineering-portfolio
 
 media_folder: static/assets
 public_folder: assets
