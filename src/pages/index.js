@@ -1,29 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import PostLink from "../components/post-link"
+import Header from "../components/Header"
 import "../global-styles.css";
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <div>
-      <header className="flex-container flex-split margin-bottom-lg">
-        <div>
-          <div className="flex-content">
-            <Link to="/"><h1>Myles Enriquez</h1></Link>
-            <p className="font-color-violet">Frontend Engineer</p>
-            <div>
-              <a className="link-btn" href="#">resume</a>
-              <a className="link-btn" href="https://github.com/enriquezm">github</a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="flex-content">
-            <p className="font-override">v1.1</p>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-container">
       <section className="flex-column">
         <div className="flex-content">
