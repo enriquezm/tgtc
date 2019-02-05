@@ -53,24 +53,24 @@ const IndexPage = ({ data }) => {
               })
             }
           </ul>
-            <h2 className="margin-bottom-xs all-caps">Concepts</h2>
-            <p className="margin-bottom-sm font-color-light-gray-super">Aren't quite full on projects, but shouldn't be thrown away...yet.</p>
-            <ul className="margin-bottom-md">
+          {/* <h2 className="margin-bottom-xs all-caps">Concepts</h2>
+          <p className="margin-bottom-sm font-color-light-gray-super">Aren't quite full on projects, but shouldn't be thrown away...yet.</p>
+          <ul className="margin-bottom-md">
             <li className="margin-bottom-xs"><a href="#">habit rabbit</a></li>
             <li className="margin-bottom-xs"><a href="#">meos</a></li>
             <li className="margin-bottom-xs"><a href="#">git balloons</a></li>
-          </ul>
+          </ul> */}
           <h2 className="margin-bottom-xs all-caps">Socialize</h2>
           <ul className="margin-bottom-md">
-            <li className="margin-bottom-xs"><a href="#">github</a></li>
-            <li className="margin-bottom-xs"><a href="#">enri.myles@gmail.com</a></li>
+            <li className="margin-bottom-xs"><a href="https://github.com/enriquezm">github</a></li>
+            <li className="margin-bottom-xs"><a href="mailto:enri.myles@gmail.com">enri.myles@gmail.com</a></li>
           </ul>
         </div>
       </section>
 
     </main>
       <footer>
-        <p className="font-override font-color-light-gray-super">Slapped together by <a href="#">Myles Enriquez</a>.</p>
+        <p className="font-override font-color-light-gray-super">Slapped together by <a href="https://github.com/enriquez">Myles Enriquez</a>. <a href="https://github.com/enriquezm/engineering-portfolio">View on Github.</a></p>
       </footer>
     </div>
   );
