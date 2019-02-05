@@ -10,6 +10,9 @@ const PostContentContainer = styled.div`
   p {
     margin-bottom: 20px;
   }
+  img {
+    width: 100%;
+  }
 `;
   
   
