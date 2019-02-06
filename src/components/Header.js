@@ -16,7 +16,7 @@ const Header = () => {
         </div>
         <div>
           <div className="flex-content">
-            <p className="font-override">v1.1</p>
+            <p className="font-override" title="Currently running version 1.1 of my site.">v1.1</p>
           </div>
         </div>
       </header>
