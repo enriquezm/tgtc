@@ -28,7 +28,7 @@
   }
   p {
     line-height: 1.5;
-    color: #444;
+    color: rgba(38,41,58,.8);
   }
   img {
     width: 100%;
@@ -43,7 +43,7 @@
     list-style-position: inside;
   }
   a {
-    color: #444;
+    color: rgba(38,41,58,.8);
     text-decoration: none;
     transition: all 0.3s;
   }
