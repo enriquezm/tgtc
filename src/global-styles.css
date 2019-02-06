@@ -2,7 +2,7 @@
     box-sizing: border-box;
     font-family: 'Inconsolata', monospace;
     font-size: 18px;
-    color: #000;
+    color: rgba(38,41,58,1);
   }
   body {
     padding: 2% 25%;
@@ -116,7 +116,7 @@
     color: #444;
   }
   .font-color-light-gray-super {
-    color: #848484;
+    color: rgba(38,41,58,.6);
   }
   .font-color-violet {
     color: #4413ff;
