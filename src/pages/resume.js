@@ -1,5 +1,5 @@
-import React from 'react'
-import Header from "../components/Header"
+import React from 'react';
+import Header from "../components/Header";
 import styled from 'styled-components';
 
 const Resume = styled.div`
@@ -20,7 +20,7 @@ const Resume = styled.div`
       margin: 20px 0;
     }
   }
-`
+`;
 
 const ResumePage = () => {
   return (
@@ -88,6 +88,6 @@ const ResumePage = () => {
       </section>
     </Resume>
   )
-}
+};
 
-export default ResumePage
+export default ResumePage;
