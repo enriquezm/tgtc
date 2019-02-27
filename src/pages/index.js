@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
             <li className="margin-bottom-xs"><a href="#">meos</a></li>
             <li className="margin-bottom-xs"><a href="#">git balloons</a></li>
           </ul> */}
-          <h2 className="margin-bottom-xs all-caps">Socialize</h2>
+          <h2 className="margin-bottom-xs all-caps">Connect</h2>
           <ul className="margin-bottom-md">
             <li className="margin-bottom-xs"><a href="https://github.com/enriquezm">github</a></li>
             <li className="margin-bottom-xs"><a href="mailto:enri.myles@gmail.com">enri.myles@gmail.com</a></li>
