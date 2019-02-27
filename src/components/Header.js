@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className="flex-container flex-split margin-bottom-lg">
         <div>
@@ -9,8 +9,11 @@ const Header = () => {
             <Link to="/"><h1>Myles Enriquez</h1></Link>
             <p className="font-color-violet">Frontend Engineer</p>
             <div>
-              <Link to="/resume/" className="link-btn">resume</Link>
-              <a className="link-btn" href="https://github.com/enriquezm">github</a>
+              {
+                props.extraBtn ? <Link to="/" className="link-btn margin-right-sm">More Projects</Link> : ''
+              }
+              <Link to="/resume/" className="link-btn">Resume</Link>
+              <a className="link-btn" href="https://github.com/enriquezm">Github</a>
             </div>
           </div>
         </div>
