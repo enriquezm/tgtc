@@ -25,7 +25,7 @@ const Resume = styled.div`
 const ResumePage = () => {
   return (
     <Resume>
-      <Header />
+      <Header extraBtn="/" />
       <section>
         <h2>Education</h2>
         <div className="block">

@@ -26,7 +26,7 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   const html = markdownRemark.html;
   return (
     <div>
-      <Header />
+      <Header extraBtn="/" />
 
       <main className="flex-container">
         <section className="flex-column">
