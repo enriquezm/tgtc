@@ -1,9 +1,9 @@
 ---
 path: /habit-rabbit
 date: 2019-02-05T22:00:00.580Z
-title: Building a habit tracking application.
+title: Habit Rabbit App
+description: "Building a Habit Tracking App using React"
 ---
-# 
 
 ![](/assets/waranont-wichittranont-1347698-unsplash.jpg)
 
