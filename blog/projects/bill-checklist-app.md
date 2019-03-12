@@ -2,6 +2,8 @@
 path: /bill-checklist
 date: 2019-03-12T10:33:36.830Z
 title: Bill Checklist
+source: https://github.com/enriquezm/bills-todo-app
+demo: https://codepen.io/mylesenri/pen/KJWPWb
 ---
 I wanted to build something simple without React. The idea was this: Build something similar to what I would do with pencil and paper, but make it a little more interactive. The first thing that came to mind was an app that handled drag-n-drop.
 
