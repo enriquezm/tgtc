@@ -12,18 +12,19 @@ const IndexPage = ({ data }) => {
       <section className="flex-column">
         <div className="flex-content">
             <h2 className="margin-bottom-xs all-caps">Projects</h2>
-            <p className="margin-bottom-sm font-color-light-gray-super">Some projects worth talking about. Check out my walkthrough, the source code, or the live/demo site.</p>
+            <p className="margin-bottom-sm font-color-light-gray-super">Case studies, walkthroughs, source code, and demos.</p>
 
             <ul className="margin-bottom-md">
             {
               edges.map( edge => {
                 const { frontmatter } = edge.node;
                 return (
-                  <li key={frontmatter.path}  className="margin-bottom-xs">
+                  <li key={frontmatter.path}>
                     <Link 
                     className="margin-right-xs" 
                     to={frontmatter.path}>
-                      {frontmatter.title}
+                      <h3>{frontmatter.title}</h3>
+                      <p className="font-color-light-gray-super">{frontmatter.description}</p>
                     </Link>
                     {
                       frontmatter.source ? <a className="link-btn margin-right-xs" href={frontmatter.source}>source</a> : null
@@ -31,7 +32,7 @@ const IndexPage = ({ data }) => {
                     {
                       frontmatter.demo ? <a className="link-btn margin-right-xs" href={frontmatter.demo}>demo</a> : null
                     }
-                    
+                  <hr></hr>
                   </li>
                 )
               })
@@ -77,6 +78,9 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
+            source
+            demo
+            description
           }
         }
       }
