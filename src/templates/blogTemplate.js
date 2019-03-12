@@ -14,6 +14,14 @@ const PostContentContainer = styled.div`
   img {
     width: 100%;
   }
+  ul {
+    margin: 20px 0;
+    padding-left: 20px;
+    > li {
+      margin: 4px 0;
+      list-style: circle;
+    }
+  }
 `;
   
   
