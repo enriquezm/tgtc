@@ -46,6 +46,7 @@ const ResumePage = () => {
             <li>Wrote documentation for degrees directory and site analytics using Gitbook.</li>
           </ul>
         </div>
+        <hr></hr>
         <div className="block">
           <h3>Web Developer May 2011 - May 2013</h3>
           <p>Distance Course Design & Consulting</p>
@@ -54,6 +55,7 @@ const ResumePage = () => {
             <li>Assisted developers with website enhancements within Wordpress sites.</li>
           </ul>
         </div>
+        <hr></hr>
         <div className="block">
           <h3>Web Design Assistant August 2010 - May 2011</h3>
           <p>Distance Course Design & Consulting</p>
