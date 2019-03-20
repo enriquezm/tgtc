@@ -11,7 +11,7 @@ const Header = (props) => {
             <p className="font-color-violet">Frontend Engineer</p>
             <div>
               {
-                props.extraBtn ? <Link to="/" className="link-btn margin-right-sm">All Projects</Link> : ''
+                props.extraBtn ? <Link to="/" className="link-btn margin-right-sm">All Posts</Link> : ''
               }
               <Link to="/resume/" className="link-btn">Resume</Link>
               <a className="link-btn" href="https://github.com/enriquezm">Github</a>
@@ -20,7 +20,7 @@ const Header = (props) => {
         </div>
         <div>
           <div className="flex-content">
-            <p className="font-override" title="Hey you! Welcome to my site! :)">???</p>
+            <p className="font-override" title="Hey you! Welcome to my site! :)">;)</p>
           </div>
         </div>
       </header>
