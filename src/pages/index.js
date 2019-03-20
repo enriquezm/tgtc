@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
       <main className="flex-container">
       <section className="flex-column">
         <div className="flex-content">
-            <h2 className="margin-bottom-xs all-caps">Projects</h2>
+            <h2 className="margin-bottom-xs all-caps">Posts</h2>
             <p className="margin-bottom-sm font-color-light-gray-super">Case studies, walkthroughs, source code, and demos.</p>
 
             <ul className="margin-bottom-md">
@@ -24,22 +24,23 @@ const IndexPage = ({ data }) => {
                     className="margin-right-xs" 
                     to={frontmatter.path}>
                       <h3>{frontmatter.title}</h3>
-                      <p className="font-color-light-gray-super">{frontmatter.description}</p>
+                      <p className="font-color-light-gray-super margin-bottom-xs">{frontmatter.description}</p>
                     </Link>
                     {
-                      frontmatter.source ? <a className="link-btn margin-right-xs" href={frontmatter.source}>source</a> : null
+                      frontmatter.source ? <a className="link-btn margin-right-xs margin-bottom-md" href={frontmatter.source}>Source</a> : null
                     }
                     {
-                      frontmatter.demo ? <a className="link-btn margin-right-xs" href={frontmatter.demo}>demo</a> : null
+                      frontmatter.demo ? <a className="link-btn margin-right-xs margin-bottom-md" href={frontmatter.demo}>Demo</a> : null
                     }
+                    <p className="font-color-light-gray-super margin-top-sm">Tagged as <b className="tagger">{frontmatter.tag}</b></p>
                   <hr></hr>
                   </li>
                 )
               })
             }
           </ul>
-          {/* <h2 className="margin-bottom-xs all-caps">Concepts</h2>
-          <p className="margin-bottom-sm font-color-light-gray-super">Aren't quite full on projects, but shouldn't be thrown away...yet.</p>
+          {/* <h2 className="margin-bottom-xs all-caps">Experiements</h2>
+          <p className="margin-bottom-sm font-color-light-gray-super">Aren't quite full on projects, but help me better understand certain concepts.</p>
           <ul className="margin-bottom-md">
             <li className="margin-bottom-xs"><a href="#">habit rabbit</a></li>
             <li className="margin-bottom-xs"><a href="#">meos</a></li>
@@ -81,6 +82,7 @@ export const pageQuery = graphql`
             source
             demo
             description
+            tag
           }
         }
       }
