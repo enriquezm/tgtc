@@ -5,6 +5,11 @@ title: Habit Rabbit App
 description: Building a Habit Tracking App using React
 source: 'https://github.com/enriquezm/habbit-rabbit'
 demo: 'https://codesandbox.io/s/3v8l0o7p7p'
+tag: 'Concept'
 ---
 
 I love developing new habits that benefit me and so I decided to create a small little React app that allowed me to start, continue, and develop habits that lasted.
+
+That basic idea for the app is to check-in and done. Simple and to the point. I love the idea of having a github contribution type interface to visually keep track of your progress.
+
+A simple demo can be viewed on [codesandbox.io](https://codesandbox.io/s/3v8l0o7p7p) to get a better idea.
