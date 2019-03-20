@@ -81,6 +81,9 @@
     color: rgba(255, 255, 255, 1);
     text-shadow: black 0 0;
   }
+  b.tagger { 
+    color: #FF2964;
+  }
   .margin-top-xs {
     margin-top: 5px;
   }
