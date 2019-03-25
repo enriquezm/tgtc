@@ -12,4 +12,4 @@ If we were to dissect the app, it's simply a bunch of boxes, each with their own
 
 Obviously, there's a lot more to it, but it was a start.
 
-You can view the source code for this project on \[github](https://github.com/enriquezm/google-trends-visualizer).
+You can view the source code for this project on [github](https://github.com/enriquezm/google-trends-visualizer).
