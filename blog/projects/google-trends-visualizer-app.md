@@ -5,6 +5,7 @@ title: Google Trends Visualizer App
 description: My process when building the Google Trends Visualizer for a coding test.
 source: 'https://github.com/enriquezm/google-trends-visualizer'
 demo: '#'
+tag: 'Project'
 ---
 At first glance, the Google Trends Visualizer look complex. After breaking it down and looking at all the working pieces it didn't seem too bad.
 
