@@ -6,14 +6,10 @@ description: My process when building the Google Trends Visualizer for a coding 
 source: 'https://github.com/enriquezm/google-trends-visualizer'
 demo: '#'
 ---
-First of I had to draw out my plan of attack. 
+At first glance, the Google Trends Visualizer look complex. After breaking it down and looking at all the working pieces it didn't seem too bad.
 
-When looking at the google trends visualizer, I noticed at large it looked pretty complex. But as I took a closer look, it's simply made up of containers each with their own color, intro/outro animation, and text animation.
+If we were to dissect the app, it's simply a bunch of boxes, each with their own animations, timer, and content. So I thought to myself, "If I can get one working, I could use the power of React components, and make them all work."
 
-So for starters, I wanted to create one container with a background color and text animation.
+Obviously, there's a lot more to it, but it was a start.
 
-Conditionally handling background colors was no big deal. Where I was getting stumped was creating the text animation. I wasn't sure if it needed to be it's own component or if the functionality should be included in the Box component itself. It made more sense to me to have each Box component manage it's own text generator. So the functionality should be within the Box component.
-
-The logic at first was a little confusing to me, but I broke it down and gradually worked my way to it. First I focused on converting a given string into an array of all the individual characters. Since the animation will have to type them one by one, I needed a way to break up the string.
-
-Second,
+You can view the source code for this project on \[github](https://github.com/enriquezm/google-trends-visualizer).
