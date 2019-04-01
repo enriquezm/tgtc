@@ -15,13 +15,13 @@
     font-family: 'Noto Sans', sans-serif;
   }
   h1 {
-    font-size: 24px;
+    font-size: 56px;
   }
   h2 {
-    font-size: 18px;
+    font-size: 24px;
   }
   h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   hr {
     border: 1px solid #F5F5F5;
@@ -84,6 +84,7 @@
   b.tagger { 
     color: #FF2964;
   }
+  /* MARGIN */
   .margin-top-xs {
     margin-top: 5px;
   }
@@ -131,6 +132,14 @@
   }
   .margin-left-lg {
     margin-left: 50px;
+  }
+
+  /* PADDING */
+  .padding-lg {
+    padding: 50px 0;
+  }
+  .padding-xlg {
+    padding: 160px 0;
   }
   .font-color-yellow {
     color: #ffb70c;
