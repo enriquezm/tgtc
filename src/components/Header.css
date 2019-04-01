@@ -1,5 +1,15 @@
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 header {
   animation: fadeIn 0.75s ease-in;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 @keyframes fadeIn {
   from {
