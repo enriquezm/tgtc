@@ -25,7 +25,7 @@ const Resume = styled.div`
 const ResumePage = () => {
   return (
     <Resume>
-      <Header extraBtn="/" />
+      <Header title="Resume" description="What I've done and I can do." />
       <section>
         <h2>Education</h2>
         <div className="block">
