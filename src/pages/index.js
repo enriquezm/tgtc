@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 import "../global-styles.css";
 
 const IndexPage = ({ data }) => {
@@ -39,25 +40,10 @@ const IndexPage = ({ data }) => {
               })
             }
           </ul>
-          {/* <h2 className="margin-bottom-xs all-caps">Experiements</h2>
-          <p className="margin-bottom-sm font-color-light-gray-super">Aren't quite full on projects, but help me better understand certain concepts.</p>
-          <ul className="margin-bottom-md">
-            <li className="margin-bottom-xs"><a href="#">habit rabbit</a></li>
-            <li className="margin-bottom-xs"><a href="#">meos</a></li>
-            <li className="margin-bottom-xs"><a href="#">git balloons</a></li>
-          </ul> */}
-          <h2 className="margin-bottom-xs all-caps">Connect</h2>
-          <ul className="margin-bottom-md">
-            <li className="margin-bottom-xs"><a href="https://github.com/enriquezm">github</a></li>
-            <li className="margin-bottom-xs"><a href="mailto:enri.myles@gmail.com">enri.myles@gmail.com</a></li>
-          </ul>
         </div>
       </section>
-
     </main>
-      <footer>
-        <p className="font-override font-color-light-gray-super">Slapped together by <a href="https://github.com/enriquez">Myles Enriquez</a>. <a href="https://github.com/enriquezm/engineering-portfolio">View on Github.</a></p>
-      </footer>
+      <Footer />
     </div>
   );
 }
