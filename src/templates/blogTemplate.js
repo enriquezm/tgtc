@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import '../global-styles.css';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const PostContentContainer = styled.div`
   h1, h2, h3, h4, h5, h6 {
@@ -31,30 +32,21 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
 
   const {markdownRemark} = data; // data.markdownRemark holds our post data
   const title = markdownRemark.frontmatter.title;
+  const description = markdownRemark.frontmatter.description;
   const html = markdownRemark.html;
   return (
     <div>
-      <Header extraBtn="/" />
+      <Header title={title} description={description} />
 
       <main className="flex-container">
         <section className="flex-column">
           <PostContentContainer className="flex-content">
-            <h2>{title}</h2>
             <div dangerouslySetInnerHTML={{__html: html}} />
           </PostContentContainer>
         </section>
       </main>
 
-      {prev && 
-          <Link to={prev.frontmatter.path}>
-            Previous Post
-          </Link>
-        }
-      {next && 
-        <Link to={next.frontmatter.path}>
-          Next Post
-        </Link>
-      }
+      <Footer />
     </div>
   )
 }
@@ -67,6 +59,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
       }
     }
   }
