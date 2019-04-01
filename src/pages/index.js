@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -8,6 +9,10 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <div>
+      <Helmet>
+        <title>That Guy That Codes</title>
+        <link rel="canonical" href="https://thatguythat.codes" />
+      </Helmet>
       <Header />
       <main className="flex-container">
       <section className="flex-column">
