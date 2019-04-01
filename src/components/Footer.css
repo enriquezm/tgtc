@@ -11,8 +11,13 @@ footer ul {
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1450px) {
   footer ul {
     width: 75%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  footer ul {
+    width: 80%;
   }
 }
