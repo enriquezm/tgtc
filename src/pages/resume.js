@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import styled from 'styled-components';
+
 
 const Resume = styled.div`
   section {
@@ -11,6 +13,7 @@ const Resume = styled.div`
     ul {
       margin: 5px 0;
       li {
+        line-height: 1.5;
         &:before {
           content: '- ';
         }
@@ -25,7 +28,7 @@ const Resume = styled.div`
 const ResumePage = () => {
   return (
     <Resume>
-      <Header title="Resume" description="What I've done and I can do." />
+      <Header title="Resume" description="What I've done and what I can do." />
       <section>
         <h2>Education</h2>
         <div className="block">
@@ -67,27 +70,13 @@ const ResumePage = () => {
         </div>
       </section>
       <section>
-        <h2>Projects</h2>
-        <div className="block">
-          <h3>Habit Rabbit</h3>
-          <p>A habit forming application. Aimed to start, manage, and maintain a habit.</p>
-          <p>Utilizes: Reactjs, Nodejs, mysql</p>
-          <p>Source: https://github.com/enriquezm/habbit-hub</p>
-        </div>
-        <div className="block">
-          <h3>Scoreboard Application</h3>
-          <p>React application connecting to a firebase database.</p>
-          <p>Utilizes: Reactjs, Firebase</p>
-          <p>Demo:</p>
-        </div>
-      </section>
-      <section>
         <h2>Skills</h2>
         <div className="block">
           <p>(proficient): HTML, CSS, SCSS, JavaScript, Git, CLI, wireframing/prototyping</p>
           <p>(familiar): A11y, Nodejs, Gatsby, React, MySQL</p>
         </div>
       </section>
+      <Footer />
     </Resume>
   )
 };
