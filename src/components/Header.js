@@ -7,14 +7,14 @@ const Header = (props) => {
     <header>
       <nav>
         <Link to="/">
-          <h5>TGTC</h5>
+          <h5>thatguythat.codes</h5>
         </Link>
         <div>
           <Link to="/resume/">Resume</Link>
         </div>
       </nav>
       {
-        props.title ? <section className="padding-xlg centered"><h1>{props.title}</h1><p>{props.description}</p></section> : <section className="padding-xlg centered"><h1>Hello!</h1><p>I'm a Frontend Engineer creating simple interfaces connected to data.</p></section>
+        props.title ? <section className="padding-xlg centered"><h1>{props.title}</h1><p>{props.description}</p></section> : <section className="padding-xlg centered"><h1>Hey there!</h1><p>My name's Myles and I'm a Frontend Engineer.</p></section>
       }
     </header>
   )
