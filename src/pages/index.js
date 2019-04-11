@@ -17,8 +17,8 @@ const IndexPage = ({ data }) => {
       <main className="flex-container">
       <section className="flex-column">
         <div className="flex-content">
-            <h2 className="margin-bottom-xs all-caps">Posts</h2>
-            <p className="margin-bottom-sm font-color-light-gray-super">Case studies, walkthroughs, source code, and demos.</p>
+            <h2 className="margin-bottom-xs all-caps">Experiments</h2>
+            <p className="margin-bottom-sm font-color-light-gray-super">Check out my designs, walkthroughs, source code, and demos.</p>
 
             <ul className="margin-bottom-md">
             {
