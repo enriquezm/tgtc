@@ -17,6 +17,11 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 900px) {
+  .centered {
+    align-items: flex-start;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -25,7 +30,6 @@ nav {
     opacity: 1;
   }
 }
-
 @keyframes slideUp {
   0% {
     transform: translateY(50px);
