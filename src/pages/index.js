@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
+import {Code, ExternalLink} from "react-feather"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import "../global-styles.css";
@@ -30,15 +31,15 @@ const IndexPage = ({ data }) => {
                     className="margin-right-xs" 
                     to={frontmatter.path}>
                       <h3>{frontmatter.title}</h3>
-                      <p className="font-color-light-gray-super margin-bottom-xs">{frontmatter.description}</p>
+                      <p className="font-color-light-gray-super margin-bottom-sm">{frontmatter.description}</p>
                     </Link>
                     {
-                      frontmatter.source ? <a className="link-btn margin-right-xs margin-bottom-md" href={frontmatter.source}>Source</a> : null
+                      frontmatter.source ? <a className="margin-right-sm margin-bottom-md primary" href={frontmatter.source}><Code size="24" /></a> : null
                     }
                     {
-                      frontmatter.demo ? <a className="link-btn margin-right-xs margin-bottom-md" href={frontmatter.demo}>Demo</a> : null
+                      frontmatter.demo ? <a className="margin-right-sm margin-bottom-md secondary" href={frontmatter.demo}><ExternalLink size="24"/></a> : null
                     }
-                    <p className="font-color-light-gray-super margin-top-sm">Tagged as <b className="tagger">{frontmatter.tag}</b></p>
+                    {/* <p className="font-color-light-gray-super margin-top-sm">Tagged as <b className="tagger">{frontmatter.tag}</b></p> */}
                   <hr></hr>
                   </li>
                 )
