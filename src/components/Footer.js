@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import {GitHub, Linkedin, Codepen} from 'react-feather'
 import './Footer.css'
 
 const Footer = () => (
   <footer>
     <ul>
-      <li><a href="https://github.com/enriquezm">Github</a></li>
-      <li><a href="https://www.linkedin.com/in/mylesenriquez/">LinkedIn</a></li>
-      <li><a href="https://codepen.io/mylesenri/">Codepen</a></li>
+      <li><a className="primary" href="https://github.com/enriquezm"><GitHub /></a></li>
+      <li><a className="primary" href="https://www.linkedin.com/in/mylesenriquez/"><Linkedin /></a></li>
+      <li><a className="primary" href="https://codepen.io/mylesenri/"><Codepen /></a></li>
     </ul>
-    <p className="margin-top-sm">&copy;2019 <Link to="/">thatguythat.codes</Link>, All Rights Reserved.</p>
+    <p className="margin-top-md">&copy;2019 <Link to="/">thatguythat.codes</Link>, All Rights Reserved.</p>
   </footer>
 )
 
