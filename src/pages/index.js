@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
-import {Code, ExternalLink} from "react-feather"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Section from "../components/Section"
@@ -39,6 +38,17 @@ const Grid = styled.div`
   @media screen and (max-width: 450px) {
     grid-template-columns: 1fr;
     grid-gap: 0;
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
   }
 `;
 
@@ -92,17 +102,6 @@ const Item = styled(Link)`
     }
   }
 
-`;
-
-const fadeIn = keyframes`
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
 `;
 
 const IndexPage = ({ data }) => {

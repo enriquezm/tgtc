@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import {GitHub, Linkedin, Mail} from 'react-feather'
 import styled from 'styled-components'
 
