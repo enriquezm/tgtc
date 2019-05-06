@@ -18,6 +18,7 @@ const Container = styled.header`
   }
   p {
     animation-delay: 0.1s;
+    color: #949494;
   }
   &.tabs > a:not(:last-child){
     margin-right: 15px;
