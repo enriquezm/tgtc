@@ -45,7 +45,6 @@ class Form extends React.Component {
     });
   }
   handleSubmit(event){
-    event.preventDefault();
     console.log(`Form from ${this.state.firstName} has been submitted.`);
     this.setState(
       {
