@@ -4,6 +4,7 @@ import '../global-styles.css';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Section from '../components/Section';
 
 const PostContentContainer = styled.div`
   h1, h2, h3, h4, h5, h6 {
@@ -36,14 +37,13 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   const html = markdownRemark.html;
   return (
     <div>
-      <Header title={title} description={description} />
-
-      <main className="flex-container">
-        <section className="flex-column">
+      <Header viewHeight="70vh" title={title} description={description} />
+      <main>
+        <Section>
           <PostContentContainer className="flex-content">
             <div dangerouslySetInnerHTML={{__html: html}} />
           </PostContentContainer>
-        </section>
+        </Section>
       </main>
 
       <Footer />

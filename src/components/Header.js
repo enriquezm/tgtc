@@ -8,7 +8,7 @@ import './Header.css'
 const Container = styled.header`
   animation: fadeIn 0.5s ease-in;
   width: 100%;
-  height: 100vh;
+  height: ${props => props.viewHeight || "100vh"};
   h1 {
     font-weight: 400;
   }
@@ -37,12 +37,15 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 100px;
+  }
 `;
 
 const Header = (props) => {
   return (
     <Section>
-      <Container>
+      <Container viewHeight={props.viewHeight}>
         <NavBar>
           <Logo to="/">
             tgtc

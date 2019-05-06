@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Heebo', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: rgba(38,41,58,1);
   }
   body {
@@ -50,6 +50,10 @@
   }
   a {
     text-decoration: none;
+    color: #009fff;
+  }
+  a:hover {
+    color: #007fcc;
   }
   a.btn {
     border-radius: 6px;
@@ -63,12 +67,6 @@
     background-image: linear-gradient(-20deg, #2575fc 0%, #5e3bda 100%);
     color: rgba(255, 255, 255, 1);
     text-shadow: black 0 0;
-  }
-  a.primary svg {
-    stroke: #6200FF;
-  }
-  a.primary svg:hover {
-    stroke: #9655FF;
   }
   a.secondary svg {
     stroke: rgb(233, 39, 94);
