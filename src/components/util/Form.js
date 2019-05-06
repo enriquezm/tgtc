@@ -58,7 +58,7 @@ class Form extends React.Component {
   render() {
     return (
       <Container 
-        method="post" 
+        method="POST" 
         onSubmit={this.handleSubmit}
         name="contact"
         data-netlify="true"
