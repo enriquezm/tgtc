@@ -24,72 +24,38 @@ const Row = styled.div`
   }
 `;
 
-class Form extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      firstName: "",
-      email: "",
-      message: ""
-    }
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value
-    });
-  }
-  handleSubmit(event){
-    console.log(`Form from ${this.state.firstName} has been submitted.`);
-    this.setState(
-      {
-        firstName: "",
-        email: "",
-        message: ""
-      }
-    );
-  }
-  render() {
-    return (
-      <form
-        method="post" 
-        onSubmit={this.handleSubmit}
-        name="contact"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        >
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact" />
-          <input
-              type="text"
-              name="firstName"
-              value={this.state.firstName}
-              onChange={this.handleChange}
-              placeholder="Name"
-          />
-          <input
-              type="text"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-              placeholder="Email"
-          />
-          <textarea 
-            placeholder="Message" 
-            name="message" 
-            value={this.state.message} 
-            onChange={this.handleChange}
-          >
-          </textarea>
-          <Button type="submit">Submit</Button>
-      </form>
-    );
-  }
-}
+const Form = () => (
+  <Container
+    method="post"
+    name="contact"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    >
+    <input type="hidden" name="bot-field" />
+    <input type="hidden" name="form-name" value="contact" />
+    <Row justifyContent="space-between">
+      <input
+          type="text"
+          name="firstName"
+          placeholder="Name"
+      />
+      <input
+          type="text"
+          name="email"
+          placeholder="Email"
+      />
+      </Row>
+      <Row>
+      <textarea 
+        placeholder="Message" 
+        name="message"
+      >
+      </textarea>
+      </Row>
+      <Row justifyContent="flex-end">
+        <Button type="submit">Submit</Button>
+      </Row>
+  </Container>
+)
 
 export default Form;
