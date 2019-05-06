@@ -17,5 +17,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Heebo`,
+            variants: [`300`, `500`, `700`]
+          }
+        ]
+      }
+    }
   ],
 }

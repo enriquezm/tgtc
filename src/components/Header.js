@@ -1,22 +1,72 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import Section from './Section';
+import styled from 'styled-components';
+import AInternal from './util/AInternal';
+import Logo from './util/Logo';
 import './Header.css'
+
+const Container = styled.header`
+  animation: fadeIn 0.5s ease-in;
+  width: 100%;
+  height: 100vh;
+  h1 {
+    font-weight: 400;
+  }
+  h1,
+  p {
+  animation: slideUp 0.5s ease-in-out;
+  }
+  p {
+    animation-delay: 0.1s;
+  }
+  &.tabs > a:not(:last-child){
+    margin-right: 15px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 900px) {
+    padding: 3%;
+  }
+`;
+
+const NavBar = styled.nav`
+  margin-bottom: 200px;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const Header = (props) => {
   return (
-    <header>
-      <nav>
-        <Link to="/">
-          <h5>thatguythat.codes</h5>
-        </Link>
-        <div>
-          <Link to="/resume/">Resume</Link>
-        </div>
-      </nav>
-      {
-        props.title ? <section className="padding-xlg centered"><h1>{props.title}</h1><p>{props.description}</p></section> : <section className="padding-xlg centered"><h1>Hey there!</h1><p>My name's Myles and I'm a Frontend Engineer.</p></section>
-      }
-    </header>
+    <Section>
+      <Container>
+        <NavBar>
+          <Logo to="/">
+            tgtc
+          </Logo>
+          <div className="tabs">
+            {/* <AInternal to="/about/">About</AInternal> */}
+            <AInternal to="/resume/">Resume</AInternal>
+            {/* <AInternal to="/contact/">Contact</AInternal> */}
+          </div>
+        </NavBar>
+        {
+          props.title ? 
+          <section>
+            <h1>{props.title}</h1>
+            <p>{props.description}</p>
+          </section> 
+          : 
+          <section>
+            <h1>Myles Enriquez</h1>
+            <p>Frontend Engineer. Designer. Problem solver. That guy that codes.</p>
+          </section>
+        }
+      </Container>
+    </Section>
   )
 }
 

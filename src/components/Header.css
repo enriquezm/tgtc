@@ -4,24 +4,7 @@
   justify-content: center;
   align-items: center;
 }
-header {
-  animation: fadeIn 0.5s ease-in;
-}
-header h1, header p {
-  animation: slideUp 0.5s ease-in-out;
-}
-header p {
-  animation-delay: 0.1s;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-@media only screen and (max-width: 900px) {
-  .centered {
-    align-items: flex-start;
-  }
-}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

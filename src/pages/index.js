@@ -4,7 +4,106 @@ import { graphql, Link } from "gatsby"
 import {Code, ExternalLink} from "react-feather"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import Section from "../components/Section"
+import styled, { keyframes } from "styled-components"
 import "../global-styles.css";
+
+const Row = styled.div`
+  display: flex;
+  justify-content: ${props => props.justifyContent};
+`;
+
+const ResumeLeft = styled.div`
+  width: 50%;
+  text-align: right;
+  padding: 50px 20px;
+  border-right: 2px solid #eeeeee;
+  p {
+    margin-bottom: 10px;
+  }
+`;
+
+const ResumeRight = styled.div`
+  width: 50%;
+  padding: 50px 20px;
+  p {
+    margin-bottom: 10px;
+  }
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  @media screen and (max-width: 450px) {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+`;
+
+const Item = styled(Link)`
+  margin: 0;
+  padding: 50px 25px;
+  h4,
+  p {
+    color: white;
+  }
+  &:hover {
+    h4,
+    p {
+      animation: ${fadeIn} 2s;
+    }
+  }
+  &:nth-child(1) {
+    background-color: #8131FF;
+    &:hover {
+      background-color: #6727cc;
+    }
+  }
+  &:nth-child(2) {
+    background-color: #009FFF;
+    &:hover {
+      background-color: #007fcc;
+    }
+  }
+  &:nth-child(3) {
+    background-color: #50C5B7;
+    &:hover {
+      background-color: #409d92;
+    }
+  }
+  &:nth-child(4) {
+    background-color: #EF5A4C;
+    &:hover {
+      background-color: #bf483c;
+    }
+  }
+  &:nth-child(5) {
+    background-color: #FFBA08;
+    &:hover {
+      background-color: #cc9406;
+    }
+  }
+  &:nth-child(6) {
+    background-color: #F2AF07;
+    &:hover {
+      background-color: #c18c05;
+    }
+  }
+
+`;
+
+const fadeIn = keyframes`
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+`;
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -15,40 +114,52 @@ const IndexPage = ({ data }) => {
         <link rel="canonical" href="https://thatguythat.codes" />
       </Helmet>
       <Header />
-      <main className="flex-container">
-      <section className="flex-column">
-        <div className="flex-content">
-            <h2 className="margin-bottom-xs all-caps">Experiments</h2>
-            <p className="margin-bottom-sm font-color-light-gray-super">Check out my designs, walkthroughs, source code, and demos.</p>
-
-            <ul className="margin-bottom-md">
-            {
-              edges.map( edge => {
-                const { frontmatter } = edge.node;
-                return (
-                  <li key={frontmatter.path}>
-                    <Link 
-                    className="margin-right-xs" 
-                    to={frontmatter.path}>
-                      <h3>{frontmatter.title}</h3>
-                      <p className="font-color-light-gray-super margin-bottom-sm">{frontmatter.description}</p>
-                    </Link>
-                    {
-                      frontmatter.source ? <a className="margin-right-sm margin-bottom-md primary" href={frontmatter.source}><Code size="24" /></a> : null
-                    }
-                    {
-                      frontmatter.demo ? <a className="margin-right-sm margin-bottom-md secondary" href={frontmatter.demo}><ExternalLink size="24"/></a> : null
-                    }
-                    {/* <p className="font-color-light-gray-super margin-top-sm">Tagged as <b className="tagger">{frontmatter.tag}</b></p> */}
-                  <hr></hr>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
-      </section>
-    </main>
+      <Section centered>
+        <h3>Projects</h3>
+          <Grid>
+          {
+            edges.map( edge => {
+              const { frontmatter } = edge.node;
+              return (
+                <Item to={frontmatter.path}>
+                  <h4>{frontmatter.title}</h4>
+                  <p>{frontmatter.description}</p>
+                </Item>
+              )
+            })
+          }
+          </Grid>
+       </Section>
+      <Section centered>
+        <h3>Experience</h3>
+        <Row justifyContent="center">
+          <ResumeLeft>
+            <p><b>Jan 2017 - Present</b></p>
+          </ResumeLeft>
+          <ResumeRight>
+            <p><b>Web Specialist @ UNLV</b></p>
+            <p>Maintain Degrees Directory. Report Google Analytics. Minor Web Development.</p>
+          </ResumeRight>
+        </Row>
+        <Row justifyContent="center">
+          <ResumeLeft>
+            <p><b>Web Developer @ DCDC</b></p>
+            <p>Develop websites from wireframes and mockups. Find and correct bugs on existing sites.</p>
+          </ResumeLeft>
+          <ResumeRight>
+            <p><b>Jan 2016 - Apr 2016</b></p>
+          </ResumeRight>
+        </Row>
+        <Row justifyContent="center">
+          <ResumeLeft>
+            <p><b>May 2015 - Jan 2016</b></p>
+          </ResumeLeft>
+          <ResumeRight>
+            <p><b>Web & Design Assistant @ DCDC</b></p>
+            <p>Design and create social media banners. Design and create surveyed infographics.</p>
+          </ResumeRight>
+        </Row>
+      </Section>
       <Footer />
     </div>
   );
@@ -71,8 +182,6 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
-            source
-            demo
             description
             tag
           }
