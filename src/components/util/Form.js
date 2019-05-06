@@ -57,8 +57,8 @@ class Form extends React.Component {
   }
   render() {
     return (
-      <Container 
-        method="POST" 
+      <form
+        method="post" 
         onSubmit={this.handleSubmit}
         name="contact"
         data-netlify="true"
@@ -66,7 +66,6 @@ class Form extends React.Component {
         >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
-        <Row justifyContent="space-between">
           <input
               type="text"
               name="firstName"
@@ -81,8 +80,6 @@ class Form extends React.Component {
               onChange={this.handleChange}
               placeholder="Email"
           />
-        </Row>
-        <Row>
           <textarea 
             placeholder="Message" 
             name="message" 
@@ -90,11 +87,8 @@ class Form extends React.Component {
             onChange={this.handleChange}
           >
           </textarea>
-        </Row>
-        <Row justifyContent="flex-end">
           <Button type="submit">Submit</Button>
-        </Row>
-      </Container>
+      </form>
     );
   }
 }
