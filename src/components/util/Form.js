@@ -46,7 +46,7 @@ class Form extends React.Component {
   }
   handleSubmit(event){
     event.preventDefault();
-    alert(`Thank you ${this.state.firstName}!`);
+    console.log(`Form from ${this.state.firstName} has been submitted.`);
     this.setState(
       {
         firstName: "",
@@ -83,7 +83,13 @@ class Form extends React.Component {
           />
         </Row>
         <Row>
-          <textarea placeholder="Message" name="message" value={this.state.message} onChange={this.handleChange}></textarea>
+          <textarea 
+            placeholder="Message" 
+            name="message" 
+            value={this.state.message} 
+            onChange={this.handleChange}
+          >
+          </textarea>
         </Row>
         <Row justifyContent="flex-end">
           <Button type="submit">Submit</Button>
