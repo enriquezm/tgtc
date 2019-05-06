@@ -6,6 +6,7 @@ import Footer from "../components/Footer"
 import Section from "../components/Section"
 import styled, { keyframes } from "styled-components"
 import "../global-styles.css";
+import { ArrowRight } from 'react-feather';
 
 const Row = styled.div`
   display: flex;
@@ -59,10 +60,14 @@ const Item = styled(Link)`
   p {
     color: white;
   }
+  svg {
+    stroke: white;
+    transition: all 0.2s;
+  }
   &:hover {
-    h4,
-    p {
-      animation: ${fadeIn} 2s;
+    svg {
+      transform: translateX(100%);
+      transition: all 0.3s;
     }
   }
   &:nth-child(1) {
@@ -101,7 +106,11 @@ const Item = styled(Link)`
       background-color: #c18c05;
     }
   }
-
+  @media screen and (max-width: 768px) {
+    svg {
+      display: none;
+    }
+  }
 `;
 
 const IndexPage = ({ data }) => {
@@ -123,6 +132,7 @@ const IndexPage = ({ data }) => {
                 <Item to={frontmatter.path}>
                   <h4>{frontmatter.title}</h4>
                   <p>{frontmatter.description}</p>
+                  <ArrowRight />
                 </Item>
               )
             })
