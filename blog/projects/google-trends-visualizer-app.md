@@ -20,3 +20,4 @@ You can view the source code for this project on [github](https://github.com/enr
 Conclusion:
 
 - I technically did finish the application but there were a couple things I wasn't too happy about. For one, I would use an array to store the states of all "trends". The reason for this would be because there would be built in methods I could run that JS would provide.
+- Second, each component should have it's own timer. I did have this in mind at first, but never got to it.
