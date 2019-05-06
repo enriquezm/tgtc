@@ -30,7 +30,7 @@ const Container = styled.div`
 const ResumePage = () => {
   return (
     <Resume>
-      <Header viewHeight="70vh" title="Resume" description="What I've done and what I can do." />
+      <Header viewHeight="50vh" title="Resume" description="What I've done and what I can do." />
       <Section>
         <Container>
           <h2>Education</h2>
