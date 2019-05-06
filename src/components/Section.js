@@ -5,7 +5,8 @@ const Section = styled.section`
   margin: 0 auto;
   padding: 3% 0;
   h3:first-child {
-    text-align: ${props => props.centered ? "center" : "left"}
+    text-align: ${props => props.centered ? "center" : "left"};
+    margin-bottom: 50px;
   }
   background-color: ${props => props.bgColor}
 `;
