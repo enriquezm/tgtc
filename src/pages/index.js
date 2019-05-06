@@ -122,7 +122,7 @@ const IndexPage = ({ data }) => {
         <title>That Guy That Codes</title>
         <link rel="canonical" href="https://thatguythat.codes" />
       </Helmet>
-      <Header />
+      <Header full />
       <Section centered>
         <h3>Projects</h3>
           <Grid>

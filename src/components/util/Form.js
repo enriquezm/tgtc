@@ -18,7 +18,7 @@ const Row = styled.div`
   }
   input,
   textarea {
-    padding: 5px;
+    padding: 5px 10px;
     font-weight: 300;
     border: none;
   }

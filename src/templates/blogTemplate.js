@@ -5,9 +5,11 @@ import styled from 'styled-components';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Section from '../components/Section';
+import Contact from '../components/Contact';
 
 const PostContentContainer = styled.div`
   max-width: 768px;
+  margin: 0 auto;
   padding: 2%;
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
@@ -49,7 +51,7 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   const html = markdownRemark.html;
   return (
     <div>
-      <Header viewHeight="100vh" title={title} description={description} />
+      <Header title={title} description={description} />
       <LineBreak />
       <main>
         <Section>
@@ -58,7 +60,7 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
           </PostContentContainer>
         </Section>
       </main>
-
+      <Contact />
       <Footer />
     </div>
   )

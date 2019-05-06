@@ -8,7 +8,7 @@ import './Header.css'
 const Container = styled.header`
   animation: fadeIn 0.5s ease-in;
   width: 100%;
-  height: ${props => props.viewHeight || "100vh"};
+  margin-bottom: 10%;
   h1 {
     font-weight: 400;
   }
