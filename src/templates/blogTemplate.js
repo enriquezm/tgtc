@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql} from 'gatsby';
 import '../global-styles.css';
 import styled from 'styled-components';
 import Header from '../components/Header';
@@ -24,11 +24,15 @@ const PostContentContainer = styled.div`
       list-style: circle;
     }
   }
+  @media screen and (max-width: 450px) {
+    padding: 3%;
+  }
 `;
   
   
 const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql query below
   
+  // eslint-disable-next-line
   const {prev, next} = pageContext; 
 
   const {markdownRemark} = data; // data.markdownRemark holds our post data
@@ -37,7 +41,7 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   const html = markdownRemark.html;
   return (
     <div>
-      <Header viewHeight="70vh" title={title} description={description} />
+      <Header viewHeight="100vh" title={title} description={description} />
       <main>
         <Section>
           <PostContentContainer className="flex-content">
