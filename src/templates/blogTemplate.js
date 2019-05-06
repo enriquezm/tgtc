@@ -28,6 +28,12 @@ const PostContentContainer = styled.div`
     padding: 3%;
   }
 `;
+
+const LineBreak = styled.hr`
+  border: 3px dashed #009FFF;
+  width: 25%;
+  margin: 30px auto;
+`;
   
   
 const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql query below
@@ -42,6 +48,7 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   return (
     <div>
       <Header viewHeight="100vh" title={title} description={description} />
+      <LineBreak />
       <main>
         <Section>
           <PostContentContainer className="flex-content">
