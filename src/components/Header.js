@@ -66,7 +66,7 @@ const Header = (props) => {
           : 
           <section>
             <h1>Myles Enriquez</h1>
-            <p>I'm that guy that codes.</p>
+            <p>User interface engineer.</p>
           </section>
         }
       </Container>

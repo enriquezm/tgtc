@@ -8,6 +8,7 @@ import Section from "../components/Section"
 import styled, { keyframes } from "styled-components"
 import "../global-styles.css";
 import { ArrowRight } from 'react-feather';
+import P from "../components/util/P";
 
 const Row = styled.div`
   display: flex;
@@ -57,6 +58,7 @@ const fadeIn = keyframes`
 const Item = styled(Link)`
   margin: 0;
   padding: 50px 25px;
+  text-align: center;
   h4,
   p {
     color: white;
@@ -96,15 +98,15 @@ const Item = styled(Link)`
     }
   }
   &:nth-child(5) {
-    background-color: #FFBA08;
+    background-color: #e5a707;
     &:hover {
-      background-color: #cc9406;
+      background-color: #b78505;
     }
   }
   &:nth-child(6) {
-    background-color: #F2AF07;
+    background-color: #554D61;
     &:hover {
-      background-color: #c18c05;
+      background-color: #4d4658;
     }
   }
   @media screen and (max-width: 768px) {
@@ -125,6 +127,7 @@ const IndexPage = ({ data }) => {
       <Header full />
       <Section centered>
         <h3>Projects</h3>
+        <P align="center">A mixture of websites, applications, designs, and experiments.</P>
           <Grid>
           {
             edges.map( edge => {
@@ -142,6 +145,7 @@ const IndexPage = ({ data }) => {
        </Section>
       <Section centered>
         <h3>Experience</h3>
+        <P align="center">A little of where I've been and what I did.</P>
         <Row justifyContent="center">
           <ResumeLeft>
             <p><b>Jan 2017 - Present</b></p>

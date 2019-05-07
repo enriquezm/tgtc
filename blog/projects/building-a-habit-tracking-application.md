@@ -2,7 +2,7 @@
 path: /projects/habit-rabbit
 date: 2019-02-05T22:00:00.580Z
 title: Habit Rabbit App
-description: Building a Habit Tracking App using React
+description: Building a Habit Tracking App using React.
 source: 'https://github.com/enriquezm/habbit-rabbit'
 demo: 'https://codesandbox.io/s/3v8l0o7p7p'
 tag: 'Concept'

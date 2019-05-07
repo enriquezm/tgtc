@@ -10,8 +10,8 @@ const Container = styled.footer`
     margin-bottom: 25px;
   }
   p {
-    color: white;
-    font-size: 16px;
+    color: #c2c0c4;
+    font-size: 14px;
     text-align: center;
   }
   a svg {
