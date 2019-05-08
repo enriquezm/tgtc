@@ -141,7 +141,7 @@ const IndexPage = ({ data }) => {
             edges.map( edge => {
               const { frontmatter } = edge.node;
               return (
-                <Item to={frontmatter.path}>
+                <Item key={frontmatter.path} to={frontmatter.path}>
                   <h4>{frontmatter.title}</h4>
                   <p>{frontmatter.description}</p>
                   <ArrowRight />

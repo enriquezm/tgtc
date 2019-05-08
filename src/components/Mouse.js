@@ -10,7 +10,20 @@ const scroll = keyframes`
   }
 `;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 const SVG = styled.svg`
+  g {
+    animation: ${fadeIn} 3s;
+    animation-delay: 2s;
+  }
   circle#Scroll-Wheel {
     animation-name: ${scroll};
     animation-duration: 1.5s;

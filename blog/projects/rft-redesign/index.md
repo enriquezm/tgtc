@@ -8,4 +8,8 @@ demo: '#'
 tag: 'Project'
 ---
 
-It's been awhile since I last redesigned an app/website so I wanted to redesign the website for MMA school that I go to, Redemption Fight Team.
+It's been awhile since I last redesigned an app/website so I gave myself the challenge to redesign the website for a MMA school that I go to, [Redemption Fight Team](http://www.redemptionfightteam.com/).
+
+The current site is not horrible, but like all websites and apps, it could always be improved.
+
+The main goal was to get users to contact the gym. 
