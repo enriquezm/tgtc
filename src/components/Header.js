@@ -8,7 +8,7 @@ import './Header.css'
 const Container = styled.header`
   animation: fadeIn 0.5s ease-in;
   width: 100%;
-  margin-bottom: 10%;
+  margin-bottom: 20%;
   h1 {
     font-weight: 400;
   }

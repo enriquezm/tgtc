@@ -8,4 +8,4 @@ demo: '#'
 tag: 'Project'
 ---
 
-Test
+It's been awhile since I last redesigned an app/website so I wanted to redesign the website for MMA school that I go to, Redemption Fight Team.

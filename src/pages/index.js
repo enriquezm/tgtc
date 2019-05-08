@@ -9,6 +9,8 @@ import styled, { keyframes } from "styled-components"
 import "../global-styles.css";
 import { ArrowRight } from 'react-feather';
 import P from "../components/util/P";
+import Mouse from "../components/Mouse";
+import Column from "../components/Column";
 
 const Row = styled.div`
   display: flex;
@@ -125,6 +127,12 @@ const IndexPage = ({ data }) => {
         <link rel="canonical" href="https://thatguythat.codes" />
       </Helmet>
       <Header full />
+      <Section>
+        <Column>
+          <Mouse />
+          <p>SCROLL</p>
+        </Column>
+      </Section>
       <Section centered>
         <h3>Projects</h3>
         <P align="center">A mixture of websites, applications, designs, and experiments.</P>
