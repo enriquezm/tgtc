@@ -133,6 +133,15 @@ const IndexPage = ({ data }) => {
           <p>SCROLL</p>
         </Column>
       </Section>
+      <Section>
+        <h3>About</h3>
+        <p>
+          I'm a UI Engineer and my goal is to build tools and websites that people want to use. This website is part portfolio, and part blog.
+        </p>
+        <p>
+          I encourage everyone to take a look at things I have posted. If you have ideas, job opportunities, or want to collaborate then shoot me a message!
+        </p>
+      </Section>
       <Section centered>
         <h3>Projects</h3>
         <P align="center">A mixture of websites, applications, designs, and experiments.</P>
@@ -206,7 +215,6 @@ export const pageQuery = graphql`
             path
             title
             description
-            tag
           }
         }
       }
