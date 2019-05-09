@@ -120,7 +120,6 @@ const Item = styled(Link)`
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
-  const windowSize = window.innerWidth;
   return (
     <div>
       <Helmet>
