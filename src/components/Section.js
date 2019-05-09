@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Section = styled.section`
+  display: ${props => props.noMobile ? "none" : "block" };
   max-width: 992px;
   margin: 0 auto;
   padding: 3% 0;
