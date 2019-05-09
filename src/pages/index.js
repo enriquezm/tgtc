@@ -120,6 +120,7 @@ const Item = styled(Link)`
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
+  const windowSize = window.innerWidth;
   return (
     <div>
       <Helmet>
@@ -127,12 +128,10 @@ const IndexPage = ({ data }) => {
         <link rel="canonical" href="https://thatguythat.codes" />
       </Helmet>
       <Header full />
-      <Section>
-        <Column>
-          <Mouse />
-          <p>SCROLL</p>
-        </Column>
-      </Section>
+      {
+        windowSize > 900 ? <Section><Column><Mouse /><p>SCROLL</p></Column></Section> : null 
+      }
+      
       <Section centered>
         <h3>Projects</h3>
         <P align="center">A mixture of websites, applications, designs, and experiments.</P>
