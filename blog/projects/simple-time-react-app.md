@@ -2,7 +2,7 @@
 path: /experimental/react-clock
 date: 2018-10-23T10:33:36.830Z
 title: Clock App
-description: A simple clock built with React
+description: A simple clock built with React.
 source: 'https://codepen.io/mylesenri/pen/vVVORw'
 demo: 'https://codepen.io/mylesenri/pen/vVVORw'
 tag: 'Experimental'

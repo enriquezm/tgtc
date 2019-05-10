@@ -1,5 +1,4 @@
 import React from 'react'
-import AInternal from './util/AInternal';
 import {GitHub, Linkedin, Codepen} from 'react-feather';
 import styled from 'styled-components';
 import './Footer.css'
@@ -11,8 +10,9 @@ const Container = styled.footer`
     margin-bottom: 25px;
   }
   p {
-    color: white;
-    font-size: 16px;
+    color: #c2c0c4;
+    font-size: 14px;
+    text-align: center;
   }
   a svg {
     stroke: #009FFF;
@@ -33,4 +33,4 @@ const Footer = () => (
   </Container>
 )
 
-export default Footer
+export default Footer;

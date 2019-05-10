@@ -1,12 +1,16 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
-import {Code, ExternalLink} from "react-feather"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import Contact from "../components/Contact"
 import Section from "../components/Section"
 import styled, { keyframes } from "styled-components"
 import "../global-styles.css";
+import { ArrowRight } from 'react-feather';
+import P from "../components/util/P";
+import Mouse from "../components/Mouse";
+import Column from "../components/Column";
 
 const Row = styled.div`
   display: flex;
@@ -42,17 +46,33 @@ const Grid = styled.div`
   }
 `;
 
+const fadeIn = keyframes`
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+`;
+
 const Item = styled(Link)`
   margin: 0;
   padding: 50px 25px;
+  text-align: center;
   h4,
   p {
     color: white;
   }
+  svg {
+    stroke: white;
+    transition: all 0.2s;
+  }
   &:hover {
-    h4,
-    p {
-      animation: ${fadeIn} 2s;
+    svg {
+      transform: translateX(100%);
+      transition: all 0.3s;
     }
   }
   &:nth-child(1) {
@@ -80,28 +100,21 @@ const Item = styled(Link)`
     }
   }
   &:nth-child(5) {
-    background-color: #FFBA08;
+    background-color: #e5a707;
     &:hover {
-      background-color: #cc9406;
+      background-color: #b78505;
     }
   }
   &:nth-child(6) {
-    background-color: #F2AF07;
+    background-color: #554D61;
     &:hover {
-      background-color: #c18c05;
+      background-color: #4d4658;
     }
   }
-
-`;
-
-const fadeIn = keyframes`
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
+  @media screen and (max-width: 768px) {
+    svg {
+      display: none;
+    }
   }
 `;
 
@@ -113,17 +126,34 @@ const IndexPage = ({ data }) => {
         <title>That Guy That Codes</title>
         <link rel="canonical" href="https://thatguythat.codes" />
       </Helmet>
-      <Header />
+      <Header full />
+      <Section noMobile>
+        <Column>
+          <Mouse />
+          <p>SCROLL</p>
+        </Column>
+      </Section>
+      <Section>
+        <h3>About</h3>
+        <p>
+          I'm a UI Engineer and my goal is to build tools and websites that people want to use. This website is part portfolio, and part blog.
+        </p>
+        <p>
+          I encourage everyone to take a look at things I have posted. If you have ideas, job opportunities, or want to collaborate then shoot me a message!
+        </p>
+      </Section>
       <Section centered>
         <h3>Projects</h3>
+        <P align="center">A mixture of websites, applications, designs, and experiments.</P>
           <Grid>
           {
             edges.map( edge => {
               const { frontmatter } = edge.node;
               return (
-                <Item to={frontmatter.path}>
+                <Item key={frontmatter.path} to={frontmatter.path}>
                   <h4>{frontmatter.title}</h4>
                   <p>{frontmatter.description}</p>
+                  <ArrowRight />
                 </Item>
               )
             })
@@ -132,6 +162,7 @@ const IndexPage = ({ data }) => {
        </Section>
       <Section centered>
         <h3>Experience</h3>
+        <P align="center">A little of where I've been and what I did.</P>
         <Row justifyContent="center">
           <ResumeLeft>
             <p><b>Jan 2017 - Present</b></p>
@@ -160,6 +191,7 @@ const IndexPage = ({ data }) => {
           </ResumeRight>
         </Row>
       </Section>
+      <Contact />
       <Footer />
     </div>
   );
@@ -183,7 +215,6 @@ export const pageQuery = graphql`
             path
             title
             description
-            tag
           }
         }
       }

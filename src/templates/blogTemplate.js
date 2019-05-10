@@ -1,12 +1,16 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql} from 'gatsby';
 import '../global-styles.css';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Section from '../components/Section';
+import Contact from '../components/Contact';
 
 const PostContentContainer = styled.div`
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 2%;
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
   }
@@ -24,11 +28,21 @@ const PostContentContainer = styled.div`
       list-style: circle;
     }
   }
+  @media screen and (max-width: 450px) {
+    padding: 3%;
+  }
+`;
+
+const LineBreak = styled.hr`
+  border: 3px dashed #009FFF;
+  width: 25%;
+  margin: 30px auto;
 `;
   
   
 const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql query below
   
+  // eslint-disable-next-line
   const {prev, next} = pageContext; 
 
   const {markdownRemark} = data; // data.markdownRemark holds our post data
@@ -37,7 +51,8 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   const html = markdownRemark.html;
   return (
     <div>
-      <Header viewHeight="70vh" title={title} description={description} />
+      <Header title={title} description={description} />
+      <LineBreak />
       <main>
         <Section>
           <PostContentContainer className="flex-content">
@@ -45,7 +60,7 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
           </PostContentContainer>
         </Section>
       </main>
-
+      <Contact />
       <Footer />
     </div>
   )

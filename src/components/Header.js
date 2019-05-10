@@ -8,7 +8,7 @@ import './Header.css'
 const Container = styled.header`
   animation: fadeIn 0.5s ease-in;
   width: 100%;
-  height: ${props => props.viewHeight || "100vh"};
+  margin-bottom: 20%;
   h1 {
     font-weight: 400;
   }
@@ -18,6 +18,7 @@ const Container = styled.header`
   }
   p {
     animation-delay: 0.1s;
+    color: #949494;
   }
   &.tabs > a:not(:last-child){
     margin-right: 15px;
@@ -65,7 +66,7 @@ const Header = (props) => {
           : 
           <section>
             <h1>Myles Enriquez</h1>
-            <p>Frontend Engineer. Designer. Problem solver. That guy that codes.</p>
+            <p>I'm a User Interface Engineer</p>
           </section>
         }
       </Container>
