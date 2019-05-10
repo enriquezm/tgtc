@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Section = styled.section`
   max-width: 992px;
   margin: 0 auto;
-  padding: 3% 0;
+  padding: 5% 2%;
   background-color: ${props => props.bgColor};
   h3:first-child {
     text-align: ${props => props.centered ? "center" : "left"};

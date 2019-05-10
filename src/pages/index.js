@@ -9,8 +9,7 @@ import styled, { keyframes } from "styled-components"
 import "../global-styles.css";
 import { ArrowRight } from 'react-feather';
 import P from "../components/util/P";
-import Mouse from "../components/Mouse";
-import Column from "../components/Column";
+import ContainerFluid from "../components/util/ContainerFluid";
 
 const Row = styled.div`
   display: flex;
@@ -43,17 +42,6 @@ const Grid = styled.div`
   @media screen and (max-width: 450px) {
     grid-template-columns: 1fr;
     grid-gap: 0;
-  }
-`;
-
-const fadeIn = keyframes`
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
   }
 `;
 
@@ -127,24 +115,17 @@ const IndexPage = ({ data }) => {
         <link rel="canonical" href="https://thatguythat.codes" />
       </Helmet>
       <Header full />
-      <Section noMobile>
-        <Column>
-          <Mouse />
-          <p>SCROLL</p>
-        </Column>
-      </Section>
-      <Section>
-        <h3>About</h3>
-        <p>
-          I'm a UI Engineer and my goal is to build tools and websites that people want to use. This website is part portfolio, and part blog.
-        </p>
-        <p>
-          I encourage everyone to take a look at things I have posted. If you have ideas, job opportunities, or want to collaborate then shoot me a message!
-        </p>
-      </Section>
+      <ContainerFluid bgColor="#35303c" color="#c2c0c4">
+        <Section centered>
+          <h3>About</h3>
+          <P align="center">
+            I'm a UI Engineer and my goal is to build tools and websites that people want to use. This website is part portfolio, and part blog.
+          </P>
+        </Section>
+      </ContainerFluid>
       <Section centered>
         <h3>Projects</h3>
-        <P align="center">A mixture of websites, applications, designs, and experiments.</P>
+        <P align="center">Here are a mixture of websites, applications, designs, and experiments.</P>
           <Grid>
           {
             edges.map( edge => {

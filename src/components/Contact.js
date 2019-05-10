@@ -2,6 +2,7 @@ import React from 'react';
 import {GitHub, Linkedin, Mail} from 'react-feather';
 import styled from 'styled-components';
 import Form from './util/Form';
+import P from './util/P';
 
 const ContainerFluid = styled.section`
     background: #554d60;
@@ -36,6 +37,7 @@ const Contact = () => (
     <ContainerFluid>
         <ContainerFixed>
             <h3>Get in touch</h3>
+            <P align="center" color="white">Have a job opportunity, idea, or want to collaborate? Shoot me a message!</P>
             <Row>
                 <a href="mailto:enri.myles@gmail.com">
                     <Mail />

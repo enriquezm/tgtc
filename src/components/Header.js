@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import AInternal from './util/AInternal';
 import Logo from './util/Logo';
 import './Header.css'
+import Mouse from './Mouse';
 
 const Container = styled.header`
   animation: fadeIn 0.5s ease-in;
@@ -27,14 +28,21 @@ const Container = styled.header`
     display: flex;
     justify-content: space-between;
   }
-  @media only screen and (max-width: 900px) {
-    padding: 3%;
+`;
+
+const Center = styled.div`
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 `;
 
 const NavBar = styled.nav`
   margin-bottom: 200px;
-  padding-top: 25px;
+  padding-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +54,7 @@ const NavBar = styled.nav`
 const Header = (props) => {
   return (
     <Section>
-      <Container viewHeight={props.viewHeight}>
+      <Container>
         <NavBar>
           <Logo to="/">
             tgtc
@@ -66,9 +74,12 @@ const Header = (props) => {
           : 
           <section>
             <h1>Myles Enriquez</h1>
-            <p>I'm a User Interface Engineer</p>
+            <p>User Interface Engineer</p>
           </section>
         }
+        <Center>
+          <Mouse />
+        </Center>
       </Container>
     </Section>
   )
