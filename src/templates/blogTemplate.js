@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Section from '../components/Section';
 import Contact from '../components/Contact';
+import '../prism-styles-override.css';
 
 const PostContentContainer = styled.div`
   max-width: 768px;

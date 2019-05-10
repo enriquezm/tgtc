@@ -2,7 +2,7 @@
 path: /project/rft-website-redesign
 date: 2019-05-07T21:51:10.754Z
 title: Redemption Fight Team Redesign
-description: I redesigned a martial art's gym website.
+description: The redesigning of a martial art gym's website.
 source: '#'
 demo: '#'
 tag: 'Project'
@@ -46,3 +46,72 @@ Those needs are:
 - Instructors (need to know how their kids will be with for those 2 hours)
 
 Once these needs are met, you could assume that they would want to join. And that's were the convenience of joining is crucial.
+
+Now I want to take a step back and mention that this is purely my assumption. I did not interview any users.
+
+With this information I structured the site map like so:
+
+        Home
+        |_Instructors
+        |_Pricing
+        |_Programs
+        |_Schedule
+        |_Contact
+
+It's a lot simpler and provides the customer (parent) the information that they would need.
+
+### Home Page
+
+Here's what I designed for the home page:
+
+![Mockup of home page layout.](./Home.png)
+
+Notes on the home page:
+
+- Has more contrast with call to action buttons.
+- Background images shows what a student would be doing in class.
+- Clear explanation of what programs are offered.
+- Display of pricing options. Giving the "Double" plan more contrast since it brings in more money for the business.
+- Call to action at end to "hook in" the customer and seal the deal.
+
+
+### Sub Pages
+
+The sub-pages follow the same format to contain consistency. 
+
+They consist of having:
+
+- A header which describes where they are.
+- Breadcrumbs which let the customer know where they are within the site.
+- Content area displaying what they need in more detail.
+- And a call to action to, again, "hook in" the customer.
+
+![Mock up for instructors page.](./Instructors.png)
+![Mock up for programs page.](./Programs.png)
+![Mock up for schedule page.](./Schedule.png)
+
+
+### Contact Page
+
+The contact page is where we seal the deal. This means that it needs to be clear and easy to use. It also has to have the last minute information that the customer may need.
+
+This includes, but is not limited to:
+- Location on map
+- Email (not everyone likes to call these days)
+- Phone
+- Address
+- Form
+
+![Mock up for contact page.](./Contact.png)
+
+The reason for having a interactive google map and an address is because of the fact that not all customers may be comfortable with using the interactive map. To make sure they don't leave because of frustration, we include an easy to read address.
+
+The reason for having an email and a form is pretty much because of the reasoning above. Not all users want to use a form. Some times a form may seem untrustworthy, so as an alternative we include an email address so that customers can use an mail client that they have more confidence in.
+
+### Conclusion
+
+This is only the first phase of these mockups and the design may change in the future. Essentially, I just wanted to try to things with these designs: (1) trip off the fat, and (2) define and server a target audience.
+
+
+
+
