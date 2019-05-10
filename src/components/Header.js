@@ -14,7 +14,7 @@ const Container = styled.header`
   }
   h1,
   p {
-  animation: slideUp 0.5s ease-in-out;
+    animation: slideUp 0.5s ease-in-out;
   }
   p {
     animation-delay: 0.1s;
