@@ -58,7 +58,7 @@ const Header = (props) => {
       <Container>
         <NavBar>
           <Logo to="/">
-            TCTC
+            TGTC
           </Logo>
           <div className="tabs">
             {/* <AInternal to="/about/">About</AInternal> */}
