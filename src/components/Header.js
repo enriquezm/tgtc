@@ -3,6 +3,7 @@ import Section from './Section';
 import styled from 'styled-components';
 import AInternal from './util/AInternal';
 import Logo from './util/Logo';
+import LogoGraphic from './LogoGraphic';
 import './Header.css'
 import Mouse from './Mouse';
 
@@ -57,7 +58,7 @@ const Header = (props) => {
       <Container>
         <NavBar>
           <Logo to="/">
-            tgtc
+            <LogoGraphic />
           </Logo>
           <div className="tabs">
             {/* <AInternal to="/about/">About</AInternal> */}
