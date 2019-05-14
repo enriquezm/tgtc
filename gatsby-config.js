@@ -16,6 +16,7 @@ module.exports = {
         name: "markdown-pages",
       },
     },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -30,16 +31,16 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 992,
-            },
-          },
+          // {
+          //   resolve: `gatsby-remark-images`,
+          //   options: {
+          //     maxWidth: 768,
+          //   },
+          // },
         ],
       },
     },
-    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

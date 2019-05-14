@@ -22,15 +22,17 @@ So the first step for me was to define a goal and that goal was to get curious c
 
 The original site map looked like so:
 
-        Home
-        |_Programs
-        |_Schedule
-        |_BJJ Videos
-        |_About Us
-        | |_Instructors
-        | |_Social
-        |
-        |_Contact
+```javascript
+Home
+|_Programs
+|_Schedule
+|_BJJ Videos
+|_About Us
+| |_Instructors
+| |_Social
+|
+|_Contact
+```
 
 All the content for a working website was there, but it was not placed in the correct areas (if we're talking about getting those conversions).
 
@@ -51,12 +53,14 @@ Now I want to take a step back and mention that this is purely my assumption. I 
 
 With this information I structured the site map like so:
 
-        Home
-        |_Instructors
-        |_Pricing
-        |_Programs
-        |_Schedule
-        |_Contact
+```javascript
+Home
+|_Instructors
+|_Pricing
+|_Programs
+|_Schedule
+|_Contact
+```
 
 It's a lot simpler and provides the customer (parent) the information that they would need.
 

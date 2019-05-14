@@ -35,9 +35,9 @@ const PostContentContainer = styled.div`
 `;
 
 const LineBreak = styled.hr`
-  border: 3px dashed #009FFF;
-  width: 25%;
-  margin: 30px auto;
+  width: 100%;
+  border: 3px solid #8131FF;
+  margin-bottom: 50px;
 `;
   
   
@@ -53,10 +53,10 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   return (
     <div>
       <Header title={title} description={description} />
-      <LineBreak />
       <main>
         <Section>
           <PostContentContainer className="flex-content">
+          <LineBreak />
             <div dangerouslySetInnerHTML={{__html: html}} />
           </PostContentContainer>
         </Section>
