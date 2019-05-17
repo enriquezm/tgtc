@@ -1,8 +1,8 @@
 import React from 'react';
 import {GitHub, Linkedin, Mail} from 'react-feather';
 import styled from 'styled-components';
-import Form from './util/Form';
 import P from './util/P';
+import Bold from './util/Bold';
 
 const ContainerFluid = styled.section`
     background: #554d60;
@@ -23,12 +23,22 @@ const Row = styled.div`
     justify-content: space-around;
     align-items: center;
     a {
+        border-radius: 8px;
+        width: 200px;
+        padding: 2%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        &:hover {
+            background-color: #63576f;
+        }
         p {
             color: #eeedef;
+            margin-bottom: 5px;
+            &::first-child {
+                font-weight: 900;
+            }
         }
     }
 `;
@@ -41,18 +51,20 @@ const Contact = () => (
             <Row>
                 <a href="mailto:enri.myles@gmail.com">
                     <Mail />
-                    <p>Email</p>
+                    <p><Bold>Email</Bold></p>
+                    <p>enri.myles@gmail.com</p>
                 </a>
                 <a href="https://www.linkedin.com/in/mylesenriquez/">
                     <Linkedin />
-                    <p>LinkedIn</p>
+                    <p><Bold>LinkedIn</Bold></p>
+                    <p>mylesenriquez</p>
                 </a>
                 <a href="https://github.com/enriquezm">
                     <GitHub />
-                    <p>Github</p>
+                    <p><Bold>Github</Bold></p>
+                    <p>enriquezm</p>
                 </a>
             </Row>
-            <Form />
         </ContainerFixed>
     </ContainerFluid>
 )
