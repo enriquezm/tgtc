@@ -6,11 +6,14 @@ import Logo from './util/Logo';
 import LogoGraphic from './LogoGraphic';
 import './Header.css'
 import Mouse from './Mouse';
+import Button from './util/Button';
 
 const Container = styled.header`
   width: 100%;
   h1 {
-    font-weight: 400;
+    font-weight: 900;
+    font-size: 72px;
+    color: white;
   }
   h1,
   p {
@@ -18,7 +21,9 @@ const Container = styled.header`
   }
   p {
     animation-delay: 0.1s;
-    color: #949494;
+    padding-left: 10px;
+    color: white;
+    border-left: 2px solid #40FFC1;
   }
   &.tabs > a:not(:last-child){
     margin-right: 15px;
@@ -26,6 +31,9 @@ const Container = styled.header`
   nav {
     display: flex;
     justify-content: space-between;
+  }
+  section {
+    width: 75%;
   }
 `;
 
@@ -72,8 +80,10 @@ const Header = (props) => {
           </section> 
           : 
           <section>
-            <h1>Myles Enriquez</h1>
-            <p>User Interface Engineer</p>
+            <h1>Hello! My name is Myles.</h1>
+            <p>I'm User Interface Engineer focused on designing and building web applications.</p>
+            <Button primary>what i can do</Button>
+            <Button>let's work together</Button>
           </section>
         }
         <Center>
