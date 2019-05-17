@@ -5,7 +5,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Contact from "../components/Contact"
 import Section from "../components/Section"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import "../global-styles.css";
 import { ArrowRight } from 'react-feather';
 import P from "../components/util/P";
@@ -119,7 +119,7 @@ const IndexPage = ({ data }) => {
         <Section centered>
           <h3>About</h3>
           <P align="center">
-            I'm a UI Engineer and my goal is to build tools and websites that people want to use. This website is part portfolio, and part blog.
+            I started my coding career in college and eventually received my degree in computer science. After graduating, I dove in the JavaScript world and have been teaching myself ever since. I mainly work with a JavaScript heavy stack but have some experience with others as well.
           </P>
         </Section>
       </ContainerFluid>
