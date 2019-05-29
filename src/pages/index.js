@@ -99,6 +99,12 @@ const Item = styled(Link)`
       background-color: #4d4658;
     }
   }
+  &:nth-child(7) {
+    background-color: #50C5B7;
+    &:hover {
+      background-color: #409d92;
+    }
+  }
   @media screen and (max-width: 768px) {
     svg {
       display: none;
@@ -183,6 +189,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
+      limit: 6
       sort: { 
         order: DESC, 
         fields: [frontmatter___date] 
