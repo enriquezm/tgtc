@@ -90,8 +90,8 @@ They consist of having:
 - Content area displaying what they need in more detail.
 - And a call to action to, again, "hook in" the customer.
 
-![Mock up for instructors page.](./Instructors.png)
-![Mock up for programs page.](./Programs.png)
+![Mock up for instructors page.](./Instructors.png) 
+![Mock up  for programs page.](./Programs.png)
 ![Mock up for schedule page.](./Schedule.png)
 
 
