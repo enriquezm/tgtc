@@ -119,7 +119,7 @@ const IndexPage = ({ data }) => {
         <Section centered>
           <h3>About</h3>
           <P align="center">
-            I started my coding career in college and eventually received my degree in computer science. After graduating, I dove in the JavaScript world and have been teaching myself ever since. I mainly work with a JavaScript heavy stack but have some experience with others as well.
+            I started my coding career in college and eventually received my degree in computer science. After graduating, I dove into the JavaScript world and have been teaching myself ever since. I'm always trying to improve my problem-solving skills and I love teamwork/collaboration.I mainly work with JavaScript but am always trying to learn new programming language concepts as a whole.
           </P>
         </Section>
       </ContainerFluid>
