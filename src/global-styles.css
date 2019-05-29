@@ -74,6 +74,9 @@
   a.secondary svg:hover {
     stroke: #FF2964;
   }
+  code.language-text {
+    font-size: 14px;
+  }
   .flex-container {
     display: flex;
   }
