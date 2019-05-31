@@ -1,7 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
-import AInternal from "../components/util/AInternal";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
@@ -126,14 +124,14 @@ const IndexPage = ({ data }) => {
       <Header full />
       <ContainerFluid bgColor="#35303c" color="#c2c0c4">
         <Section centered>
-          <h3>About</h3>
+          <h3>A little about me</h3>
           <P align="center">
-            I started my coding career in college and eventually received my degree in computer science. After graduating, I dove into the JavaScript world and have been teaching myself ever since. I'm always trying to improve my problem-solving skills and I love teamwork/collaboration.I mainly work with JavaScript but am always trying to learn new programming language concepts as a whole.
+            I started coding in college and after many sleepless nights received my degree in computer science. After graduating, I launched off into the JavaScript universe and have been teaching myself ever since. I'm pretty open minded when it comes to learning and I enjoy pushing myself to get better a little bit every day. I mainly work with JavaScript but I am always trying to learn new programming language concepts as a whole.
           </P>
         </Section>
       </ContainerFluid>
       <Section centered>
-        <h3>Projects</h3>
+        <h3>What I've been up to</h3>
         <P align="center">Here are a mixture of websites, applications, designs, and experiments.</P>
           <Grid>
           {
@@ -162,16 +160,16 @@ const IndexPage = ({ data }) => {
           </ResumeLeft>
           <ResumeRight>
             <p><b>Web Specialist @ UNLV</b></p>
-            <p>Maintain Degrees Directory. Report Google Analytics. Minor Web Development.</p>
+            <p>Maintain <a href="https://www.unlv.edu/academics/degrees">Degrees Directory</a>. Report Google Analytics on department websites. Minor Web Development within Drupal and Wordpress CMS.</p>
           </ResumeRight>
         </Row>
         <Row justifyContent="center">
           <ResumeLeft>
             <p><b>Web Developer @ DCDC</b></p>
-            <p>Develop websites from wireframes and mockups. Find and correct bugs on existing sites.</p>
+            <p>Develop websites from provided wireframes and mockups. Find and correct bugs on existing Wordpress sites.</p>
           </ResumeLeft>
           <ResumeRight>
-            <p><b>Jan 2016 - Apr 2016</b></p>
+            <p><b>Jan 2016 - Apr 2016</b></p> 
           </ResumeRight>
         </Row>
         <Row justifyContent="center">
@@ -180,7 +178,7 @@ const IndexPage = ({ data }) => {
           </ResumeLeft>
           <ResumeRight>
             <p><b>Web & Design Assistant @ DCDC</b></p>
-            <p>Design and create social media banners. Design and create surveyed infographics.</p>
+            <p>Design and create social media banners using Adobe Illustrator/Photoshop. Design and create surveyed infographics.</p>
           </ResumeRight>
         </Row>
       </Section>
