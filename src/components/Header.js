@@ -6,6 +6,7 @@ import Logo from './util/Logo';
 import LogoGraphic from './LogoGraphic';
 import './Header.css'
 import Mouse from './Mouse';
+import { Helmet } from 'react-helmet';
 
 const Container = styled.header`
   width: 100%;
@@ -59,6 +60,11 @@ const Header = (props) => {
   return (
     <Section>
       <Container>
+      <Helmet>
+        <title>That Guy That Codes</title>
+        <link rel="canonical" href="https://thatguythat.codes" />
+        <html lang="en" />
+      </Helmet>
         <NavBar>
           <Logo to="/">
             TGTC
