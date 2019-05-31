@@ -65,6 +65,7 @@ const Header = (props) => {
           </Logo>
           <div>
             {/* <AInternal to="/about/">About</AInternal> */}
+            <AInternal to="/">Home</AInternal>
             <AInternal to="/projects/">Projects</AInternal>
             <AInternal to="/resume/">Resume</AInternal>
             {/* <AInternal to="/contact/">Contact</AInternal> */}
