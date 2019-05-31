@@ -45,6 +45,11 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  div {
+    a {
+      margin-left: 20px;
+    }
+  }
   @media only screen and (max-width: 900px) {
     margin-bottom: 100px;
   }
@@ -58,8 +63,9 @@ const Header = (props) => {
           <Logo to="/">
             TGTC
           </Logo>
-          <div className="tabs">
+          <div>
             {/* <AInternal to="/about/">About</AInternal> */}
+            <AInternal to="/projects/">Projects</AInternal>
             <AInternal to="/resume/">Resume</AInternal>
             {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
