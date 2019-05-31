@@ -17,9 +17,9 @@ The actual steps to each of these projects in this series is to:
 2. Break it into a components
 3. Organize the components into a hierarchy
 4. Build a static prototype (using react props)
-5. Build into a functional prototype (using react props and state)
+5. Build into a functioning prototype (using react props and state)
 
-My main goal in this series is to get a better understanding of component composition and testing within a React application. I will be using the official [Thinking In React Tutorial](https://reactjs.org/docs/thinking-in-react.html) to give my process a little structure.
+My main goal in this series is to get a better understanding of component composition within a React application. I will be using the official [Thinking In React Tutorial](https://reactjs.org/docs/thinking-in-react.html) to give my process a little structure. If you don't feel like reading the whole walkthrough, you can [check out the source code on codesandbox](https://codesandbox.io/s/weather-forecast-81nnh) or [check out the live demo](https://csb-81nnh.netlify.com/).
 
 ## The Walkthrough
 
@@ -266,7 +266,55 @@ The `<ForecastApp />` is yet another simple component because all it's doing is 
 
 With all components being build out statically, we can start to work in the data and see what components need to be functional and which ones need to handle state.
 
+First let's take a lot at the way I structured data. If this were a real app on the market, I would probably wire up to a weather API but since I'm more focused building a basic prototype, static data will do.
+
+```json
+[
+  {
+    "today": {
+      "day": 0,
+      "description": "It's warm!",
+      "location": "Cairo, Egypt",
+      "temperature": 98,
+      "followingDays": [
+        {
+          "day": 1,
+          "temp": 89,
+          "weatherStatus": 0
+        },
+        {
+          "day": 2,
+          "temp": 92,
+          "weatherStatus": 0
+        },
+        {
+          "day": 3,
+          "temp": 90,
+          "weatherStatus": 1
+        }
+      ]
+    }
+  }
+]
+```
+
+Now let me break this down. We have the name `today` with the value of an object. Inside of this object we have today's:
+- `day` number, 
+- `description`, 
+- `location`, 
+- `temperature`, and 
+- `followingDays`.
+
+Within `followingDays` we have an array of objects. Each object contains:
+- `day` number,
+- `temp`, and
+- `weatherStatus`
+
 [in the works]
 
 ### 4. Add Inverse Data Flow
 [queued]
+
+## Conclusion
+
+If you'd like to view all the source code, you can [check it out on codesandbox](https://codesandbox.io/s/weather-forecast-81nnh). You can also [checkout out the live demo](https://csb-81nnh.netlify.com/) hosted on Netlify.
