@@ -6,6 +6,7 @@ import Logo from './util/Logo';
 import LogoGraphic from './LogoGraphic';
 import './Header.css'
 import Mouse from './Mouse';
+import { Helmet } from 'react-helmet';
 
 const Container = styled.header`
   width: 100%;
@@ -18,7 +19,7 @@ const Container = styled.header`
   }
   p {
     animation-delay: 0.1s;
-    color: #949494;
+    color: black
   }
   &.tabs > a:not(:last-child){
     margin-right: 15px;
@@ -45,6 +46,11 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  div {
+    a {
+      margin-left: 20px;
+    }
+  }
   @media only screen and (max-width: 900px) {
     margin-bottom: 100px;
   }
@@ -54,12 +60,20 @@ const Header = (props) => {
   return (
     <Section>
       <Container>
+      <Helmet>
+      <html lang="en" />
+        <title>That Guy That Codes</title>
+        <link rel="canonical" href="https://thatguythat.codes" />
+        <meta name="description" content="Front end engineer portfolio website for Myles Enriquez." />
+      </Helmet>
         <NavBar>
           <Logo to="/">
             TGTC
           </Logo>
-          <div className="tabs">
+          <div>
             {/* <AInternal to="/about/">About</AInternal> */}
+            <AInternal to="/">Home</AInternal>
+            <AInternal to="/projects/">Projects</AInternal>
             <AInternal to="/resume/">Resume</AInternal>
             {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
@@ -72,8 +86,8 @@ const Header = (props) => {
           </section> 
           : 
           <section>
-            <h1>Myles Enriquez</h1>
-            <p>User Interface Engineer</p>
+            <h1>Hello there!</h1>
+            <p>I'm a UI Engineer focused on building websites and applications with JavaScript.</p>
           </section>
         }
         <Center>
