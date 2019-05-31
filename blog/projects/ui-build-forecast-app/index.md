@@ -310,7 +310,9 @@ Within `followingDays` we have an array of objects. Each object contains:
 - `temp`, and
 - `weatherStatus`
 
-[in the works]
+Now that I have the data, I can start to go through each component, and see what will control its own state, and which will just present data with props.
+
+First I started with the main `<ForecastApp />` component. Since it was just a container, I want to pull in the data here, using a `componentDidMount` method. This means that the component its self will have to be a class component.
 
 ### 4. Add Inverse Data Flow
 [queued]
