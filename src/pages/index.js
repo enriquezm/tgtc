@@ -123,10 +123,6 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <div>
-      <Helmet>
-        <title>That Guy That Codes</title>
-        <link rel="canonical" href="https://thatguythat.codes" />
-      </Helmet>
       <Header full />
       <ContainerFluid bgColor="#35303c" color="#c2c0c4">
         <Section centered>
