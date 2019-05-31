@@ -1,11 +1,12 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { graphql, Link } from "gatsby"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import Contact from "../components/Contact"
-import Section from "../components/Section"
-import styled from "styled-components"
+import React from "react";
+import { Helmet } from "react-helmet";
+import { Link } from "gatsby";
+import AInternal from "../components/util/AInternal";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Contact from "../components/Contact";
+import Section from "../components/Section";
+import styled from "styled-components";
 import "../global-styles.css";
 import { ArrowRight } from 'react-feather';
 import P from "../components/util/P";
@@ -39,6 +40,7 @@ const Grid = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
+  margin-bottom: 20px;
   @media screen and (max-width: 450px) {
     grid-template-columns: 1fr;
     grid-gap: 0;
@@ -112,6 +114,11 @@ const Item = styled(Link)`
   }
 `;
 
+const linkContainerStyles = {
+  display: "flex",
+  justifyContent: "flex-end",
+};
+
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
@@ -146,6 +153,9 @@ const IndexPage = ({ data }) => {
             })
           }
           </Grid>
+          <div style={linkContainerStyles}>
+            <Link to="/projects/">Check out more projects</Link>
+          </div>
        </Section>
       <Section centered>
         <h3>Experience</h3>
