@@ -19,7 +19,7 @@ const Container = styled.header`
   }
   p {
     animation-delay: 0.1s;
-    color: #949494;
+    color: black
   }
   &.tabs > a:not(:last-child){
     margin-right: 15px;
@@ -61,9 +61,10 @@ const Header = (props) => {
     <Section>
       <Container>
       <Helmet>
+      <html lang="en" />
         <title>That Guy That Codes</title>
         <link rel="canonical" href="https://thatguythat.codes" />
-        <html lang="en" />
+        <meta name="description" content="Front end engineer portfolio website for Myles Enriquez." />
       </Helmet>
         <NavBar>
           <Logo to="/">
@@ -85,8 +86,8 @@ const Header = (props) => {
           </section> 
           : 
           <section>
-            <h1>Myles Enriquez</h1>
-            <p>User Interface Engineer</p>
+            <h1>Hello there!</h1>
+            <p>I'm a UI Engineer focused on building websites and applications with JavaScript.</p>
           </section>
         }
         <Center>
