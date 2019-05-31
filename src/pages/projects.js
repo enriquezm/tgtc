@@ -96,7 +96,7 @@ const IndexPage = ({ data }) => {
         <title>That Guy That Codes | Projects</title>
         <link rel="canonical" href="https://thatguythat.codes" />
       </Helmet>
-      <Header title="Projects" description="A mix of websites, applications, designs, and experiments." full />
+      <Header title="Projects" description="All my projects involving websites, applications, designs, and experiments." full />
       <Section centered>
           <Grid>
           {
