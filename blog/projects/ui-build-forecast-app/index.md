@@ -9,7 +9,7 @@ tag: 'Project'
 ---
 
 ## Introduction
-This walkthrough is first of a series I'm calling "UI Build It". Essentially, I just break down an interface and rebuild it using React. 
+This walkthrough is first of a series I'm calling "UI Build It". Essentially, I just break down an interface and rebuild a prototype using React. 
 
 The actual steps to each of these projects in this series is to:
 
@@ -272,25 +272,24 @@ First let's take a lot at the way I structured data. If this were a real app on 
 [
   {
     "today": {
-      "day": 0,
       "description": "It's warm!",
       "location": "Cairo, Egypt",
       "temperature": 98,
       "followingDays": [
         {
-          "day": 1,
+          "day": "Monday",
           "temp": 89,
           "weatherStatus": 0
         },
         {
-          "day": 2,
+          "day": "Tuesday",
           "temp": 92,
-          "weatherStatus": 0
+          "weatherStatus": 1
         },
         {
-          "day": 3,
-          "temp": 90,
-          "weatherStatus": 1
+          "day": "Wednesday",
+          "temp": 85,
+          "weatherStatus": 2
         }
       ]
     }
@@ -299,7 +298,6 @@ First let's take a lot at the way I structured data. If this were a real app on 
 ```
 
 Now let me break this down. We have the name `today` with the value of an object. Inside of this object we have today's:
-- `day` number, 
 - `description`, 
 - `location`, 
 - `temperature`, and 
@@ -312,11 +310,222 @@ Within `followingDays` we have an array of objects. Each object contains:
 
 Now that I have the data, I can start to go through each component, and see what will control its own state, and which will just present data with props.
 
-First I started with the main `<ForecastApp />` component. Since it was just a container, I want to pull in the data here, using a `componentDidMount` method. This means that the component its self will have to be a class component.
+First I started with the main `<ForecastApp />` component. Since it was just a container, I want to pull in the data here, using a `componentDidMount` method. So I added 2 new methods, `constructor()` and `componentDidMount()`.
 
-### 4. Add Inverse Data Flow
-[queued]
+```javascript
+constructor(props) {
+  super(props);
+  this.state = {
+    today: "Loading...",
+    followingDays: "Loading..."
+  };
+}
+componentDidMount() {
+  const today = data[0].today;
+  const followingDays = today.followingDays;
+
+  this.setState({
+    today,
+    followingDays
+  });
+}
+```
+
+All together my component stayed as a class component, but added some state and data to the mix.
+
+```javascript
+import React from "react";
+import ForecastAppHeader from "./ForecastAppHeader";
+import ForecastAppFooter from "./ForecastAppFooter";
+import data from "../data.json";
+
+const styles = {
+  maxWidth: 360
+};
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      today: "Loading...",
+      followingDays: "Loading..."
+    };
+  }
+  componentDidMount() {
+    const today = data[0].today;
+    const followingDays = today.followingDays;
+
+    this.setState({
+      today,
+      followingDays
+    });
+  }
+  render() {
+    return (
+      <div style={styles}>
+        <ForecastAppHeader data={this.state.today} />
+        <ForecastAppFooter data={this.state.followingDays} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+You can see that I'm importing `data` from a local `json` file. If this were a real product, we would be pulling from an API. Once we import `data`, we update our component's state within our `componentDidMount()` method. From here, we can update our state and pass it along to our child components, `<ForecastAppHeader />` and `<ForecastAppFooter />`.
+
+Next, I updated `<ForecastAppHeader />`.
+
+Because `<ForecastAppHeader />` is just _displaying_ data, I changed the component into a stateless functional component like so:
+
+```javascript
+import React from "react";
+
+const styles = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center"
+};
+
+function ForecastAppHeader(props) {
+  const { description, location, temperature } = props.data;
+  return (
+    <div style={styles}>
+      <div>
+        <p>
+          <b>{description}</b>
+        </p>
+        <p>{location}</p>
+        <h1>{temperature}&#8457;</h1>
+      </div>
+    </div>
+  );
+}
+
+export default ForecastAppHeader;
+```
+
+Here we can see that we keep the same container styling, but now we are passing in 3 props: `description`, `location`, and `temperature`. After destructuring the properties from `props` we display them. Pretty simple.
+
+Now about `<ForecastAppFooter />`.
+
+Because `<ForecastAppFooter />` did not need to manage any state, I changed it to a stateless functional component.
+
+```javascript
+import React from "react";
+import ForecastFooterNav from "./ForecastFooterNav";
+import ForecastWeek from "./ForecastWeek";
+
+const styles = {
+  padding: 20
+};
+
+function ForecastAppFooter(props) {
+  return (
+    <div style={styles}>
+      <ForecastFooterNav />
+      <ForecastWeek data={props.data} />
+    </div>
+  );
+}
+
+export default ForecastAppFooter;
+```
+
+You could see that `<ForecastAppFooter />` is pretty simple. It only needs to pass `props` over to the `<ForecastWeek />`.
+
+Now `<ForecastWeek />` is probably the most exciting component this little app has to offer. Once again, I changed this component into a stateless functional component.
+
+```javascript
+import React from "react";
+import ForecastDay from "./ForecastDay";
+
+const styles = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between"
+};
+
+function ForecastWeek(props) {
+  const days = Object.keys(props.data).map(function(key) {
+    return [props.data[key]];
+  });
+  return (
+    <div style={styles}>
+      {days.map((item, index) => (
+        <ForecastDay key={index} day={item[0].day} temp={item[0].temp} />
+      ))}
+    </div>
+  );
+}
+
+export default ForecastWeek;
+```
+
+Now, the `props` we're passing in is an object of objects. At first I wanted to map through the objects, and after trial and error, I found out that you cannot use the `map()` function on objects.
+
+So what I did was iterate through each `key`, return an array item, with which I passed to a `map()` function which then would return a final array item with the matching `key`'s property name.
+
+This then left me with an array that I could `map()` through and generate a list of `<ForecastDay />` components each with the data that belonged to them.
+
+Now for the last component, `<ForecastDay />`.
+
+```javascript
+import React from "react";
+import styled from "styled-components";
+import { Cloud, Sun, CloudRain } from "react-feather";
+
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+function ForecastDay({ day, temp, status }) {
+  let weatherStatus = (status => {
+    switch (status) {
+      case 0:
+        return <Cloud />;
+      case 1:
+        return <Sun />;
+      case 2:
+        return <CloudRain />;
+      default:
+        break;
+    }
+  })(status);
+
+  return (
+    <Container>
+      <p>{day}</p>
+      <p>{temp}&#8457;</p>
+      <p>{weatherStatus}</p>
+    </Container>
+  );
+}
+
+export default ForecastDay;
+```
+
+For `<ForecastDay />` I simply changed it to a stateless component and passed in the `day`, `temp`, and `status` prop.
+
+For `day` and `temp` we pass in and display. For `status` we assign a variable `weatherStatus` the returned value of a `switch` statement. This `switch` statement goes through our status codes and assigns the passed in `status` its corresponding feather icon. From here we just display it and we're good to go.
+
+And that is the last and final component.
 
 ## Conclusion
+
+To wrap it up I'd like to mention what I've done. 
+
+- I looked at a mock up
+- structured the components
+- created a component hierarchy
+- developed a static interface using `props` only
+- structured data
+- converted components to stateless functional components
+- gave stateful components their state
 
 If you'd like to view all the source code, you can [check it out on codesandbox](https://codesandbox.io/s/weather-forecast-81nnh). You can also [checkout out the live demo](https://csb-81nnh.netlify.com/) hosted on Netlify.
