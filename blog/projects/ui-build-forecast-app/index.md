@@ -1,6 +1,6 @@
 ---
 path: /project/ui-build-forecast-app
-date: 2019-05-29T21:51:10.754Z
+date: 2019-05-29
 title: UI Build - Forecast App
 description: Building a UI from scratch in React.
 source: '#'
