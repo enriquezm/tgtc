@@ -49,6 +49,7 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   const {markdownRemark} = data; // data.markdownRemark holds our post data
   const title = markdownRemark.frontmatter.title;
   const description = markdownRemark.frontmatter.description;
+  const date = markdownRemark.frontmatter.date;
   const html = markdownRemark.html;
   return (
     <div>
@@ -57,6 +58,7 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
         <Section>
           <PostContentContainer className="flex-content">
           <LineBreak />
+          <p>Written on {date}</p>
             <div dangerouslySetInnerHTML={{__html: html}} />
           </PostContentContainer>
         </Section>
@@ -76,6 +78,7 @@ export const query = graphql`
       frontmatter {
         title
         description
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
