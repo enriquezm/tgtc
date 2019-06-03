@@ -125,7 +125,7 @@ const IndexPage = ({ data }) => {
       <ContainerFluid bgColor="#35303c" color="#c2c0c4">
         <Section centered>
           <h3>A little about me</h3>
-          <P align="center">
+          <P color="red" align="center">
             I started coding in college and after many sleepless nights received my degree in computer science. After graduating, I launched off into the JavaScript universe and have been teaching myself ever since. I'm pretty open minded when it comes to learning and I enjoy pushing myself to get better a little bit every day. I mainly work with JavaScript but I am always trying to learn new programming language concepts as a whole.
           </P>
         </Section>
