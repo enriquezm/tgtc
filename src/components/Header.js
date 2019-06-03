@@ -7,6 +7,7 @@ import LogoGraphic from './LogoGraphic';
 import './Header.css'
 import Mouse from './Mouse';
 import { Helmet } from 'react-helmet';
+import NavLink from './util/NavLink';
 
 const Container = styled.header`
   width: 100%;
@@ -72,9 +73,9 @@ const Header = (props) => {
           </Logo>
           <div>
             {/* <AInternal to="/about/">About</AInternal> */}
-            <AInternal to="/">Home</AInternal>
-            <AInternal to="/projects/">Projects</AInternal>
-            <AInternal to="/resume/">Resume</AInternal>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/projects/">Projects</NavLink>
+            <NavLink to="/resume/">Resume</NavLink>
             {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
         </NavBar>
@@ -87,7 +88,7 @@ const Header = (props) => {
           : 
           <section>
             <h1>Hello there!</h1>
-            <p>I'm a UI Engineer focused on building websites and applications with JavaScript.</p>
+            <p>My name is Myles and I'm a UI Engineer focused on building websites and applications with JavaScript.</p>
           </section>
         }
         <Center>
