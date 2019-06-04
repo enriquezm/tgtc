@@ -1,15 +1,15 @@
 ---
 path: /project/ui-build-forecast-app
 date: 2019-05-29
-title: UI Build - Forecast App
-description: Building a UI from scratch in React.
+title: UI Build It - Forecast App
+description: Building a prototype from scratch in React.
 source: '#'
 demo: '#'
 tag: 'Project'
 ---
 
 ## Introduction
-This walkthrough is first of a series I'm calling "UI Build It". Essentially, I just break down an interface and rebuild a prototype using React. 
+This walkthrough is first of a series I'm calling "UI Build It". Essentially, I just break down an interface and build a prototype the "React Way". 
 
 The actual steps to each of these projects in this series is to:
 
