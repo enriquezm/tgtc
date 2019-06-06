@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from "../components/Header";
+import SubPageHeader from "../components/Header";
 import Section from "../components/Section";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import styled from 'styled-components';
 import { Link } from 'gatsby';
@@ -31,7 +32,7 @@ const Container = styled.div`
 const ResumePage = () => {
   return (
     <Resume>
-      <Header title="Resume" description="What I've done and what I can do." />
+      <SubPageHeader title="Resume" description="What I've done and what I can do." />
       <Section css={`
         padding-bottom: 0;
       `}>
@@ -109,13 +110,15 @@ const ResumePage = () => {
       </Section>
       <Section>
         <Container>
-          <h2>Active Projects</h2>
+          <h2>Recent Projects</h2>
           <div className="block">
             <p><Link to="/project/ui-build-forecast-app">UI Build It - Forecast App</Link> - A walkthrough demonstrating the steps I take when converting a static mock up into an interactive React interface.</p>
             <p><Link to="/project/rft-website-redesign">Redemption Fight Team Redesign</Link> - A website redesign project for a local martial arts gym.</p>
+            <p><a href="/projects">View more of my projects</a></p>
           </div>
         </Container>
       </Section>
+      <Contact />
       <Footer />
     </Resume>
   )
