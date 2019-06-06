@@ -31,12 +31,12 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          // {
-          //   resolve: `gatsby-remark-images`,
-          //   options: {
-          //     maxWidth: 768,
-          //   },
-          // },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 768,
+            },
+          },
         ],
       },
     },
