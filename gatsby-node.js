@@ -8,6 +8,7 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
+        filter: { fields: { draft: { eq: false } } }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -15,6 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              color
             }
           }
         }
@@ -29,7 +31,9 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
+        context: {
+          color: node.frontmatter.color
+        }, // additional data can be passed via context
       })
     })
   })
