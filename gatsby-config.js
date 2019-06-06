@@ -2,6 +2,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-draft`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -30,12 +31,12 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 768,
-            },
-          },
+          // {
+          //   resolve: `gatsby-remark-images`,
+          //   options: {
+          //     maxWidth: 768,
+          //   },
+          // },
         ],
       },
     },
@@ -46,8 +47,8 @@ module.exports = {
         fonts: [
           {
             family: `Heebo`,
-            variants: [`300`, `500`, `700`]
-          }
+            variants: [`300`, `500`, `700`],
+          },
         ]
       }
     }
