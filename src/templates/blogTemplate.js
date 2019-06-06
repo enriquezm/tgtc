@@ -2,16 +2,15 @@ import React from 'react';
 import { graphql} from 'gatsby';
 import '../global-styles.css';
 import styled from 'styled-components';
-import Header from '../components/Header';
+import SubPageHeader from '../components/SubPageHeader';
 import Footer from '../components/Footer';
 import Section from '../components/Section';
 import Contact from '../components/Contact';
 import '../prism-styles-override.css';
 
 const PostContentContainer = styled.div`
-  max-width: 768px;
+  // max-width: 768px;
   margin: 0 auto;
-  padding: 2%;
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
   }
@@ -34,30 +33,25 @@ const PostContentContainer = styled.div`
   }
 `;
 
-const LineBreak = styled.hr`
-  width: 100%;
-  border: 3px solid #8131FF;
-  margin-bottom: 50px;
+const PostDate = styled.p`
+  color: #9799a3;
 `;
   
   
 const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql query below
-  
-  // eslint-disable-next-line
-  const {prev, next} = pageContext; 
-  console.log(pageContext);
-
+  const { color } = pageContext;
   const { markdownRemark } = data;
   const { html } = markdownRemark; 
-  const { title, description, date } = markdownRemark.frontmatter;
+  const { title, description, date} = markdownRemark.frontmatter;
   return (
     <div>
-      <Header title={title} description={description} />
+      <div css={`background-color: ${color}; color: white;`}>
+        <SubPageHeader title={title} description={description} />
+      </div>
       <main>
-        <Section>
+        <Section css={"padding-top: 50px;"}>
           <PostContentContainer className="flex-content">
-          <LineBreak />
-          <p>Written on {date}</p>
+          <PostDate>Written on {date}</PostDate>
             <div dangerouslySetInnerHTML={{__html: html}} />
           </PostContentContainer>
         </Section>
