@@ -1,9 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import styled from 'styled-components';
-import AInternal from './util/AInternal';
 import Logo from './util/Logo';
-import LogoGraphic from './LogoGraphic';
 import './Header.css'
 import Mouse from './Mouse';
 import { Helmet } from 'react-helmet';
