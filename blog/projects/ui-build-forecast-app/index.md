@@ -3,9 +3,6 @@ path: /project/ui-build-forecast-app
 date: 2019-05-29
 title: UI Build It - Forecast App
 description: Building a prototype from scratch in React.
-source: '#'
-demo: '#'
-tag: 'Project'
 ---
 
 ## Introduction
