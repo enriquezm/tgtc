@@ -45,12 +45,11 @@ const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql
   
   // eslint-disable-next-line
   const {prev, next} = pageContext; 
+  console.log(pageContext);
 
-  const {markdownRemark} = data; // data.markdownRemark holds our post data
-  const title = markdownRemark.frontmatter.title;
-  const description = markdownRemark.frontmatter.description;
-  const date = markdownRemark.frontmatter.date;
-  const html = markdownRemark.html;
+  const { markdownRemark } = data;
+  const { html } = markdownRemark; 
+  const { title, description, date } = markdownRemark.frontmatter;
   return (
     <div>
       <Header title={title} description={description} />
