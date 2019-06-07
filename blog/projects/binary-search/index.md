@@ -29,4 +29,6 @@ Alright, for those of you who need structure, here's the plan:
 ### 2. Build functional UI with Reactjs (props and state)
 ### 3. Apply Binary Search Algorithm within app.
 
+Alright, so what is the Binary Search Algorithm? Well if you haven't been clicking on the links I've provided above, essentially it is a very fast searching algorithm. But there is a catch, it has to be used on data that has already been 
+
 ## Conclusion
