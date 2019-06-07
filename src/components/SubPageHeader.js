@@ -9,7 +9,6 @@ import NavLink from "./util/NavLink";
 
 const Container = styled.header`
   width: 100%;
-  border: 1px solid red;
   h1 {
     font-weight: 400;
   }
