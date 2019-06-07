@@ -7,15 +7,15 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         tracingId: "UA-86061209-1",
-        head: false,
+        head: false
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/blog/projects`,
-        name: "markdown-pages",
-      },
+        name: "markdown-pages"
+      }
     },
     `gatsby-plugin-sharp`,
     {
@@ -29,17 +29,17 @@ module.exports = {
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
-              noInlineHighlight: false,
-            },
+              noInlineHighlight: false
+            }
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 768,
-            },
-          },
-        ],
-      },
+              maxWidth: 768
+            }
+          }
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     {
@@ -48,10 +48,10 @@ module.exports = {
         fonts: [
           {
             family: `Heebo`,
-            variants: [`300`, `500`, `700`],
-          },
+            variants: [`300`, `500`, `700`]
+          }
         ]
       }
     }
-  ],
-}
+  ]
+};

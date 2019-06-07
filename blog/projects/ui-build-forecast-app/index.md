@@ -7,7 +7,8 @@ color: "#554D61"
 ---
 
 ## Introduction
-This walkthrough is first of a series I'm calling "UI Build It". Essentially, I just break down an interface and build a prototype the "React Way". 
+
+This walkthrough is first of a series I'm calling "UI Build It". Essentially, I just break down an interface and build a prototype the "React Way".
 
 The actual steps to each of these projects in this series is to:
 
@@ -23,18 +24,17 @@ My main goal in this series is to get a better understanding of component compos
 
 I'm going to walk you through my process for building the interface below in React.
 
-![Mockup of forecast application](./img01.png)
+![Mockup of forecast application](./img01.jpg)
 
 ### 1. Break The UI Into A Component Hierarchy
 
 After taking a look at the interface I broke it down like so:
 
-![UI Component Application Breakdown](./img02.png)
+![UI Component Application Breakdown](./img02.jpg)
 
 The issues I came across had to do with reusability. I wasn't sure which components should be resused or not. At first glass the Header and Footer components seemed like they should be the same, but at second glance I decided to make them two completely different components. The reason being that they each had to represent and deal with different types of data.
 
 The final list of components consisted of:
-
 
 - `<ForecastApp />` (pink): contains the entirety of the application.
 - `<ForecastAppHeader />` (teal, top): contains the current day weather details.
@@ -296,12 +296,14 @@ First let's take a lot at the way I structured data. If this were a real app on 
 ```
 
 Now let me break this down. We have the name `today` with the value of an object. Inside of this object we have today's:
-- `description`, 
-- `location`, 
-- `temperature`, and 
+
+- `description`,
+- `location`,
+- `temperature`, and
 - `followingDays`.
 
 Within `followingDays` we have an array of objects. Each object contains:
+
 - `day` number,
 - `temp`, and
 - `weatherStatus`
@@ -516,7 +518,7 @@ And that is the last and final component.
 
 ## Conclusion
 
-To wrap it up I'd like to mention what I've done. 
+To wrap it up I'd like to mention what I've done.
 
 - I looked at a mock up
 - structured the components
