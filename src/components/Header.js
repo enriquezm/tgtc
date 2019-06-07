@@ -1,11 +1,11 @@
-import React from 'react';
-import Section from './Section';
-import styled from 'styled-components';
-import Logo from './util/Logo';
-import './Header.css'
-import Mouse from './Mouse';
-import { Helmet } from 'react-helmet';
-import NavLink from './util/NavLink';
+import React from "react";
+import Section from "./Section";
+import styled from "styled-components";
+import Logo from "./util/Logo";
+import "./Header.css";
+import Mouse from "./Mouse";
+import { Helmet } from "react-helmet";
+import NavLink from "./util/NavLink";
 
 const Container = styled.header`
   width: 100%;
@@ -18,14 +18,17 @@ const Container = styled.header`
   }
   p {
     animation-delay: 0.1s;
-    color: black
+    color: black;
   }
-  &.tabs > a:not(:last-child){
+  &.tabs > a:not(:last-child) {
     margin-right: 15px;
   }
   nav {
     display: flex;
     justify-content: space-between;
+  }
+  @media screen and (max-width: 600px) {
+    height: 100vh;
   }
 `;
 
@@ -55,20 +58,21 @@ const NavBar = styled.nav`
   }
 `;
 
-const Header = (props) => {
+const Header = props => {
   return (
     <Section>
       <Container>
-      <Helmet>
-      <html lang="en" />
-        <title>That Guy That Codes</title>
-        <link rel="canonical" href="https://thatguythat.codes" />
-        <meta name="description" content="Front end engineer portfolio website for Myles Enriquez." />
-      </Helmet>
+        <Helmet>
+          <html lang="en" />
+          <title>That Guy That Codes</title>
+          <link rel="canonical" href="https://thatguythat.codes" />
+          <meta
+            name="description"
+            content="Front end engineer portfolio website for Myles Enriquez."
+          />
+        </Helmet>
         <NavBar>
-          <Logo to="/">
-            TGTC
-          </Logo>
+          <Logo to="/">TGTC</Logo>
           <div>
             {/* <AInternal to="/about/">About</AInternal> */}
             <NavLink to="/">Home</NavLink>
@@ -77,24 +81,26 @@ const Header = (props) => {
             {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
         </NavBar>
-        {
-          props.title ? 
+        {props.title ? (
           <section>
             <h1>{props.title}</h1>
             <p>{props.description}</p>
-          </section> 
-          : 
+          </section>
+        ) : (
           <section>
             <h1>Hello there!</h1>
-            <p>My name is Myles and I'm a UI Engineer focused on building websites and applications with JavaScript.</p>
+            <p>
+              My name is Myles and I'm a UI Engineer focused on building
+              websites and applications with JavaScript.
+            </p>
           </section>
-        }
+        )}
         <Center>
           <Mouse />
         </Center>
       </Container>
     </Section>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

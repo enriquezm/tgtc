@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 import Section from "../components/Section";
 import styled from "styled-components";
 import "../global-styles.css";
-import { ArrowRight } from 'react-feather';
+import { ArrowRight } from "react-feather";
 import P from "../components/util/P";
 import ContainerFluid from "../components/util/ContainerFluid";
 
@@ -35,11 +35,13 @@ const ResumeRight = styled.div`
 
 const Grid = styled.div`
   display: grid;
+  margin-left: -2%;
+  margin-right: -2%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
   margin-bottom: 20px;
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
@@ -108,7 +110,7 @@ const Item = styled(Link)`
 
 const linkContainerStyles = {
   display: "flex",
-  justifyContent: "flex-end",
+  justifyContent: "flex-end"
 };
 
 const IndexPage = ({ data }) => {
@@ -120,59 +122,97 @@ const IndexPage = ({ data }) => {
         <Section centered>
           <h3>A little about me</h3>
           <P color="red" align="center">
-            I started coding in college and after many sleepless nights received my degree in computer science. After graduating, I launched off into the JavaScript universe and have been teaching myself ever since. I'm pretty open minded when it comes to learning and I enjoy pushing myself to get better a little bit every day. I mainly work with JavaScript but I am always trying to learn new programming language concepts as a whole.
+            I started coding in college and after many sleepless nights received
+            my degree in computer science. After graduating, I launched off into
+            the JavaScript universe and have been teaching myself ever since.
+            I'm pretty open minded when it comes to learning and I enjoy pushing
+            myself to get better a little bit every day. I mainly work with
+            JavaScript but I am always trying to learn new programming language
+            concepts as a whole.
           </P>
         </Section>
       </ContainerFluid>
       <Section centered>
         <h3>What I've been up to</h3>
-        <P align="center">Here are a mixture of websites, applications, designs, and experiments.</P>
-          <Grid>
-          {
-            edges.map( edge => {
-              const { frontmatter } = edge.node;
-              return (
-                <Item css={`background-color: ${frontmatter.color};`} key={frontmatter.path} to={frontmatter.path}>
-                  <h4>{frontmatter.title}</h4>
-                  <p>{frontmatter.description}</p>
-                  <ArrowRight />
-                </Item>
-              )
-            })
-          }
-          </Grid>
-          <div style={linkContainerStyles}>
-            <Link to="/projects/">Check out more projects</Link>
-          </div>
-       </Section>
+        <P align="center">
+          Here are a mixture of websites, applications, designs, and
+          experiments.
+        </P>
+        <Grid>
+          {edges.map(edge => {
+            const { frontmatter } = edge.node;
+            return (
+              <Item
+                css={`
+                  background-color: ${frontmatter.color};
+                `}
+                key={frontmatter.path}
+                to={frontmatter.path}
+              >
+                <h4>{frontmatter.title}</h4>
+                <p>{frontmatter.description}</p>
+                <ArrowRight />
+              </Item>
+            );
+          })}
+        </Grid>
+        <div style={linkContainerStyles}>
+          <Link to="/projects/">Check out more projects</Link>
+        </div>
+      </Section>
       <Section centered>
         <h3>Experience</h3>
         <P align="center">A little of where I've been and what I did.</P>
         <Row justifyContent="center">
           <ResumeLeft>
-            <p><b>Jan 2017 - Present</b></p>
+            <p>
+              <b>Jan 2017 - Present</b>
+            </p>
           </ResumeLeft>
           <ResumeRight>
-            <p><b>Web Specialist @ UNLV</b></p>
-            <p>Maintain <a href="https://www.unlv.edu/academics/degrees">Degrees Directory</a>. Report Google Analytics on department websites. Minor Web Development within Drupal and Wordpress CMS.</p>
+            <p>
+              <b>Web Specialist @ UNLV</b>
+            </p>
+            <p>
+              Maintain{" "}
+              <a href="https://www.unlv.edu/academics/degrees">
+                Degrees Directory
+              </a>
+              . Report Google Analytics on department websites. Minor Web
+              Development within Drupal and Wordpress CMS.
+            </p>
           </ResumeRight>
         </Row>
         <Row justifyContent="center">
           <ResumeLeft>
-            <p><b>Web Developer @ DCDC</b></p>
-            <p>Develop websites from provided wireframes and mockups. Find and correct bugs on existing Wordpress sites.</p>
+            <p>
+              <b>Web Developer @ DCDC</b>
+            </p>
+            <p>
+              Develop websites from provided wireframes and mockups. Find and
+              correct bugs on existing Wordpress sites.
+            </p>
           </ResumeLeft>
           <ResumeRight>
-            <p><b>Jan 2016 - Apr 2016</b></p> 
+            <p>
+              <b>Jan 2016 - Apr 2016</b>
+            </p>
           </ResumeRight>
         </Row>
         <Row justifyContent="center">
           <ResumeLeft>
-            <p><b>May 2015 - Jan 2016</b></p>
+            <p>
+              <b>May 2015 - Jan 2016</b>
+            </p>
           </ResumeLeft>
           <ResumeRight>
-            <p><b>Web & Design Assistant @ DCDC</b></p>
-            <p>Design and create social media banners using Adobe Illustrator/Photoshop. Design and create surveyed infographics.</p>
+            <p>
+              <b>Web & Design Assistant @ DCDC</b>
+            </p>
+            <p>
+              Design and create social media banners using Adobe
+              Illustrator/Photoshop. Design and create surveyed infographics.
+            </p>
           </ResumeRight>
         </Row>
       </Section>
@@ -180,19 +220,17 @@ const IndexPage = ({ data }) => {
       <Footer />
     </div>
   );
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       filter: { fields: { draft: { eq: false } } }
       limit: 6
-      sort: { 
-        order: DESC, 
-        fields: [frontmatter___date] 
-      }) {
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           id
@@ -208,4 +246,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

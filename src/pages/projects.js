@@ -1,20 +1,21 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { graphql, Link } from "gatsby"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import Contact from "../components/Contact"
-import Section from "../components/Section"
-import styled from "styled-components"
+import React from "react";
+import { Helmet } from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Contact from "../components/Contact";
+import Section from "../components/Section";
+import styled from "styled-components";
 import "../global-styles.css";
-import { ArrowRight } from 'react-feather';
+import { ArrowRight } from "react-feather";
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   // grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
-  @media screen and (max-width: 450px) {
+
+  @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
@@ -95,39 +96,45 @@ const IndexPage = ({ data }) => {
         <title>That Guy That Codes | Projects</title>
         <link rel="canonical" href="https://thatguythat.codes" />
       </Helmet>
-      <Header title="Projects" description="All my projects involving websites, applications, designs, and experiments." full />
+      <Header
+        title="Projects"
+        description="All my projects involving websites, applications, designs, and experiments."
+        full
+      />
       <Section centered>
-          <Grid>
-          {
-            edges.map( edge => {
-              const { frontmatter } = edge.node;
-              return (
-                <Item css={`background-color: ${frontmatter.color};`} key={frontmatter.path} to={frontmatter.path}>
-                  <h4>{frontmatter.title}</h4>
-                  <p>{frontmatter.description}</p>
-                  <ArrowRight />
-                </Item>
-              )
-            })
-          }
-          </Grid>
-       </Section>
+        <Grid>
+          {edges.map(edge => {
+            const { frontmatter } = edge.node;
+            return (
+              <Item
+                css={`
+                  background-color: ${frontmatter.color};
+                `}
+                key={frontmatter.path}
+                to={frontmatter.path}
+              >
+                <h4>{frontmatter.title}</h4>
+                <p>{frontmatter.description}</p>
+                <ArrowRight />
+              </Item>
+            );
+          })}
+        </Grid>
+      </Section>
       <Contact />
       <Footer />
     </div>
   );
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       filter: { fields: { draft: { eq: false } } }
-      sort: { 
-        order: DESC, 
-        fields: [frontmatter___date] 
-      }) {
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           id
@@ -143,4 +150,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
