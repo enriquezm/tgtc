@@ -9,6 +9,7 @@ import "../global-styles.css";
 import { ArrowRight } from "react-feather";
 import P from "../components/util/P";
 import ContainerFluid from "../components/util/ContainerFluid";
+import TextButton from "../components/util/TextButton";
 
 const Row = styled.div`
   display: flex;
@@ -110,7 +111,7 @@ const Item = styled(Link)`
 
 const linkContainerStyles = {
   display: "flex",
-  justifyContent: "flex-end"
+  justifyContent: "center"
 };
 
 const IndexPage = ({ data }) => {
@@ -157,7 +158,7 @@ const IndexPage = ({ data }) => {
           })}
         </Grid>
         <div style={linkContainerStyles}>
-          <Link to="/projects/">Check out more projects</Link>
+          <TextButton to="/projects/">More Projects</TextButton>
         </div>
       </Section>
       <Section centered>
