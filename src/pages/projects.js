@@ -1,18 +1,17 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Contact from "../components/Contact";
-import Section from "../components/Section";
-import styled from "styled-components";
-import "../global-styles.css";
-import { ArrowRight } from "react-feather";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Contact from '../components/Contact';
+import Section from '../components/Section';
+import styled from 'styled-components';
+import '../global-styles.css';
+import { ArrowRight } from 'react-feather';
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  // grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
 
   @media screen and (max-width: 600px) {
@@ -39,48 +38,7 @@ const Item = styled(Link)`
       transition: all 0.3s;
     }
   }
-  // &:nth-child(1) {
-  //   background-color: #8131FF;
-  //   &:hover {
-  //     background-color: #6727cc;
-  //   }
-  // }
-  // &:nth-child(2) {
-  //   background-color: #009FFF;
-  //   &:hover {
-  //     background-color: #007fcc;
-  //   }
-  // }
-  // &:nth-child(3) {
-  //   background-color: #50C5B7;
-  //   &:hover {
-  //     background-color: #409d92;
-  //   }
-  // }
-  // &:nth-child(4) {
-  //   background-color: #EF5A4C;
-  //   &:hover {
-  //     background-color: #bf483c;
-  //   }
-  // }
-  // &:nth-child(5) {
-  //   background-color: #e5a707;
-  //   &:hover {
-  //     background-color: #b78505;
-  //   }
-  // }
-  // &:nth-child(6) {
-  //   background-color: #554D61;
-  //   &:hover {
-  //     background-color: #4d4658;
-  //   }
-  // }
-  // &:nth-child(7) {
-  //   background-color: #50C5B7;
-  //   &:hover {
-  //     background-color: #409d92;
-  //   }
-  // }
+
   @media screen and (max-width: 768px) {
     svg {
       display: none;

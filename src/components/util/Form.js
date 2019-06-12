@@ -30,32 +30,20 @@ const Form = () => (
     name="contact"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    >
+  >
     <input type="hidden" name="bot-field" />
     <input type="hidden" name="form-name" value="contact" />
     <Row justifyContent="space-between">
-      <input
-          type="text"
-          name="firstName"
-          placeholder="Name"
-      />
-      <input
-          type="text"
-          name="email"
-          placeholder="Email"
-      />
-      </Row>
-      <Row>
-      <textarea 
-        placeholder="Message" 
-        name="message"
-      >
-      </textarea>
-      </Row>
-      <Row justifyContent="flex-end">
-        <Button type="submit">Submit</Button>
-      </Row>
+      <input type="text" name="firstName" placeholder="Name" />
+      <input type="text" name="email" placeholder="Email" />
+    </Row>
+    <Row>
+      <textarea placeholder="Message" name="message" />
+    </Row>
+    <Row justifyContent="flex-end">
+      <Button type="submit">Submit</Button>
+    </Row>
   </Container>
-)
+);
 
 export default Form;

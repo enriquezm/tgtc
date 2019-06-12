@@ -1,8 +1,8 @@
-import React from "react";
-import { GitHub, Linkedin, Mail } from "react-feather";
-import styled from "styled-components";
-import P from "./util/P";
-import Bold from "./util/Bold";
+import React from 'react';
+import { GitHub, Linkedin, Mail } from 'react-feather';
+import styled from 'styled-components';
+import P from './util/P';
+import Bold from './util/Bold';
 
 const ContainerFluid = styled.section`
   background: #554d60;

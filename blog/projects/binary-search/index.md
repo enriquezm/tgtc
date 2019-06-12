@@ -3,8 +3,8 @@ path: /projects/binary-search
 date: 2019-06-06
 title: Binary Search
 description: Pratical use of Binary Search within an application UI.
-color: "#8131FF"
-draft: true
+color: "#50C5B7"
+draft: false
 ---
 
 ## Introduction

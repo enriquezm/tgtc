@@ -1,11 +1,11 @@
-import React from "react";
-import Section from "./Section";
-import styled from "styled-components";
-import Logo from "./util/Logo";
-import "./Header.css";
-import Mouse from "./Mouse";
-import { Helmet } from "react-helmet";
-import NavLink from "./util/NavLink";
+import React from 'react';
+import Section from './Section';
+import styled from 'styled-components';
+import Logo from './util/Logo';
+import './Header.css';
+import Mouse from './Mouse';
+import { Helmet } from 'react-helmet';
+import NavLink from './util/NavLink';
 
 const Container = styled.header`
   width: 100%;

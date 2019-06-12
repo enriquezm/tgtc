@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import '../global-styles.css';
 import styled from 'styled-components';
 import SubPageHeader from '../components/SubPageHeader';
@@ -11,7 +11,12 @@ import '../prism-styles-override.css';
 const PostContentContainer = styled.div`
   // max-width: 768px;
   margin: 0 auto;
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 10px;
   }
   p {
@@ -36,37 +41,40 @@ const PostContentContainer = styled.div`
 const PostDate = styled.p`
   color: #9799a3;
 `;
-  
-  
-const Template = ({data, pageContext}) => { // 'data' is injected by the Graphql query below
+
+const Template = ({ data, pageContext }) => {
+  // 'data' is injected by the Graphql query below
   const { color } = pageContext;
   const { markdownRemark } = data;
-  const { html } = markdownRemark; 
-  const { title, description, date} = markdownRemark.frontmatter;
+  const { html } = markdownRemark;
+  const { title, description, date } = markdownRemark.frontmatter;
   return (
     <div>
-      <div css={`background-color: ${color}; color: white;`}>
+      <div
+        css={`
+          background-color: ${color};
+          color: white;
+        `}
+      >
         <SubPageHeader title={title} description={description} />
       </div>
       <main>
-        <Section css={"padding-top: 50px;"}>
+        <Section css={'padding-top: 50px;'}>
           <PostContentContainer className="flex-content">
-          <PostDate>Written on {date}</PostDate>
-            <div dangerouslySetInnerHTML={{__html: html}} />
+            <PostDate>Written on {date}</PostDate>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
           </PostContentContainer>
         </Section>
       </main>
       <Contact />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: {
-      path: {eq: $path} 
-    }) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         title
@@ -75,7 +83,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 export default Template;
-  
