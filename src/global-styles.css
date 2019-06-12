@@ -19,14 +19,6 @@ a {
   margin: 0;
   margin-bottom: 25px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Heebo', sans-serif;
-}
 h1 {
   font-size: 56px;
 }
@@ -41,7 +33,6 @@ hr {
 }
 p,
 a {
-  font-family: 'Heebo', monospace;
   font-weight: 300;
 }
 p {
@@ -51,14 +42,15 @@ p {
 img {
   width: 100%;
 }
+ul,
+ol {
+  font-weight: 300;
+  color: rgba(38, 41, 58, 0.8);
+}
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-ul.bullet-list {
-  list-style: disc;
-  list-style-position: inside;
 }
 a {
   text-decoration: none;
@@ -66,27 +58,6 @@ a {
 }
 a:hover {
   color: #007fcc;
-}
-a.btn {
-  border-radius: 6px;
-  padding: 4px 10px;
-}
-a.btn:hover {
-  cursor: pointer;
-}
-a.btn-primary {
-  background-image: linear-gradient(-20deg, #2575fc 0%, #5e3bda 100%);
-  color: rgba(255, 255, 255, 1);
-  text-shadow: black 0 0;
-}
-a.secondary svg {
-  stroke: rgb(233, 39, 94);
-}
-a.secondary svg:hover {
-  stroke: #ff2964;
-}
-code.language-text {
-  font-size: 14px;
 }
 .flex-container {
   display: flex;
