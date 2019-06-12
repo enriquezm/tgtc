@@ -4,7 +4,7 @@ date: 2019-06-06
 title: Binary Search
 description: Pratical use of Binary Search within an application UI.
 color: '#50C5B7'
-draft: false
+draft: true
 ---
 
 ## Introduction
