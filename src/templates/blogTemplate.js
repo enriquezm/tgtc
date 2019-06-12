@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import '../global-styles.css';
 import styled from 'styled-components';
 import SubPageHeader from '../components/SubPageHeader';
 import Footer from '../components/Footer';
 import Section from '../components/Section';
 import Contact from '../components/Contact';
+import '../global-styles.css';
 import '../prism-styles-override.css';
 
 const PostContentContainer = styled.div`
@@ -18,6 +18,12 @@ const PostContentContainer = styled.div`
   h5,
   h6 {
     margin-bottom: 10px;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 50px;
   }
   p {
     margin-bottom: 20px;
