@@ -3,7 +3,7 @@ path: /projects/binary-search
 date: 2019-06-06
 title: Binary Search
 description: Pratical use of Binary Search within an application UI.
-color: "#50C5B7"
+color: '#50C5B7'
 draft: false
 ---
 
@@ -16,6 +16,8 @@ The interface I will be building can be seen below.
 ![Interface showing a list](img01.jpg)
 
 **Disclaimer: This is not my original design. This interface design was create by [Anna Kukhareva](https://dribbble.com/phosphoricc) and can be seen on [Dribbble](https://dribbble.com/shots/5815853-History-Tab).**
+
+I'll use this interface design as a basis to develop an application that searches through a [directory of dinosaurs](https://www.nhm.ac.uk/discover/dino-directory/name/a/gallery.html).
 
 ## Walkthrough
 
