@@ -16,7 +16,7 @@ pre[class*='language-'] {
   white-space: pre-wrap;
   word-wrap: normal;
   font-family: SFMono-Regular, Menlo, Monaco, 'Courier New', monospace;
-  font-size: 14px;
+  font-size: 16px;
   color: #76d9e6;
   text-shadow: none;
 }
@@ -26,8 +26,6 @@ pre[class*='language-'],
 }
 pre[class*='language-'] {
   padding: 15px;
-  border-radius: 4px;
-  border: 1px solid #e1e1e8;
   overflow: auto;
 }
 
@@ -187,4 +185,17 @@ pre[data-line] .line-highlight[data-end]:after {
 .gatsby-highlight pre[class='language-json']::before {
   content: 'json';
   background: #009fff;
+}
+
+p > code[class*='language-'] {
+  background: #f6f8fa;
+  border: none;
+  color: #e60073;
+  box-shadow: none;
+}
+li > code[class*='language-'] {
+  background: #f6f8fa;
+  border: none;
+  color: #e60073;
+  box-shadow: none;
 }
