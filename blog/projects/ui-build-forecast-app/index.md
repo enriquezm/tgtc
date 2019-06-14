@@ -3,7 +3,7 @@ path: /projects/ui-build-forecast-app
 date: 2019-05-29
 title: UI Build It - Forecast App
 description: Building a prototype from scratch in React.
-color: "#554D61"
+color: '#554D61'
 ---
 
 ## Introduction
@@ -59,13 +59,14 @@ And the final component hierarchy:
 Even though this application was small in size, I wanted to build out the application going bottom-top. So I started with the `<ForecastDay />` component.
 
 ```javascript
-import React from "react";
-import { Cloud } from "react-feather";
+// ForecastDay.jsx
+import React from 'react';
+import { Cloud } from 'react-feather';
 
 const styles = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center"
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
 };
 
 class ForecastDay extends React.Component {
@@ -97,13 +98,14 @@ Finally, we export the component.
 Next, let's build `<ForecastWeek />`.
 
 ```javascript
-import React from "react";
-import ForecastDay from "./ForecastDay";
+// ForecastWeek.jsx
+import React from 'react';
+import ForecastDay from './ForecastDay';
 
 const styles = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between"
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
 };
 
 class ForecastWeek extends React.Component {
@@ -133,14 +135,15 @@ Lastly, we export the component.
 Next, `<ForecastFooterNav />`.
 
 ```javascript
-import React from "react";
-import Button from "./utils/Button";
+// ForecastFooterNav.jsx
+import React from 'react';
+import Button from './utils/Button';
 
 const styles = {
-  padding: "2% 0",
-  display: "flex",
-  justifyContent: "space-between",
-  marginBottom: 25
+  padding: '2% 0',
+  display: 'flex',
+  justifyContent: 'space-between',
+  marginBottom: 25,
 };
 
 class ForecastFooterNav extends React.Component {
@@ -169,12 +172,13 @@ Lastly, we export `<ForecastFooterNav />`.
 Next, `<ForecastAppFooter />`.
 
 ```javascript
-import React from "react";
-import ForecastFooterNav from "./ForecastFooterNav";
-import ForecastWeek from "./ForecastWeek";
+// ForecastAppFooter.jsx
+import React from 'react';
+import ForecastFooterNav from './ForecastFooterNav';
+import ForecastWeek from './ForecastWeek';
 
 const styles = {
-  padding: 20
+  padding: 20,
 };
 
 class ForecastAppFooter extends React.Component {
@@ -198,14 +202,15 @@ We import `React`, `ForecastFooterNav`, and `ForecastWeek`. Then we had some sty
 Next, we have `<ForecastAppHeader />`.
 
 ```javascript
-import React from "react";
+// ForecastAppHeader.jsx
+import React from 'react';
 
 const styles = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  textAlign: "center"
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
 };
 
 class ForecastAppHeader extends React.Component {
@@ -236,12 +241,13 @@ And last but not least, we export `<ForecastAppHeader />`.
 Now for the last component, `<ForecastApp />`.
 
 ```javascript
-import React from "react";
-import ForecastAppHeader from "./ForecastAppHeader";
-import ForecastAppFooter from "./ForecastAppFooter";
+// App.jsx
+import React from 'react';
+import ForecastAppHeader from './ForecastAppHeader';
+import ForecastAppFooter from './ForecastAppFooter';
 
 const styles = {
-  maxWidth: 360
+  maxWidth: 360,
 };
 
 class App extends React.Component {
@@ -267,6 +273,7 @@ With all components being build out statically, we can start to work in the data
 First let's take a lot at the way I structured data. If this were a real app on the market, I would probably wire up to a weather API but since I'm more focused building a basic prototype, static data will do.
 
 ```json
+// data.json
 [
   {
     "today": {
@@ -313,6 +320,7 @@ Now that I have the data, I can start to go through each component, and see what
 First I started with the main `<ForecastApp />` component. Since it was just a container, I want to pull in the data here, using a `componentDidMount` method. So I added 2 new methods, `constructor()` and `componentDidMount()`.
 
 ```javascript
+// App.jsx
 constructor(props) {
   super(props);
   this.state = {
@@ -334,21 +342,22 @@ componentDidMount() {
 All together my component stayed as a class component, but added some state and data to the mix.
 
 ```javascript
-import React from "react";
-import ForecastAppHeader from "./ForecastAppHeader";
-import ForecastAppFooter from "./ForecastAppFooter";
-import data from "../data.json";
+// App.jsx
+import React from 'react';
+import ForecastAppHeader from './ForecastAppHeader';
+import ForecastAppFooter from './ForecastAppFooter';
+import data from '../data.json';
 
 const styles = {
-  maxWidth: 360
+  maxWidth: 360,
 };
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      today: "Loading...",
-      followingDays: "Loading..."
+      today: 'Loading...',
+      followingDays: 'Loading...',
     };
   }
   componentDidMount() {
@@ -357,7 +366,7 @@ class App extends React.Component {
 
     this.setState({
       today,
-      followingDays
+      followingDays,
     });
   }
   render() {
@@ -380,14 +389,15 @@ Next, I updated `<ForecastAppHeader />`.
 Because `<ForecastAppHeader />` is just _displaying_ data, I changed the component into a stateless functional component like so:
 
 ```javascript
-import React from "react";
+// ForecastAppHeader.jsx
+import React from 'react';
 
 const styles = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  textAlign: "center"
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
 };
 
 function ForecastAppHeader(props) {
@@ -415,12 +425,13 @@ Now about `<ForecastAppFooter />`.
 Because `<ForecastAppFooter />` did not need to manage any state, I changed it to a stateless functional component.
 
 ```javascript
-import React from "react";
-import ForecastFooterNav from "./ForecastFooterNav";
-import ForecastWeek from "./ForecastWeek";
+// ForecastAppFooter.jsx
+import React from 'react';
+import ForecastFooterNav from './ForecastFooterNav';
+import ForecastWeek from './ForecastWeek';
 
 const styles = {
-  padding: 20
+  padding: 20,
 };
 
 function ForecastAppFooter(props) {
@@ -440,13 +451,14 @@ You could see that `<ForecastAppFooter />` is pretty simple. It only needs to pa
 Now `<ForecastWeek />` is probably the most exciting component this little app has to offer. Once again, I changed this component into a stateless functional component.
 
 ```javascript
-import React from "react";
-import ForecastDay from "./ForecastDay";
+// ForecastWeek.jsx
+import React from 'react';
+import ForecastDay from './ForecastDay';
 
 const styles = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between"
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
 };
 
 function ForecastWeek(props) {
@@ -474,9 +486,10 @@ This then left me with an array that I could `map()` through and generate a list
 Now for the last component, `<ForecastDay />`.
 
 ```javascript
-import React from "react";
-import styled from "styled-components";
-import { Cloud, Sun, CloudRain } from "react-feather";
+// ForecastDay.jsx
+import React from 'react';
+import styled from 'styled-components';
+import { Cloud, Sun, CloudRain } from 'react-feather';
 
 const Container = styled.div`
   display: flex;
