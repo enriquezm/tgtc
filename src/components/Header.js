@@ -20,6 +20,10 @@ const Container = styled.header`
     animation-delay: 0.1s;
     color: black;
   }
+  mark {
+    color: white;
+    background-color: #8131FF;
+  }
   &.tabs > a:not(:last-child) {
     margin-right: 15px;
   }
@@ -90,7 +94,7 @@ const Header = props => {
           <section>
             <h1>Hello there!</h1>
             <p>
-              My name is Myles and I'm a UI Engineer focused on building
+              My name is Myles and I'm a <mark>Frontend Developer</mark> focused on building
               websites and applications with JavaScript.
             </p>
           </section>
