@@ -8,6 +8,7 @@ import Section from '../components/Section';
 import styled from 'styled-components';
 import '../global-styles.css';
 import { ArrowRight } from 'react-feather';
+import GithubData from '../components/GithubData';
 
 const Grid = styled.div`
   display: grid;
@@ -59,6 +60,11 @@ const IndexPage = ({ data }) => {
         description="A glipse of who I am, what I've built, and where I want to go in my career."
         full
       />
+      <Section>
+        <h2>Activity</h2>
+        <p>My latest activity on Github.</p>
+        <GithubData />
+      </Section>
       <Section centered>
         <Grid>
           {edges.map(edge => {
