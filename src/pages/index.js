@@ -86,14 +86,8 @@ const IndexPage = ({ data }) => {
       <ContainerFluid bgColor="#35303c" color="#c2c0c4">
         <Section centered>
           <h3>A little about me</h3>
-          <P color="red" align="center">
-            I started coding in college and after many sleepless nights received
-            my degree in computer science. After graduating, I launched off into
-            the JavaScript universe and have been teaching myself ever since.
-            I'm pretty open minded when it comes to learning and I enjoy pushing
-            myself to get better a little bit every day. I mainly work with
-            JavaScript but I am always trying to learn new programming language
-            concepts as a whole.
+          <P align="center">
+            I've always viewed myself as a creative and someone who likes to do things a little different. When the time is appropriate, I like to think outside of the boundaries that we sometimes put on ourselves and see where we can go. I mainly write in JavaScript. I have experience with frameworks like React but whenever possible, my favorite flavor is vanilla. I build for the human experience and always try to work in best practices in UX and Accesibility. Whenever I'm not coding, I'm studying Brazilian Jiu Jitsu or running some miles in the outback trails.
           </P>
         </Section>
       </ContainerFluid>
