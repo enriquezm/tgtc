@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => {
         <Section centered>
           <h3>A little about me</h3>
           <P align="center">
-            I've always viewed myself as a creative and someone who likes to do things a little different. When the time is appropriate, I like to think outside of the boundaries that we sometimes put on ourselves and see where we can go. I mainly write in JavaScript. I have experience with frameworks like React but whenever possible, my favorite flavor is vanilla. I build for the human experience and always try to work in best practices in UX and Accesibility. Whenever I'm not coding, I'm studying Brazilian Jiu Jitsu or running some miles in the outback trails.
+            I've always viewed myself as a creative and someone who likes to do things a little different. When the time is appropriate, I like to think outside of the boundaries that I sometimes put on myself and see where I can go. I mainly write in vanilla JavaScript but I also have experience with frameworks like React. I build for the human experience and always try to work using best practices in UX and Accesibility. Whenever I'm not coding, I'm studying Brazilian Jiu Jitsu or trail running.
           </P>
         </Section>
       </ContainerFluid>
