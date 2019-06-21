@@ -65,7 +65,9 @@ const IndexPage = ({ data }) => {
         <p>My latest activity on Github.</p>
         <GithubData />
       </Section>
-      <Section centered>
+      <Section>
+        <h2>Side Projects</h2>
+        <p>Some projects I've worked on to keep the mind busy.</p>
         <Grid>
           {edges.map(edge => {
             const { frontmatter } = edge.node;
