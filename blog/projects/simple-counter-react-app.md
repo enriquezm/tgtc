@@ -3,7 +3,7 @@ path: /projects/react-counter
 date: 2018-10-29T11:39:36.830Z
 title: Counter App
 description: "A simple counter built with React and React Pose."
-color: "#e5a707"
+color: "#1AAE9F"
 ---
 I wanted to understand event handlers more when working with React, so I built a simple counter. Since _just_ a counter app was too boring for me, I wanted to add some simple animation for feedback with [React Pose](https://popmotion.io/pose/).
 

@@ -3,7 +3,7 @@ path: /projects/google-trends-visualizer
 date: 2019-03-21T21:51:10.754Z
 title: Google Trends Visualizer App
 description: My process when building the Google Trends Visualizer for a coding test.
-color: "#EF5A4C"
+color: "#BD34D1"
 ---
 I took a coding test that required us to make a replica of the [Google Trends Visualizer](https://trends.google.com/trends/hottrends/visualize?nrow=5&ncol=5). 
 

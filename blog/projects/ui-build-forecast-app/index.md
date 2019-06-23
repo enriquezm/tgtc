@@ -3,7 +3,7 @@ path: /projects/ui-build-forecast-app
 date: 2019-05-29
 title: UI Build It - Forecast App
 description: Building a prototype from scratch in React.
-color: '#554D61'
+color: '#7569F4'
 ---
 
 ## Introduction
