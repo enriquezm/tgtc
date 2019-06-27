@@ -6,6 +6,7 @@ import './Header.css';
 import Mouse from './Mouse';
 import { Helmet } from 'react-helmet';
 import NavLink from './util/NavLink';
+import GitHubButton from 'react-github-btn';
 
 const Container = styled.header`
   width: 100%;
@@ -22,7 +23,7 @@ const Container = styled.header`
   }
   mark {
     color: white;
-    background-color: #8131FF;
+    background-color: #8131ff;
   }
   &.tabs > a:not(:last-child) {
     margin-right: 15px;
@@ -92,11 +93,21 @@ const Header = props => {
           </section>
         ) : (
           <section>
-            <h1>Hello there!</h1>
+            <h1>Hi, I'm Myles.</h1>
             <p>
-              My name is Myles and I'm a <mark>Frontend Developer</mark> focused on building
-              websites and applications with JavaScript.
+              I'm a Frontend Developer focused on building websites and
+              applications with{' '}
+              <a href="http://vanilla-js.com/">vanilla JavaScript</a> and modern
+              tech.
             </p>
+
+            <GitHubButton
+              href="https://github.com/enriquezm"
+              data-show-count="true"
+              aria-label="Follow @enriquezm on GitHub"
+            >
+              Follow
+            </GitHubButton>
           </section>
         )}
         <Center>
