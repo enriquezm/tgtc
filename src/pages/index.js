@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import Section from '../components/Section';
 import styled from 'styled-components';
 import '../global-styles.css';
-import { ArrowRight } from 'react-feather';
 import P from '../components/util/P';
 import ContainerFluid from '../components/util/ContainerFluid';
 import TextButton from '../components/util/TextButton';
+import ProjectPosts from '../components/ProjectPosts';
 
 const Row = styled.div`
   display: flex;
@@ -34,52 +33,7 @@ const ResumeRight = styled.div`
   }
 `;
 
-const Grid = styled.div`
-  display: grid;
-  margin-left: -2%;
-  margin-right: -2%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
-  margin-bottom: 20px;
-  @media screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
-    grid-gap: 0;
-  }
-`;
-
-const Item = styled(Link)`
-  margin: 0;
-  padding: 50px 25px;
-  text-align: center;
-  h4,
-  p {
-    color: white;
-  }
-  svg {
-    stroke: white;
-    transition: all 0.2s;
-  }
-  &:hover {
-    svg {
-      transform: translateX(100%);
-      transition: all 0.3s;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    svg {
-      display: none;
-    }
-  }
-`;
-
-const linkContainerStyles = {
-  display: 'flex',
-  justifyContent: 'center',
-};
-
-const IndexPage = ({ data }) => {
-  const { edges } = data.allMarkdownRemark;
+const IndexPage = () => {
   return (
     <div>
       <Header full />
@@ -87,7 +41,14 @@ const IndexPage = ({ data }) => {
         <Section centered>
           <h3>A little about me</h3>
           <P align="center">
-            I've always viewed myself as a creative and someone who likes to do things a little different. When the time is appropriate, I like to think outside of the boundaries that I sometimes put on myself and see where I can go. I mainly write in vanilla JavaScript but I also have experience with frameworks like React. I build for the human experience and always try to work using best practices in UX and Accesibility. Whenever I'm not coding, I'm studying Brazilian Jiu Jitsu or trail running.
+            I've always viewed myself as a creative and someone who likes to do
+            things a little different. When the time is appropriate, I like to
+            think outside of the boundaries that I sometimes put on myself and
+            see where I can go. I mainly write in vanilla JavaScript but I also
+            have experience with frameworks like React. I build for the human
+            experience and always try to work using best practices in UX and
+            Accesibility. Whenever I'm not coding, I'm studying Brazilian Jiu
+            Jitsu or trail running.
           </P>
         </Section>
       </ContainerFluid>
@@ -97,25 +58,8 @@ const IndexPage = ({ data }) => {
           Here are a mixture of websites, applications, designs, and
           experiments.
         </P>
-        <Grid>
-          {edges.map(edge => {
-            const { frontmatter } = edge.node;
-            return (
-              <Item
-                css={`
-                  background-color: ${frontmatter.color};
-                `}
-                key={frontmatter.path}
-                to={frontmatter.path}
-              >
-                <h4>{frontmatter.title}</h4>
-                <p>{frontmatter.description}</p>
-                <ArrowRight />
-              </Item>
-            );
-          })}
-        </Grid>
-        <div style={linkContainerStyles}>
+        <ProjectPosts />
+        <div css={'display: flex; justify-content: flex-end;'}>
           <TextButton to="/projects/">More Projects</TextButton>
         </div>
       </Section>
@@ -182,27 +126,3 @@ const IndexPage = ({ data }) => {
 };
 
 export default IndexPage;
-
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(
-      filter: { fields: { draft: { eq: false } } }
-      limit: 6
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-            description
-            color
-          }
-        }
-      }
-    }
-  }
-`;
