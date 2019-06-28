@@ -3,9 +3,11 @@ path: /projects/google-trends-visualizer
 date: 2019-03-21T21:51:10.754Z
 title: Google Trends Visualizer App
 description: My process when building the Google Trends Visualizer for a coding test.
-color: "#EF5A4C"
+color: '#EF5A4C'
+sourceCode: 'https://github.com/enriquezm/google-trends-visualizer'
 ---
-I took a coding test that required us to make a replica of the [Google Trends Visualizer](https://trends.google.com/trends/hottrends/visualize?nrow=5&ncol=5). 
+
+I took a coding test that required us to make a replica of the [Google Trends Visualizer](https://trends.google.com/trends/hottrends/visualize?nrow=5&ncol=5).
 
 At first, I was a little overwhelmed. There was a lot going on, but like all projects that seem overwhelming, I went looking for my best friends "Pen" and "Paper".
 

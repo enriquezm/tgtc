@@ -4,6 +4,7 @@ date: 2019-05-29
 title: UI Build It - Forecast App
 description: Building a prototype from scratch in React.
 color: '#554D61'
+sourceCode: 'https://codesandbox.io/s/weather-forecast-81nnh'
 ---
 
 ## Introduction

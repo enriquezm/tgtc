@@ -3,8 +3,9 @@ path: /projects/react-clock
 date: 2018-10-23T10:33:36.830Z
 title: Clock App
 description: A simple clock built with React.
-color: "#554D61"
+sourceCode: 'https://codepen.io/mylesenri/pen/vVVORw'
 ---
+
 I wanted to see the differences between building a clock app using vanilla JavaScript and using a library like React.
 
 Here's what I found with using React:
