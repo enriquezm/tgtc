@@ -3,12 +3,8 @@ path: /projects/ui-build-forecast-app
 date: 2019-05-29
 title: UI Build It - Forecast App
 description: Building a prototype from scratch in React.
-<<<<<<< HEAD
-color: '#7569F4'
-=======
 color: '#554D61'
 sourceCode: 'https://codesandbox.io/s/weather-forecast-81nnh'
->>>>>>> postListing
 ---
 
 ## Introduction
