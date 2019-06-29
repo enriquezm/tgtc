@@ -31,9 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {
-          color: node.frontmatter.color,
-        }, // additional data can be passed via context
+        context: {}, // additional data can be passed via context
       });
     });
   });
