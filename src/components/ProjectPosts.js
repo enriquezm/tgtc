@@ -9,7 +9,7 @@ const Grid = styled.div`
   margin-left: -2%;
   margin-right: -2%;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 10px;
   margin-bottom: 20px;
   @media screen and (max-width: 600px) {
