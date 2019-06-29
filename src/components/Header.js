@@ -95,15 +95,10 @@ const Header = props => {
           <section>
             <h1>Hi, I'm Myles.</h1>
             <p>
-<<<<<<< HEAD
-              My name is Myles and I'm a <mark>Frontend Developer</mark> focused
-              on building websites and applications with JavaScript.
-=======
               I'm a Frontend Developer focused on building websites and
               applications with{' '}
               <a href="http://vanilla-js.com/">vanilla JavaScript</a> and modern
               tech.
->>>>>>> addGithubBtn
             </p>
 
             <GitHubButton
