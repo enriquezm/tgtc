@@ -33,8 +33,12 @@ const Container = styled.header`
     display: flex;
     justify-content: space-between;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     height: 100vh;
+    h1,
+    p {
+      width: 100%;
+    }
   }
 `;
 
