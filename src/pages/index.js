@@ -37,18 +37,14 @@ const IndexPage = () => {
   return (
     <div>
       <Header full />
-      <ContainerFluid bgColor="#35303c" color="#c2c0c4">
+      <ContainerFluid bgColor="#7469F4" color="white">
         <Section centered>
           <h3>A little about me</h3>
           <P align="center">
-            I've always viewed myself as a creative and someone who likes to do
-            things a little different. When the time is appropriate, I like to
-            think outside of the boundaries that I sometimes put on myself and
-            see where I can go. I mainly write in vanilla JavaScript but I also
-            have experience with frameworks like React. I build for the human
-            experience and always try to work using best practices in UX and
-            Accesibility. Whenever I'm not coding, I'm studying Brazilian Jiu
-            Jitsu or trail running.
+            I started coding my freshman year in college but I've been a builder
+            ever since I could remember. I've always loved to figure out how
+            things worked and tried to rebuild them. I guess that's why coding
+            has always been fun for me.
           </P>
         </Section>
       </ContainerFluid>
