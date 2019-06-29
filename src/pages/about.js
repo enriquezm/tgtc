@@ -8,7 +8,6 @@ import '../global-styles.css';
 import GithubData from '../components/GithubData';
 import ProjectPosts from '../components/ProjectPosts';
 
-
 const IndexPage = () => (
   <div>
     <Helmet>
@@ -20,15 +19,9 @@ const IndexPage = () => (
       description="A glipse of who I am, what I've built, and where I want to go in my career."
       full
     />
-    <Section>
-      <h2>Activity</h2>
-      <p>My latest activity on Github.</p>
-      <GithubData />
-    </Section>
     <Contact />
     <Footer />
   </div>
 );
 
 export default IndexPage;
-
