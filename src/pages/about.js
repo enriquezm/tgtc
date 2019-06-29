@@ -18,6 +18,26 @@ const IndexPage = () => (
       full
     />
     <Section>
+      <h2>My Story</h2>
+      <p>
+        I started coding my freshman year in college but I've been a builder
+        ever since I could remember. I've always loved to figure out how things
+        worked and tried to rebuild them. I guess that's why coding has always
+        been fun for me.
+      </p>
+      <p>
+        Throughout my coding career I've been involved in hackathons, building
+        websites, building web applications, and some freelancing. I mainly
+        focus on JavaScript, but with a background in computer science, I can
+        pick up any language given a couple days. I love to explore and study
+        new frameworks, tools, and concepts. But at the end of the day, I make
+        sure the fundamentals continue to be my priority.
+      </p>
+      <p>
+        Outside of programming, I enjoy trail running and brazlian jiu jitsu.
+      </p>
+    </Section>
+    <Section>
       <h2>My Coder's Code</h2>
       <p>
         The following items are adopted from the{' '}
