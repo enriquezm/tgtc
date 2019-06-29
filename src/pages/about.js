@@ -5,8 +5,6 @@ import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import Section from '../components/Section';
 import '../global-styles.css';
-import GithubData from '../components/GithubData';
-import ProjectPosts from '../components/ProjectPosts';
 
 const IndexPage = () => (
   <div>
