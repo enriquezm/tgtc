@@ -22,10 +22,6 @@ const Container = styled.header`
     animation-delay: 0.1s;
     color: black;
   }
-  mark {
-    color: white;
-    background-color: #8131ff;
-  }
   &.tabs > a:not(:last-child) {
     margin-right: 15px;
   }
@@ -110,6 +106,7 @@ const Header = props => {
             <GitHubButton
               href="https://github.com/enriquezm"
               data-show-count="true"
+              data-size="large"
               aria-label="Follow @enriquezm on GitHub"
             >
               Follow
