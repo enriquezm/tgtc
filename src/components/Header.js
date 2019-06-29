@@ -16,6 +16,7 @@ const Container = styled.header`
   h1,
   p {
     animation: slideUp 0.5s ease-in-out;
+    width: 60%;
   }
   p {
     animation-delay: 0.1s;
@@ -97,8 +98,9 @@ const Header = props => {
             <p>
               I'm a Frontend Developer focused on building websites and
               applications with{' '}
-              <a href="http://vanilla-js.com/">vanilla JavaScript</a> and modern
-              tech.
+              <a href="http://vanilla-js.com/">vanilla JavaScript</a>. Sometimes
+              I'll even add in a little React to keep it interesting (which is
+              how this whole site was built).
             </p>
 
             <GitHubButton
