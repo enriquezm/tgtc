@@ -100,7 +100,9 @@ const Header = props => {
               applications with{' '}
               <a href="http://vanilla-js.com/">vanilla JavaScript</a>. Sometimes
               I'll even add in a little React to keep it interesting (which is
-              how this whole site was built).
+              how{' '}
+              <a href="https://github.com/enriquezm/tgtc">this whole site</a>{' '}
+              was built).
             </p>
 
             <GitHubButton
