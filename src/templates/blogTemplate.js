@@ -48,9 +48,9 @@ const PostDate = styled.p`
   color: #9799a3;
 `;
 
-const Template = ({ data, pageContext }) => {
+const Template = ({ data }) => {
   // 'data' is injected by the Graphql query below
-  const { color } = pageContext;
+  const purpleColor = '#7469F4';
   const { markdownRemark } = data;
   const { html } = markdownRemark;
   const { title, description, date } = markdownRemark.frontmatter;
@@ -58,7 +58,7 @@ const Template = ({ data, pageContext }) => {
     <div>
       <div
         css={`
-          background-color: ${color};
+          background-color: ${purpleColor};
           color: white;
         `}
       >

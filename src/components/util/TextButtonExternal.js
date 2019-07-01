@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const primaryColor = {
@@ -13,7 +12,7 @@ const secondaryColor = {
   click: '#b9b4f9',
 };
 
-const TextButton = styled(Link)`
+const TextButtonExternal = styled.a`
   margin: 0 5px;
   width: 100%;
   border-radius: 4px;
@@ -42,4 +41,4 @@ const TextButton = styled(Link)`
   }
 `;
 
-export default TextButton;
+export default TextButtonExternal;

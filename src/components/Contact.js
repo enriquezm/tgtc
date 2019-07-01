@@ -1,11 +1,11 @@
 import React from 'react';
-import { GitHub, Linkedin, Mail } from 'react-feather';
+import { Linkedin, Mail } from 'react-feather';
 import styled from 'styled-components';
 import P from './util/P';
 import Bold from './util/Bold';
 
 const ContainerFluid = styled.section`
-  background: #554d60;
+  background: #7469f4;
   color: white;
 `;
 
@@ -16,6 +16,9 @@ const ContainerFixed = styled.section`
   text-align: center;
   h3 {
     margin-bottom: 50px;
+  }
+  p {
+    color: white;
   }
   @media screen and (max-width: 600px) {
     padding: 15% 3%;
@@ -34,7 +37,7 @@ const Row = styled.div`
     justify-content: center;
     align-items: center;
     &:hover {
-      background-color: #63576f;
+      background-color: #685edb;
     }
     p {
       color: #eeedef;
@@ -72,13 +75,6 @@ const Contact = () => (
             <Bold>LinkedIn</Bold>
           </p>
           <p>mylesenriquez</p>
-        </a>
-        <a href="https://github.com/enriquezm">
-          <GitHub />
-          <p>
-            <Bold>Github</Bold>
-          </p>
-          <p>enriquezm</p>
         </a>
       </Row>
     </ContainerFixed>

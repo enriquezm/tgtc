@@ -15,7 +15,7 @@ const Container = styled(Link)`
 const activeStyles = {
   color: 'grey',
   paddingBottom: 10,
-  borderBottom: '2px solid #8131FF',
+  borderBottom: '2px solid #7469F4',
 };
 
 const NavLink = ({ children, to }) => (

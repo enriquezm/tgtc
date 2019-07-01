@@ -6,6 +6,7 @@ import './Header.css';
 import Mouse from './Mouse';
 import { Helmet } from 'react-helmet';
 import NavLink from './util/NavLink';
+import GitHubButton from 'react-github-btn';
 
 const Container = styled.header`
   width: 100%;
@@ -15,14 +16,11 @@ const Container = styled.header`
   h1,
   p {
     animation: slideUp 0.5s ease-in-out;
+    width: 60%;
   }
   p {
     animation-delay: 0.1s;
     color: black;
-  }
-  mark {
-    color: white;
-    background-color: #8131FF;
   }
   &.tabs > a:not(:last-child) {
     margin-right: 15px;
@@ -31,8 +29,12 @@ const Container = styled.header`
     display: flex;
     justify-content: space-between;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     height: 100vh;
+    h1,
+    p {
+      width: 100%;
+    }
   }
 `;
 
@@ -80,7 +82,7 @@ const Header = props => {
           <div>
             {/* <AInternal to="/about/">About</AInternal> */}
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/projects/">Projects</NavLink>
+            <NavLink to="/about/">About</NavLink>
             <NavLink to="/resume/">Resume</NavLink>
             {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
@@ -92,11 +94,25 @@ const Header = props => {
           </section>
         ) : (
           <section>
-            <h1>Hello there!</h1>
+            <h1>Hi, I'm Myles.</h1>
             <p>
-              My name is Myles and I'm a <mark>Frontend Developer</mark> focused on building
-              websites and applications with JavaScript.
+              I'm a Frontend Developer focused on building websites and
+              applications with{' '}
+              <a href="http://vanilla-js.com/">vanilla JavaScript</a>. Sometimes
+              I'll even add in a little React to keep it interesting (which is
+              how{' '}
+              <a href="https://github.com/enriquezm/tgtc">this whole site</a>{' '}
+              was built).
             </p>
+
+            <GitHubButton
+              href="https://github.com/enriquezm"
+              data-show-count="true"
+              data-size="large"
+              aria-label="Follow @enriquezm on GitHub"
+            >
+              Follow
+            </GitHubButton>
           </section>
         )}
         <Center>
