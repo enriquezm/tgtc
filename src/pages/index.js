@@ -44,7 +44,7 @@ const IndexPage = () => {
             I started coding my freshman year in college but I've been a builder
             ever since I could remember. I've always loved to figure out how
             things worked and tried to rebuild them. I guess that's why coding
-            has always been fun for me.
+            has always been fun for me. Fast forward a few years and I'm here, coding websites and applications with JavaScript.
           </P>
         </Section>
       </ContainerFluid>

@@ -39,7 +39,7 @@ const IndexPage = () => (
         build a tool that could help out a niche of users.
       </p>
       <p>
-        Outside of programming, I enjoy trail running and brazlian jiu jitsu.
+        Outside of programming, I enjoy trail running and brazilian jiu jitsu.
       </p>
     </Section>
     <Section>
