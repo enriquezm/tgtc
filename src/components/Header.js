@@ -7,6 +7,7 @@ import Mouse from './Mouse';
 import { Helmet } from 'react-helmet';
 import NavLink from './util/NavLink';
 import GitHubButton from 'react-github-btn';
+import { TwitterFollowButton } from 'react-twitter-embed';
 
 const Container = styled.header`
   width: 100%;
@@ -64,6 +65,15 @@ const NavBar = styled.nav`
   }
 `;
 
+const SocialButtons = styled.div`
+  width: 50%;
+  display: flex;
+`;
+
+const ButtonWrapper = styled.div`
+  margin-right: 15px;
+`;
+
 const Header = props => {
   return (
     <Section>
@@ -99,20 +109,29 @@ const Header = props => {
               I'm a Frontend Developer focused on building websites and
               applications with{' '}
               <a href="http://vanilla-js.com/">vanilla JavaScript</a>. Sometimes
-              I'll even add in a little React to keep it interesting (which is
+              I'll also work with modern tech, like Gatsby and React (which is
               how{' '}
               <a href="https://github.com/enriquezm/tgtc">this whole site</a>{' '}
               was built).
             </p>
-
-            <GitHubButton
-              href="https://github.com/enriquezm"
-              data-show-count="true"
-              data-size="large"
-              aria-label="Follow @enriquezm on GitHub"
-            >
-              Follow
-            </GitHubButton>
+            <p>
+              At the end of the day, I'm just a builder. Give me a problem, and
+              I'll find the solution.
+            </p>
+            <SocialButtons>
+              <ButtonWrapper>
+                <GitHubButton
+                  href="https://github.com/enriquezm"
+                  data-show-count="true"
+                  aria-label="Follow @enriquezm on GitHub"
+                >
+                  Stalk Me
+                </GitHubButton>
+              </ButtonWrapper>
+              <ButtonWrapper>
+                <TwitterFollowButton screenName={'designthrottle'} />
+              </ButtonWrapper>
+            </SocialButtons>
           </section>
         )}
         <Center>
