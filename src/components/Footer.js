@@ -1,10 +1,11 @@
 import React from 'react';
-import { GitHub, Linkedin, Codepen } from 'react-feather';
+import { GitHub, Linkedin, Codepen, Heart } from 'react-feather';
 import styled from 'styled-components';
 import './Footer.css';
 
 const Container = styled.footer`
   background-color: #35303c;
+  padding: 8%;
   ul {
     max-width: 200px;
     margin-bottom: 25px;
@@ -44,7 +45,12 @@ const Footer = () => (
         </a>
       </li>
     </ul>
-    <p>&copy;2019 That Guy That Codes, All Rights Reserved.</p>
+    <p css={'vertical-align: center;'}>
+      &copy; That Guy That Codes, All Rights Reserved. Built by{' '}
+      <a href="https://github.com/enriquezm">Myles</a> with{' '}
+      <a href="https://www.gatsbyjs.org/">Gatsby</a> and{' '}
+      <Heart color="#f14839" size={14} />.
+    </p>
   </Container>
 );
 
