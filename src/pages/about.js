@@ -62,6 +62,30 @@ const IndexPage = () => (
         <li>Design to test.</li>
       </ul>
     </Section>
+    <Section>
+      <h2>Some Smart People I Follow</h2>
+      <ul>
+        <li>
+          <a href="https://www.samanthaming.com/about">Samantha Ming</a>,
+          frontend developer
+        </li>
+        <li>
+          <a href="http://bradfrost.com/">Brad Frost</a>, web designer, speaker,
+          consultant, writer, and musician
+        </li>
+        <li>
+          <a href="https://overreacted.io/">Dan Abramov</a>, co-author of redux
+          and Create React App
+        </li>
+        <li>
+          <a href="https://wesbos.com/">Wes Bos</a>, designer, developer,
+          entreprenuer, speaker, and teacher
+        </li>
+        <li>
+          <a href="http://eli.wtf/">Eli Fitch</a>, frontend developer
+        </li>
+      </ul>
+    </Section>
     <Contact />
     <Footer />
   </div>
