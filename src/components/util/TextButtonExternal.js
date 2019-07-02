@@ -7,9 +7,9 @@ const primaryColor = {
 };
 
 const secondaryColor = {
-  normal: '#7469F4',
-  hover: '#9d96f7',
-  click: '#b9b4f9',
+  normal: '#84DCC6',
+  hover: '#76c6b2',
+  click: '#69b09e',
 };
 
 const TextButtonExternal = styled.a`
@@ -17,22 +17,25 @@ const TextButtonExternal = styled.a`
   width: 100%;
   border-radius: 4px;
   text-align: center;
-  background-color: ${props => (props.primary ? primaryColor.normal : 'none')};
+  color: white;
+  padding: 1% 2%;
+  background-color: ${props =>
+    props.primary ? primaryColor.normal : secondaryColor.normal};
   border: 1px solid
     ${props => (props.primary ? primaryColor.normal : secondaryColor.normal)};
-  color: ${props => (props.primary ? 'white' : secondaryColor.normal)};
-  padding: 1% 2%;
   &:hover {
-    color: ${props => (props.primary ? 'white' : secondaryColor.hover)};
+    color: white;
     border: 1px solid
       ${props => (props.primary ? primaryColor.hover : secondaryColor.hover)};
-    background-color: ${props => (props.primary ? primaryColor.hover : 'none')};
+    background-color: ${props =>
+      props.primary ? primaryColor.hover : secondaryColor.hover};
   }
   &:active {
-    color: ${props => (props.primary ? 'white' : secondaryColor.click)};
+    color: 'white';
     border: 1px solid
       ${props => (props.primary ? primaryColor.click : secondaryColor.click)};
-    background-color: ${props => (props.primary ? primaryColor.click : 'none')};
+    background-color: ${props =>
+      props.primary ? primaryColor.click : secondaryColor.click};
   }
   @media screen and (max-width: 600px) {
     padding: 2% 4%;
