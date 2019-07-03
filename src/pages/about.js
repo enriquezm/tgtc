@@ -34,12 +34,12 @@ const IndexPage = () => (
         sure the fundamentals continue to be my priority.
       </p>
       <p>
-        My short goal as a developer is to create and learn as much as I can. As
-        of right now, I want to get better at JavaScript. My long goal is to
-        build a tool that could help out a niche of users.
+        My short-term goal as a developer is to create and learn as much as I can. My long-term goal is 
+        to make my code work well (performance), make my code easy to follow 
+        (readability), and make it as reusable as possible.
       </p>
       <p>
-        Outside of programming, I enjoy trail running and brazilian jiu jitsu.
+        Outside of programming, I enjoy trail running, brazilian jiu jitsu, and turn based strategy games (currently all about <a href="https://intothebreach.gamepedia.com/Into_The_Breach_Wiki">Into the Breach</a>.
       </p>
     </Section>
     <Section>
