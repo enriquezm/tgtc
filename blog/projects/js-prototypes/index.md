@@ -14,6 +14,10 @@ Here's the think, most objects in JavaScript (if not all) contain a property cal
 
 ### Building an Object Constructor
 
-Let's give ourselves some context with a real world example. We're going to build software that deals with different types of beers. To make it very basic, we'll just work with a limited number of properties a single beer could have.
+Now, I could give a detailed definition of `prototype` and the `prototype chain` but that's always where I get lost. So first, let's start with some code examples and walk through it.
 
-Beer
+```javascript
+function Person() {
+  // object's props and methods
+}
+```
