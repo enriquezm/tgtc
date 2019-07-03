@@ -115,7 +115,7 @@ const Header = props => {
               was built).
             </p>
             <p>
-              At the end of the day, I'm just a builder. Give me a problem, and
+              At the end of the day, I'm just a problem solver and builder. Give me a problem, and
               I'll find the solution.
             </p>
             <SocialButtons>
