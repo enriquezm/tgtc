@@ -93,6 +93,7 @@ const Header = props => {
             {/* <AInternal to="/about/">About</AInternal> */}
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about/">About</NavLink>
+            <NavLink to="/projects/">Projects</NavLink>
             <NavLink to="/resume/">Resume</NavLink>
             {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
@@ -115,8 +116,8 @@ const Header = props => {
               was built).
             </p>
             <p>
-              At the end of the day, I'm just a problem solver and builder. Give me a problem, and
-              I'll find the solution.
+              At the end of the day, I'm just a problem solver and builder. Give
+              me a problem, and I'll find the solution.
             </p>
             <SocialButtons>
               <ButtonWrapper>

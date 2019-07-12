@@ -105,6 +105,7 @@ const ProjectPosts = () => (
               </Item>
             );
           })}
+          <TextButton to="/projects">View All Projects</TextButton>
         </Grid>
       );
     }}
