@@ -84,6 +84,9 @@ const IndexPage = () => (
         <li>
           <a href="http://eli.wtf/">Eli Fitch</a>, frontend developer
         </li>
+        <li>
+          <a href="https://frontendmasters.com/books/front-end-handbook/2019/">Front End Masters Handbook</a>, not a person but an awesome handbook
+        </li>
       </ul>
     </Section>
     <Contact />
