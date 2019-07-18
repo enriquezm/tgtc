@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 const primaryColor = {
-  normal: '#7469F4',
-  hover: '#685edb',
-  click: '#5c54c3',
+  normal: '#6829dc',
+  hover: '#571fbf',
+  click: '#481a9d',
 };
 
 const secondaryColor = {
-  normal: '#84DCC6',
-  hover: '#76c6b2',
-  click: '#69b09e',
+  normal: '#ED3D63',
+  hover: '#eb2b55',
+  click: '#ea1946',
 };
 
 const TextButtonExternal = styled.a`

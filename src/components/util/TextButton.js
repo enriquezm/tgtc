@@ -2,15 +2,15 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const primaryColor = {
-  normal: '#7469F4',
-  hover: '#685edb',
-  click: '#5c54c3',
+  normal: '#6829dc',
+  hover: '#571fbf',
+  click: '#481a9d',
 };
 
 const secondaryColor = {
-  normal: '#7469F4',
-  hover: '#9d96f7',
-  click: '#b9b4f9',
+  normal: '#ED3D63',
+  hover: '#eb2b55',
+  click: '#ea1946',
 };
 
 const TextButton = styled(Link)`
