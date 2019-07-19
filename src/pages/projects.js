@@ -26,7 +26,7 @@ const Grid = styled.div`
 
 const Item = styled.div`
   margin: 0;
-  padding: 15px;
+  padding: 25px 15px;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1.5fr 1fr;
@@ -44,7 +44,7 @@ const Item = styled.div`
     }
   }
   &:not(:last-child) {
-    border-bottom: 2px solid #f6f6f6;
+    border-bottom: 2px solid #20364d;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;

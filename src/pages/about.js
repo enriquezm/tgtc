@@ -34,34 +34,46 @@ const IndexPage = () => (
         sure the fundamentals continue to be my priority.
       </p>
       <p>
-        My short-term goal as a developer is to create and learn as much as I can. My long-term goal is 
-        to make my code work well (performance), make my code easy to follow 
-        (readability), and make it as reusable as possible.
+        My short-term goal as a developer is to create and learn as much as I
+        can. My long-term goal is to make my code work well (performance), make
+        my code easy to follow (readability), and make it as reusable as
+        possible.
       </p>
       <p>
-        Outside of programming, I enjoy trail running, brazilian jiu jitsu, and turn based strategy games (currently all about <a href="https://intothebreach.gamepedia.com/Into_The_Breach_Wiki">Into the Breach</a>.
-      </p>
-    </Section>
-    <Section>
-      <h2>My Coder's Code</h2>
-      <p>
-        The following items are adopted from the{' '}
-        <a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">
-          Pragmatic Programmer
+        Outside of programming, I enjoy trail running, brazilian jiu jitsu, and
+        turn based strategy games (currently all about{' '}
+        <a href="https://intothebreach.gamepedia.com/Into_The_Breach_Wiki">
+          Into the Breach
         </a>
-        . I try to stick to these as my own personal programmer's code.
+        ).
       </p>
-      <ul>
-        <li>Provide options, don't make lame excuses.</li>
-        <li>DRY - Don't Repeat Yourself.</li>
-        <li>Use the power of command shells.</li>
-        <li>Always use source code control.</li>
-        <li>Invest regularly in your knowledge portfolio.</li>
-        <li>Prototype to learn.</li>
-        <li>Fix the problem, not the blame.</li>
-        <li>Design to test.</li>
-      </ul>
     </Section>
+    <div
+      css={`
+        background-color: #20364d;
+      `}
+    >
+      <Section>
+        <h2>My Coder's Code</h2>
+        <p>
+          The following items are adopted from the{' '}
+          <a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">
+            Pragmatic Programmer
+          </a>
+          . I try to stick to these as my own personal programmer's code.
+        </p>
+        <ul>
+          <li>Provide options, don't make lame excuses.</li>
+          <li>DRY - Don't Repeat Yourself.</li>
+          <li>Use the power of command shells.</li>
+          <li>Always use source code control.</li>
+          <li>Invest regularly in your knowledge portfolio.</li>
+          <li>Prototype to learn.</li>
+          <li>Fix the problem, not the blame.</li>
+          <li>Design to test.</li>
+        </ul>
+      </Section>
+    </div>
     <Section>
       <h2>Some Smart People I Follow</h2>
       <ul>
@@ -85,7 +97,10 @@ const IndexPage = () => (
           <a href="http://eli.wtf/">Eli Fitch</a>, frontend developer
         </li>
         <li>
-          <a href="https://frontendmasters.com/books/front-end-handbook/2019/">Front End Masters Handbook</a>, not a person but an awesome handbook
+          <a href="https://frontendmasters.com/books/front-end-handbook/2019/">
+            Front End Masters Handbook
+          </a>
+          , not a person but an awesome handbook
         </li>
       </ul>
     </Section>

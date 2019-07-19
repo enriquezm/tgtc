@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import './Footer.css';
 
 const Container = styled.footer`
-  background-color: #35303c;
+  background-color: #0e2539;
   padding: 8%;
   ul {
     max-width: 200px;

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Container = styled(Link)`
   margin: 0;
   padding: 0;
-  color: ${props => (props.onDark ? '#009FFF' : 'inherit')};
+  color: #b4bac3;
   text-decoration: none;
   &:hover {
     color: #009fff;
@@ -13,9 +13,9 @@ const Container = styled(Link)`
 `;
 
 const activeStyles = {
-  color: 'grey',
+  color: 'white',
   paddingBottom: 10,
-  borderBottom: '2px solid #7469F4',
+  borderBottom: '2px solid #ED3D63',
 };
 
 const NavLink = ({ children, to }) => (

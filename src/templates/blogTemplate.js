@@ -45,12 +45,12 @@ const PostContentContainer = styled.div`
 `;
 
 const PostDate = styled.p`
-  color: #9799a3;
+  color: #ed3d63;
 `;
 
 const Template = ({ data }) => {
   // 'data' is injected by the Graphql query below
-  const purpleColor = '#7469F4';
+  const purpleColor = '#20364D';
   const { markdownRemark } = data;
   const { html } = markdownRemark;
   const { title, description, date } = markdownRemark.frontmatter;

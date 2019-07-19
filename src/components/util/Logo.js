@@ -7,6 +7,7 @@ const Logo = styled(Link)`
   color: inherit;
   font-weight: 700;
   font-size: 24px;
+  color: white;
   &:hover {
     color: #009fff;
   }

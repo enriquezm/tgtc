@@ -21,7 +21,6 @@ const Container = styled.header`
   }
   p {
     animation-delay: 0.1s;
-    color: black;
   }
   &.tabs > a:not(:last-child) {
     margin-right: 15px;
@@ -107,7 +106,7 @@ const Header = props => {
           <section>
             <h1>Hi, I'm Myles.</h1>
             <p>
-              I'm a Frontend Developer focused on building websites and
+              I'm a Frontend Engineer focused on building websites and
               applications with{' '}
               <a href="http://vanilla-js.com/">vanilla JavaScript</a>. Sometimes
               I'll also work with modern tech, like Gatsby and React (which is

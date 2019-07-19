@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <div>
       <Header full />
-      <ContainerFluid bgColor="#7469F4" color="white">
+      <ContainerFluid bgColor="#20364D" color="white">
         <Section centered>
           <h3>A little about me</h3>
           <P align="center">
@@ -26,10 +26,10 @@ const IndexPage = () => {
         </Section>
       </ContainerFluid>
       <Section centered>
-        <h3>What I've been up to</h3>
+        <h3>Some side stuff</h3>
         <P align="center">
-          Here are a mixture of websites, applications, designs, and
-          experiments.
+          I try to keep busy with side projects that help me learn and keep up
+          to date with modern tech, best practices, etc.
         </P>
         <ProjectPosts />
       </Section>

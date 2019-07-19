@@ -5,7 +5,7 @@ import P from './util/P';
 import Bold from './util/Bold';
 
 const ContainerFluid = styled.section`
-  background: #7469f4;
+  background: #20364d;
   color: white;
 `;
 

@@ -6,13 +6,16 @@ import P from './util/P';
 const Row = styled.div`
   display: flex;
   justify-content: ${props => props.justifyContent};
+  b {
+    color: white;
+  }
 `;
 
 const ResumeLeft = styled.div`
   width: 50%;
   text-align: right;
   padding: 50px 20px;
-  border-right: 2px solid #eeeeee;
+  border-right: 2px solid #20364d;
   p {
     margin-bottom: 10px;
   }
@@ -38,7 +41,7 @@ const MiniResume = () => (
       </ResumeLeft>
       <ResumeRight>
         <p>
-          <b>Web Specialist @ UNLV</b>
+          <b>Web Specialist @ University of Nevada, Las Vegas</b>
         </p>
         <p>
           Maintain{' '}
@@ -51,7 +54,7 @@ const MiniResume = () => (
     <Row justifyContent="center">
       <ResumeLeft>
         <p>
-          <b>Web Developer @ DCDC</b>
+          <b>Web Developer @ College of Education, UHM</b>
         </p>
         <p>
           Develop websites from provided wireframes and mockups. Find and
@@ -72,7 +75,7 @@ const MiniResume = () => (
       </ResumeLeft>
       <ResumeRight>
         <p>
-          <b>Web & Design Assistant @ DCDC</b>
+          <b>Web & Design Assistant @ College of Education, UHM</b>
         </p>
         <p>
           Design and create social media banners using Adobe
