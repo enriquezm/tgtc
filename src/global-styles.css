@@ -6,8 +6,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #0e2539;
   font-family: 'Heebo', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
 }
 h1,
 h2,
@@ -37,7 +45,7 @@ a {
 }
 p {
   line-height: 1.5;
-  color: rgba(38, 41, 58, 0.8);
+  color: #b4bac3;
 }
 img {
   width: 100%;
@@ -51,6 +59,9 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+ul > li {
+  color: #b4bac3;
 }
 a {
   text-decoration: none;
@@ -89,22 +100,6 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: #fff;
-  }
-  .flex-container {
-    display: flex;
-  }
-  .flex-column {
-    height: 100%;
-    width: 100%;
-  }
-  .flex-content {
-    display: flex;
-    flex-direction: column;
-  }
 }
 @media only screen and (max-width: 900px) {
   * {
