@@ -3,7 +3,7 @@ path: /projects/rft-website-redesign
 date: 2019-05-07T21:51:10.754Z
 title: Redemption Fight Team Redesign
 description: The redesigning of a martial art gym's website.
-color: "#1AAE9F"
+color: '#1AAE9F'
 ---
 
 It's been awhile since I last redesigned an app/website so I gave myself the challenge to redesign the website for a MMA school that I go to, [Redemption Fight Team](http://www.redemptionfightteam.com/).
@@ -20,7 +20,7 @@ So the first step for me was to define a goal and that goal was to get curious c
 
 The original site map looked like so:
 
-```javascript
+```text
 Home
 |_Programs
 |_Schedule
@@ -51,8 +51,13 @@ Now I want to take a step back and mention that this is purely my assumption. I 
 
 With this information I structured the site map like so:
 
-```javascript
-Home | _Instructors | _Pricing | _Programs | _Schedule | _Contact;
+```text
+  Home
+  |_Instructors
+  |_Pricing
+  |_Programs
+  |_Schedule
+  |_Contact
 ```
 
 It's a lot simpler and provides the customer (parent) the information that they would need.
