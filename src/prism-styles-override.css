@@ -22,7 +22,7 @@ pre[class*='language-'] {
 }
 pre[class*='language-'],
 :not(pre) > code[class*='language-'] {
-  background: #2a2a2a;
+  background: #263a4c;
 }
 pre[class*='language-'] {
   padding: 15px;
@@ -50,12 +50,12 @@ pre[class*='language-'] code {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #6f705e;
+  color: #918c86;
 }
 .token.operator,
 .token.boolean,
 .token.number {
-  color: #a77afe;
+  color: #a070ff;
 }
 .token.attr-name,
 .token.string {
@@ -188,14 +188,14 @@ pre[data-line] .line-highlight[data-end]:after {
 }
 
 p > code[class*='language-'] {
-  background: #f6f8fa;
+  background: #263a4c;
   border: none;
-  color: #e60073;
+  color: #66d166;
   box-shadow: none;
 }
 li > code[class*='language-'] {
-  background: #f6f8fa;
+  background: #263a4c;
   border: none;
-  color: #e60073;
+  color: #66d166;
   box-shadow: none;
 }
