@@ -1,7 +1,7 @@
 ---
 path: /writings/js-array-methods
 date: 2019-07-23
-title: JavaScript Array Marathon
+title: JavaScript Arrays
 description: 5 array methods you should add to your arsenal.
 draft: true
 ---
