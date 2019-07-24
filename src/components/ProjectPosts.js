@@ -61,7 +61,7 @@ const ProjectPosts = () => (
       query {
         allMarkdownRemark(
           filter: { fields: { draft: { eq: false } } }
-          limit: 3
+          limit: 5
           sort: { order: DESC, fields: [frontmatter___date] }
         ) {
           edges {
