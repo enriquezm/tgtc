@@ -26,7 +26,7 @@ const IndexPage = () => {
         </Section>
       </ContainerFluid>
       <Section centered>
-        <h3>Some side stuff</h3>
+        <h3>Side Projects</h3>
         <P align="center">
           I try to keep busy with side projects that help me learn and keep up
           to date with modern tech, best practices, etc.
