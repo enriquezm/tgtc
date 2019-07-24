@@ -41,7 +41,7 @@ for (let i = 0; i < saiyans.length; i++) {
 
 Check out more details for [Array.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
 
-## 2. map()
+## 2. Array.prototype.map()
 
 The `map()` method returns a new array by returning a result from a function called on every element of the array.
 
@@ -62,7 +62,7 @@ Real-world Example:
 
 Check out more details for [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-## 3. includes()
+## 3. Array.prototype.includes()
 
 The `includes()` method iterates through each element within an array and determines whether or not (true or false) the given value is within your array.
 
@@ -88,6 +88,6 @@ console.log(words.includes('hello')); // output: false
 
 Check out more details for [includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
 
-## 4. reduce()
+## 4. Array.prototype.reduce()
 
 The `reduce()` method
