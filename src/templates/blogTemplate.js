@@ -9,8 +9,14 @@ import '../global-styles.css';
 import '../prism-styles-override.css';
 
 const PostContentContainer = styled.div`
-  // max-width: 768px;
   margin: 0 auto;
+`;
+
+const PostContent = styled.div`
+  h1,
+  h2 {
+    margin-top: 50px;
+  }
   h1,
   h2,
   h3,
@@ -66,9 +72,9 @@ const Template = ({ data }) => {
       </div>
       <main>
         <Section css={'padding-top: 50px;'}>
-          <PostContentContainer className="flex-content">
+          <PostContentContainer>
             <PostDate>Written on {date}</PostDate>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <PostContent dangerouslySetInnerHTML={{ __html: html }} />
           </PostContentContainer>
         </Section>
       </main>
