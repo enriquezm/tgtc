@@ -20,12 +20,19 @@ const Resume = styled.div`
   .block {
     margin: 20px 0;
   }
+  hr {
+    border: 1px solid #20364d;
+  }
 `;
 
 const Container = styled.div`
   @media only screen and (max-width: 900px) {
     padding: 3%;
   }
+`;
+
+const Company = styled.p`
+  color: #ed3d63;
 `;
 
 const ResumePage = () => {
@@ -78,7 +85,9 @@ const ResumePage = () => {
           <h2>Experience</h2>
           <div className="block">
             <h3>Web Specialist January 2017 - Present</h3>
-            <p>UNLV, University Marketing & Communications</p>
+            <Company>
+              Web & Digital Strategy, University of Nevada, Las Vegas
+            </Company>
             <ul
               css={`
                 list-style: circle;
@@ -108,7 +117,9 @@ const ResumePage = () => {
           <hr />
           <div className="block">
             <h3>Web Developer January 2016 - April 2016</h3>
-            <p>Distance Course Design & Consulting</p>
+            <Company>
+              Distance Course Design & Consulting, College of Education, UHM
+            </Company>
             <ul
               css={`
                 list-style: circle;
@@ -119,7 +130,8 @@ const ResumePage = () => {
                 <a href="https://assist.coe.hawaii.edu/">
                   Assist tutorial site
                 </a>{' '}
-                using a static site generator (Jekyll).
+                using a static site generator (
+                <a href="https://jekyllrb.com/">Jekyll</a>).
               </li>
               <li>
                 Assisted developers with website enhancements within Wordpress
@@ -134,7 +146,9 @@ const ResumePage = () => {
           <hr />
           <div className="block">
             <h3>Web Design Assistant May 2015 - January 2016</h3>
-            <p>Distance Course Design & Consulting</p>
+            <Company>
+              Distance Course Design & Consulting, College of Education, UHM
+            </Company>
             <ul
               css={`
                 list-style: circle;
@@ -164,10 +178,10 @@ const ResumePage = () => {
           <h2>Skills</h2>
           <div className="block">
             <p>
-              (proficient): HTML, CSS, SCSS, JavaScript, Git, CLI,
-              wireframing/prototyping
+              (proficient): HTML, CSS, SCSS, JavaScript, Git, Bash,
+              wireframing/prototyping, Sketch
             </p>
-            <p>(familiar): A11y, Nodejs, Gatsby, React, MySQL</p>
+            <p>(familiar): Accessibility, Nodejs, Gatsby, React, MySQL</p>
           </div>
         </Container>
       </Section>
