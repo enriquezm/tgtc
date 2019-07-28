@@ -3,7 +3,7 @@ path: /writings/js-array-methods
 date: 2019-07-23
 title: JavaScript Arrays Batch_01
 description: First batch of array methods you should add to your arsenal.
-draft: true
+draft: false
 ---
 
 Arrays are crucial to know for any software engineer. That's why I wanted to go through some JavaScript array methods to learn more about them and how one would use them in real-life scenarios. This is the first batch of many posts that consist of JavaScript Arrays.
@@ -83,12 +83,10 @@ const saiyans = [
   },
 ];
 
-// Let's assume we have the overall `<table>` element and we're now just appending our rows to it.
+// Let's assume we have a <table> element. We could then append our rows to it but iterating over tableContent.
 const tableContent = saiyans.map(saiyan => {
   return `<tr><td>${saiyan.name}</td><td>${saiyan.powerLevel}</td></tr>`;
 });
-
-// We then would append tableContent to our table.
 ```
 
 Check out more details for [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
@@ -100,21 +98,30 @@ The `includes()` method iterates through each element within an array and determ
 Basic Example:
 
 ```javascript
-const numbers = [1, 2, 4, 6, 7, 8];
+const senzuBeanValues = [4, 5, 3, 7, 2];
 
-console.log(numbers.includes(6)); // output: true
-console.log(numbers.includes(23)); // output: false
+console.log(senzuBeanValues.includes(7)); // output: true
+console.log(senzuBeanValues.includes(12)); // output: false
 ```
 
 Real-world Example:
 
-You can also check for strings. Keep in mind that the when comparing strings, `includes()` is case-sensitive.
+You can also check for strings. Let's say we have a list of Saiyans, and we want to see if the saiyan in question is part of the fight team.
 
 ```javascript
-const words = ['Hello', 'Fun', 'Coding'];
+const saiyanFightTeam = ['Goku', 'Vegeta', 'Trunks', 'Gohan']; // Our fight team
 
-console.log(words.includes('Hello')); // output: true
-console.log(words.includes('hello')); // output: false
+let saiyanInQuestion = 'Trunks'; // Let's see if Trunks if part of the team
+console.log(saiyanFightTeam.includes(saiyanInQuestion)); // output: true
+
+saiyanInQuestion = 'Broly'; // Let's see if Broly is part of the team
+console.log(saiyanFightTeam.includes(saiyanInQuestion)); // output: false
 ```
 
+Keep in mind that the when comparing strings, `includes()` is case-sensitive.
+
 Check out more details for [includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
+
+## Summary
+
+There you have it, my first batch of array methods/properties to add to you belt. They were: [Array.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length), [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) and [Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes). I'll be writing about more array methods in the near future. Stay tuned!
