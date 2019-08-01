@@ -105,7 +105,13 @@ const Header = props => {
         ) : (
           <section>
             <h1>Hi, I'm Myles.</h1>
-            <p>
+            <p
+              css={`
+                &:before {
+                  content: '> ';
+                }
+              `}
+            >
               I'm a Frontend Engineer focused on building websites and
               applications with{' '}
               <a href="http://vanilla-js.com/">vanilla JavaScript</a>. Sometimes
@@ -114,7 +120,13 @@ const Header = props => {
               <a href="https://github.com/enriquezm/tgtc">this whole site</a>{' '}
               was built).
             </p>
-            <p>
+            <p
+              css={`
+                &:before {
+                  content: '> ';
+                }
+              `}
+            >
               At the end of the day, I'm just a problem solver and builder. Give
               me a problem, and I'll find the solution.
             </p>
