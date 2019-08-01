@@ -10,12 +10,18 @@ const Container = styled(Link)`
   &:hover {
     color: #009fff;
   }
+  &:before {
+    content: '>';
+  }
+  &:after {
+    content: '_';
+  }
 `;
 
 const activeStyles = {
-  color: 'white',
+  color: '#ED3D63',
   paddingBottom: 10,
-  borderBottom: '2px solid #ED3D63',
+  fontWeight: 800,
 };
 
 const NavLink = ({ children, to }) => (
