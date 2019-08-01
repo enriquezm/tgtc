@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #0e2539;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Fira Code', monospace;
 }
 h1,
 h2,
@@ -16,6 +16,7 @@ h4,
 h5,
 h6 {
   color: white;
+  font-family: 'Heebo', sans-serif;
 }
 h1,
 h2,
@@ -41,7 +42,7 @@ hr {
 }
 p,
 a {
-  font-weight: 300;
+  font-weight: 400;
 }
 p {
   line-height: 1.5;
