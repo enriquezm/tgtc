@@ -14,22 +14,21 @@ const IndexPage = () => {
     <div>
       <Header full />
       <ContainerFluid bgColor="#20364D" color="white">
-        <Section centered>
-          <h3>A little about me</h3>
-          <P align="center">
-            I started coding my freshman year in college but I've been a builder
-            ever since I could remember. I've always loved to figure out how
-            things worked and tried to rebuild them. I guess that's why coding
-            has always been fun for me. Fast forward a few years and I'm here,
-            coding websites and applications with JavaScript.
+        <Section>
+          <h3>More deets on what I do</h3>
+          <P>
+            > You know those shiny, easy-to-use digital interfaces that us
+            humans desperately need to interact with all day, every day? Yeah I
+            like to create those. I mainly build them with languages like
+            JavaScript using frameworks like ReactJS.
           </P>
         </Section>
       </ContainerFluid>
       <Section centered>
-        <h3>Side Projects</h3>
+        <h3>Micro projects</h3>
         <P align="center">
-          I try to keep busy with side projects that help me learn and keep up
-          to date with modern tech, best practices, etc.
+          > Not neccessarily projects that'll change the world, but enough to
+          keep the gears in my head turning and working.
         </P>
         <ProjectPosts />
       </Section>
