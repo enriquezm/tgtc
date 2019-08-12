@@ -77,12 +77,9 @@ const SubPageHeader = props => {
         <NavBar>
           <Logo to="/">TGTC</Logo>
           <div>
-            {/* <AInternal to="/about/">About</AInternal> */}
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about/">About</NavLink>
             <NavLink to="/projects/">Projects</NavLink>
-            <NavLink to="/resume/">Resume</NavLink>
-            {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
         </NavBar>
         {props.title ? (
