@@ -34,15 +34,20 @@ const PostContent = styled.div`
   p {
     margin-bottom: 20px;
   }
+  a {
+    text-decoration: none;
+  }
   img {
     width: 100%;
   }
-  ul {
+  ul,
+  ol {
     margin: 20px 0;
     padding-left: 20px;
     > li {
       margin: 4px 0;
       list-style: circle;
+      color: var(--primary-font-color);
     }
   }
   @media screen and (max-width: 450px) {
@@ -51,12 +56,11 @@ const PostContent = styled.div`
 `;
 
 const PostDate = styled.p`
-  color: #ed3d63;
+  color: var(--primary-info);
 `;
 
 const Template = ({ data }) => {
   // 'data' is injected by the Graphql query below
-  const purpleColor = '#20364D';
   const { markdownRemark } = data;
   const { html } = markdownRemark;
   const { title, description, date } = markdownRemark.frontmatter;
@@ -64,8 +68,7 @@ const Template = ({ data }) => {
     <div>
       <div
         css={`
-          background-color: ${purpleColor};
-          color: white;
+          background-color: var(--secondary-bg-color);
         `}
       >
         <SubPageHeader title={title} description={description} />
