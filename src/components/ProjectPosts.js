@@ -19,11 +19,13 @@ const Grid = styled.div`
 `;
 
 const Item = styled.div`
-  margin: 0;
-  padding: 15px;
+  margin-bottom: 2%;
+  padding: 3%;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1.5fr 1fr;
+  background: var(--secondary-bg-color);
+  border: 2px solid var(--primary-font-color);
   h4,
   p {
     margin-bottom: 0;
@@ -36,9 +38,6 @@ const Item = styled.div`
       transform: translateX(100%);
       transition: all 0.3s;
     }
-  }
-  &:not(:last-child) {
-    border-bottom: 2px solid #20364d;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -91,7 +90,7 @@ const ProjectPosts = () => (
                 <h4>{frontmatter.title}</h4>
                 <p>{frontmatter.description}</p>
                 <ItemButtons>
-                  <TextButton primary color="#7469F4" to={frontmatter.path}>
+                  <TextButton primary to={frontmatter.path}>
                     Read
                   </TextButton>
                   {frontmatter.sourceCode ? (
@@ -105,7 +104,9 @@ const ProjectPosts = () => (
               </Item>
             );
           })}
-          <TextButton to="/projects">View All Projects</TextButton>
+          <TextButton primary to="/projects">
+            View All Projects
+          </TextButton>
         </Grid>
       );
     }}
