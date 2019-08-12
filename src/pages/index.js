@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <div>
       <Header full />
-      <ContainerFluid bgColor="#20364D" color="white">
+      <ContainerFluid bgColor="rgba(0, 255, 156, 0.1)">
         <Section>
           <h3>More deets on what I do</h3>
           <P>
@@ -32,7 +32,6 @@ const IndexPage = () => {
         </P>
         <ProjectPosts />
       </Section>
-      <MiniResume />
       <Contact />
       <Footer />
     </div>
