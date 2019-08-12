@@ -50,7 +50,8 @@ const IndexPage = () => (
     </Section>
     <div
       css={`
-        background-color: #20364d;
+        background-color: var(--secondary-bg-color);
+        border-top: 2px solid var(--primary-font-color);
       `}
     >
       <Section>

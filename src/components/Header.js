@@ -93,7 +93,6 @@ const Header = props => {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about/">About</NavLink>
             <NavLink to="/projects/">Projects</NavLink>
-            <NavLink to="/resume/">Resume</NavLink>
             {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
         </NavBar>
@@ -105,7 +104,13 @@ const Header = props => {
         ) : (
           <section>
             <h1>Hi, I'm Myles.</h1>
-            <p>
+            <p
+              css={`
+                &:before {
+                  content: '> ';
+                }
+              `}
+            >
               I'm a Frontend Engineer focused on building websites and
               applications with{' '}
               <a href="http://vanilla-js.com/">vanilla JavaScript</a>. Sometimes
@@ -113,10 +118,6 @@ const Header = props => {
               how{' '}
               <a href="https://github.com/enriquezm/tgtc">this whole site</a>{' '}
               was built).
-            </p>
-            <p>
-              At the end of the day, I'm just a problem solver and builder. Give
-              me a problem, and I'll find the solution.
             </p>
             <SocialButtons>
               <ButtonWrapper>
@@ -135,7 +136,7 @@ const Header = props => {
           </section>
         )}
         <Center>
-          <Mouse />
+          <Mouse color="#00ff9c" />
         </Center>
       </Container>
     </Section>

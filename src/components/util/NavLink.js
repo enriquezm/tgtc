@@ -5,17 +5,18 @@ import styled from 'styled-components';
 const Container = styled(Link)`
   margin: 0;
   padding: 0;
-  color: #b4bac3;
+  color: var(--primary-link-color);
   text-decoration: none;
-  &:hover {
-    color: #009fff;
+  &:before {
+    content: '>';
   }
 `;
 
 const activeStyles = {
-  color: 'white',
+  color: '#ff4081',
   paddingBottom: 10,
-  borderBottom: '2px solid #ED3D63',
+  fontWeight: 800,
+  textDecoration: 'none',
 };
 
 const NavLink = ({ children, to }) => (

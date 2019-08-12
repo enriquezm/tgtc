@@ -7,21 +7,19 @@ const primaryColor = {
 };
 
 const secondaryColor = {
-  normal: '#ED3D63',
-  hover: '#eb2b55',
+  normal: '#00ff9c',
+  hover: '#c592ff',
   click: '#ea1946',
 };
 
 const TextButtonExternal = styled.a`
   margin: 0 5px;
   width: 100%;
-  border-radius: 4px;
   text-align: center;
-  color: white;
-  padding: 1% 2%;
-  background-color: ${props =>
-    props.primary ? primaryColor.normal : secondaryColor.normal};
-  border: 1px solid
+  color: ${props => (props.primary ? 'black' : secondaryColor.normal)};
+  padding: 3% 2%;
+  background-color: ${props => (props.primary ? primaryColor.normal : 'none')};
+  border: 2px solid
     ${props => (props.primary ? primaryColor.normal : secondaryColor.normal)};
   &:hover {
     color: white;

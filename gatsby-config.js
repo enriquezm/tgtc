@@ -50,6 +50,10 @@ module.exports = {
             family: `Heebo`,
             variants: [`300`, `500`, `700`],
           },
+          {
+            family: `Fira Code`,
+            variants: [`400`],
+          },
         ],
       },
     },

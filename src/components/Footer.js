@@ -4,22 +4,21 @@ import styled from 'styled-components';
 import './Footer.css';
 
 const Container = styled.footer`
-  background-color: #0e2539;
   padding: 8%;
   ul {
     max-width: 200px;
     margin-bottom: 25px;
   }
   p {
-    color: #c2c0c4;
+    color: var(--primary-font-color);
     font-size: 14px;
     text-align: center;
   }
   a svg {
-    stroke: #009fff;
+    stroke: var(--primary-link-color);
   }
   a svg:hover {
-    stroke: #007fcc;
+    stroke: var(--primary-link-color);
   }
 `;
 
@@ -49,7 +48,7 @@ const Footer = () => (
       &copy; That Guy That Codes, All Rights Reserved. Built by{' '}
       <a href="https://github.com/enriquezm">Myles</a> with{' '}
       <a href="https://www.gatsbyjs.org/">Gatsby</a> and{' '}
-      <Heart color="#f14839" size={14} />.
+      <Heart color="rgba(0, 255, 156, 1)" size={14} />.
     </p>
   </Container>
 );

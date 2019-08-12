@@ -18,7 +18,10 @@ const Container = styled.header`
   }
   p {
     animation-delay: 0.1s;
-    color: white;
+    color: var(--primary-font-color);
+    &:before {
+      content: '>';
+    }
   }
   &.tabs > a:not(:last-child) {
     margin-right: 15px;
@@ -74,12 +77,9 @@ const SubPageHeader = props => {
         <NavBar>
           <Logo to="/">TGTC</Logo>
           <div>
-            {/* <AInternal to="/about/">About</AInternal> */}
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about/">About</NavLink>
             <NavLink to="/projects/">Projects</NavLink>
-            <NavLink to="/resume/">Resume</NavLink>
-            {/* <AInternal to="/contact/">Contact</AInternal> */}
           </div>
         </NavBar>
         {props.title ? (
@@ -97,7 +97,7 @@ const SubPageHeader = props => {
           </section>
         )}
         <Center>
-          <Mouse color="white" />
+          <Mouse color="#00ff9c" />
         </Center>
       </Container>
     </Section>
