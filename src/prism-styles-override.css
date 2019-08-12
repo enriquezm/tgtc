@@ -15,16 +15,17 @@ pre[class*='language-'] {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: normal;
-  font-family: SFMono-Regular, Menlo, Monaco, 'Courier New', monospace;
-  font-size: 16px;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
   color: #76d9e6;
   text-shadow: none;
 }
 pre[class*='language-'],
 :not(pre) > code[class*='language-'] {
-  background: #263a4c;
+  background: var(--secondary-bg-color);
 }
 pre[class*='language-'] {
+  border: 2px solid var(--primary-font-color);
   padding: 15px;
   overflow: auto;
 }
@@ -35,6 +36,10 @@ pre[class*='language-'] {
 pre[class*='language-'] code {
   white-space: pre;
   display: block;
+}
+
+pre[class*='language-'] span {
+  font-size: 14px;
 }
 
 :not(pre) > code[class*='language-'] {
@@ -50,7 +55,7 @@ pre[class*='language-'] code {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #918c86;
+  color: var(--comments);
 }
 .token.operator,
 .token.boolean,
@@ -76,7 +81,7 @@ pre[class*='language-'] code {
 .token.keyword,
 .token.important,
 .token.deleted {
-  color: #ef3b7d;
+  color: var(--keywords);
 }
 .token.regex,
 .token.statement {
@@ -180,22 +185,24 @@ pre[data-line] .line-highlight[data-end]:after {
 }
 .gatsby-highlight pre[class='language-javascript']::before {
   content: 'js';
-  background: #f7df1e;
+  background: var(--primary-font-color);
+  color: var(--black);
 }
 .gatsby-highlight pre[class='language-json']::before {
   content: 'json';
-  background: #009fff;
+  background: var(--primary-font-color);
+  color: var(--black);
 }
 
 p > code[class*='language-'] {
-  background: #263a4c;
+  background: var(--secondary-bg-color);
   border: none;
-  color: #66d166;
+  color: var(--primary-info);
   box-shadow: none;
 }
 li > code[class*='language-'] {
-  background: #263a4c;
+  background: var(--secondary-bg-color);
   border: none;
-  color: #66d166;
+  color: var(--primary-info);
   box-shadow: none;
 }
