@@ -5,7 +5,8 @@ import P from './util/P';
 import Bold from './util/Bold';
 
 const ContainerFluid = styled.section`
-  background: #20364d;
+  background: var(--secondary-bg-color);
+  border-top: 2px solid var(--primary-font-color);
   color: white;
 `;
 
@@ -18,7 +19,7 @@ const ContainerFixed = styled.section`
     margin-bottom: 50px;
   }
   p {
-    color: white;
+    color: var(--primary-font-color);
   }
   @media screen and (max-width: 600px) {
     padding: 15% 3%;
@@ -29,18 +30,17 @@ const Row = styled.div`
   justify-content: space-around;
   align-items: center;
   a {
-    border-radius: 8px;
     width: 200px;
-    padding: 2%;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     &:hover {
-      background-color: #685edb;
+      border: 2px solid var(--primary-link-color);
     }
     p {
-      color: #eeedef;
+      color: var(--primary-font-color);
       margin-bottom: 5px;
       &::first-child {
         font-weight: 900;
@@ -58,8 +58,7 @@ const Contact = () => (
     <ContainerFixed>
       <h3>Get in touch</h3>
       <P align="center" color="white">
-        Have a job opportunity, idea, or want to collaborate? Shoot me a
-        message!
+        Want to chat? Shoot me a message!
       </P>
       <Row>
         <a href="mailto:enri.myles@gmail.com">
