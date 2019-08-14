@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 const primaryColor = {
   normal: '#00ff9c',
-  hover: '#c592ff',
-  click: '#481a9d',
+  hover: '#4dffba',
+  click: '#9c00ff',
 };
 
 const secondaryColor = {
   normal: '#ED3D63',
   hover: '#eb2b55',
-  click: '#ea1946',
+  click: '#9c00ff',
 };
 
 const TextButton = styled(Link)`
@@ -23,10 +23,11 @@ const TextButton = styled(Link)`
   color: ${props => (props.primary ? 'black' : secondaryColor.normal)};
   padding: 3% 2%;
   &:hover {
-    color: ${props => (props.primary ? 'white' : secondaryColor.hover)};
+    color: ${props => (props.primary ? 'black' : secondaryColor.hover)};
     border: 1px solid
       ${props => (props.primary ? primaryColor.hover : secondaryColor.hover)};
     background-color: ${props => (props.primary ? primaryColor.hover : 'none')};
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.25);
   }
   &:active {
     color: ${props => (props.primary ? 'white' : secondaryColor.click)};
