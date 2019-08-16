@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { Underline } from 'react-feather';
 
 const Container = styled(Link)`
   margin: 0;
@@ -13,10 +14,9 @@ const Container = styled(Link)`
 `;
 
 const activeStyles = {
-  color: '#ff4081',
+  color: '#ff0063',
   paddingBottom: 10,
   fontWeight: 800,
-  textDecoration: 'none',
 };
 
 const NavLink = ({ children, to }) => (
