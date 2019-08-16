@@ -24,9 +24,9 @@ const IndexPage = () => {
           </P>
         </Section>
       </ContainerFluid>
-      <Section centered>
+      <Section>
         <h3>Micro projects</h3>
-        <P align="center">
+        <P>
           > Not neccessarily projects that'll change the world, but enough to
           keep the gears in my head turning and working.
         </P>
